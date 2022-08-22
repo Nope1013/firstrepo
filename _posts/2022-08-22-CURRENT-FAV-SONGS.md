@@ -2,7 +2,7 @@
 layout: post
 title: "Noor's Current Favorite Songs"
 date: 2022-08-22 10:33:31 -0000
-categories: [markdown]
+categories: [songs]
 ---
 # Noor's Current Favorite Songs
 
