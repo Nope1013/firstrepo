@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-Noor Grewal is a senior at Del Norte who loves art, baking, and recently, coding! She hopes to learn more about **[fastpages](https://github.com/fastai/fastpages)** [^1].
+Noor Grewal is a senior at Del Norte who loves art, baking, and recently, coding! She hopes to learn more about **[fastpages](https://github.com/fastai/fastpages)** [^1]. 😎
 
 
 
