@@ -60,6 +60,17 @@
   
 
   
+      ,"page2": {
+          "title": "My Gallery",
+          "content": "Here are some of my recent art projects! To view more, check out my instagram 🎨🖌️ . .",
+          "url": "https://nope1013.github.io/firstrepo/gallery/",
+          "relUrl": "/gallery/",
+          "date": ""
+      }
+      
+  
+
+  
 
   
   
@@ -81,7 +92,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://nope1013.github.io/firstrepo/robots.txt",
