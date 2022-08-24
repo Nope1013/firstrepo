@@ -8,3 +8,4 @@ Here are some of my recent art projects! To view more, check out my **[instagram
 
 ---
 
+![]({{ site.baseurl }}/images/Greenlady.png)
