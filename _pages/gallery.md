@@ -9,3 +9,5 @@ Here are some of my recent art projects! To view more, check out my **[instagram
 ---
 
 ![]({{ site.baseurl }}/images/Greenlady.png)
+![]({{ site.baseurl }}/images/EddieMunson.png)
+![]({{ site.baseurl }}/images/Assam.png)
