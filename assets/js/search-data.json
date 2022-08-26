@@ -58,9 +58,20 @@
 
   
   
+      ,"page0": {
+          "title": "Schedule",
+          "content": "Trimester 1 - Introduction to Tools and Resources . The initial weeks focus on introducing Tools, Pair Programming, and the AP Resources that we plan to use throughout the year. At the end of Weeks 0-3, students will be exposed to blogging with GitHub Pages; developing with Jupyter Notebooks, Python, JavaScript, HTML, and Code.org AppLab; working with AP classroom and becoming familiar with Create Performance Task project requirements. . Week Sprint AP Test Prep Career Tech Canvas . 3 | Creative Development | Create Performance Task, How I got a 5! | JavaScript Tutorial, Program Design with AppLab | TBD | . 2 | Data Abstraction | Python Lists and Dictionaries | Agile and Roles, HTML Fragments and Layouts | TBD | . 1 | Introduction to Python | Hello to Python, Reflections on Computer Science | Bash and Checks, Fastpages, Jupyter Notebooks, Markdown, Focus and Habits | Intro Python, Jupyter, Fastpages | . 0 | Tool Setup | Scoring History, Pseudo Code | Tools and Equipment | Tools Setup | .",
+          "url": "https://nope1013.github.io/firstrepo/schedule",
+          "relUrl": "/schedule",
+          "date": ""
+      }
+      
+  
 
   
-      ,"page1": {
+
+  
+      ,"page2": {
           "title": "About Me",
           "content": "Noor Grewal is a senior at Del Norte who loves art, baking, and recently, coding! She hopes to learn more about fastpages 1. 😎 . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://nope1013.github.io/firstrepo/about/",
@@ -71,7 +82,7 @@
   
 
   
-      ,"page2": {
+      ,"page3": {
           "title": "My Gallery",
           "content": "Here are some of my recent art projects! To view more, check out my instagram 🎨🖌️ . . .",
           "url": "https://nope1013.github.io/firstrepo/gallery/",
@@ -103,7 +114,7 @@
   
 
   
-      ,"page11": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://nope1013.github.io/firstrepo/robots.txt",
