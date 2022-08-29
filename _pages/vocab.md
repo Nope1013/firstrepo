@@ -19,9 +19,7 @@ permalink: /vocab/
 | expression does not equal     | a ≠ b | a != b | Evaluate if assigned value of a is NOT equal to assigned value of b |
 | **LINK**    | -        | -         | [Collegeboard Pseudocode Reference](https://apcentral.collegeboard.org/media/pdf/ap-computer-science-principles-exam-reference-sheet.pdf)                   |
 | Github     | -        | -           | The defacto hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere in the world. Think of it as the **Google Docs for Coders.**                   |
-| Visual Studio Code      | Text        |             | Allows you to Edit files, Build your Code, and Pull/Push Code from and to the GitHub                   |
+| Visual Studio Code      | -        | -            | Allows you to Edit files, Build your Code, and Pull/Push Code from and to the GitHub                   |
 | Jupyter Notebooks     | - | - | A document format for creating and sharing computational documents. These documents allow you to compute segments of Python or Java code as you are taking notes. **(.ipynb**|
-|      | - | - |  |
-|      | - | - |  |
-|      | - | - |  |
-|      | - | - |  |
+| print     | - | print() | Prints a message through Python |
+| Sequence    | - | - | Two or more lines of code |
