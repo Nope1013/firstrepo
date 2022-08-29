@@ -22,4 +22,5 @@ permalink: /vocab/
 | Visual Studio Code      | -        | -            | Allows you to Edit files, Build your Code, and Pull/Push Code from and to the GitHub                   |
 | Jupyter Notebooks     | - | - | A document format for creating and sharing computational documents. These documents allow you to compute segments of Python or Java code as you are taking notes. **(.ipynb**|
 | print     | - | print() | Prints a message through Python |
-| Sequence    | - | - | Two or more lines of code |
+| sequence    | - | - | Two or more lines of code |
+| square brackets [] | - | - | A way of grouping data in an ordered sequence, and will be a big part of the requirement for the College Board Create Task project |
