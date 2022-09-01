@@ -9,7 +9,6 @@
 title: Noor's Page :)
 description: Welcome to my blog!
 github_username: Nope1013
-# you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "firstrepo"
 
 # OPTIONAL: override baseurl and url if using a custom domain
@@ -101,7 +100,7 @@ plugins:
 paginate: 15
 paginate_path: /page:num/
 
-remote_theme: jekyll/minima
+remote_theme: jekyll/mimima
 
 titles_from_headings:
   enabled:     true
