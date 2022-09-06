@@ -2,15 +2,10 @@
 layout: post
 title: "Noor's Current Favorite Songs"
 date: 2022-08-22 10:33:31 -0000
-categories: [songs]
+categories: [week 0]
 ---
 # Noor's Current Favorite Songs
 
----
-toc: true
-layout: post
-categories: [weeks]
-title:  Week 0
 ---
 
 - Not ranked in any specific order
