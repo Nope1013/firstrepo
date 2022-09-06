@@ -7,6 +7,11 @@ categories: [songs]
 # Noor's Current Favorite Songs
 
 ---
+toc: true
+layout: post
+categories: [weeks]
+title:  Week 0
+---
 
 - Not ranked in any specific order
 - Not in any specific category

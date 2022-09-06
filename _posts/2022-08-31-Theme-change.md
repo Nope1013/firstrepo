@@ -11,6 +11,11 @@ categories: [none]
 ## Screen captures using the remote theme "hacker"
 
 ---
+toc: true
+layout: post
+categories: [weeks]
+title:  Week 2
+---
 
 ![]({{ site.baseurl }}/images/hacker2.png)
 
