@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Practicing with Lists and Dictionaries | Noor’s Blog :)</title>
+<title>Reversing Lists and Dictionaries | Noor’s Blog :)</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Practicing with Lists and Dictionaries" />
+<meta property="og:title" content="Reversing Lists and Dictionaries" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Welcome to my page!" />
 <meta property="og:description" content="Welcome to my page!" />
@@ -16,9 +16,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-08-30T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Practicing with Lists and Dictionaries" />
+<meta property="twitter:title" content="Reversing Lists and Dictionaries" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-30T00:00:00-05:00","datePublished":"2022-08-30T00:00:00-05:00","description":"Welcome to my page!","headline":"Practicing with Lists and Dictionaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://nope1013.github.io/firstrepo/2022/08/30/listndictreverse.html"},"url":"https://nope1013.github.io/firstrepo/2022/08/30/listndictreverse.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-30T00:00:00-05:00","datePublished":"2022-08-30T00:00:00-05:00","description":"Welcome to my page!","headline":"Reversing Lists and Dictionaries","mainEntityOfPage":{"@type":"WebPage","@id":"https://nope1013.github.io/firstrepo/2022/08/30/listndictreverse.html"},"url":"https://nope1013.github.io/firstrepo/2022/08/30/listndictreverse.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/firstrepo/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://nope1013.github.io/firstrepo/feed.xml" title="Noor's Blog :)" /><link rel="shortcut icon" type="image/x-icon" href="/firstrepo/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,13 +73,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Practicing with Lists and Dictionaries</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-30T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Reversing Lists and Dictionaries</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-30T00:00:00-05:00" itemprop="datePublished">
         Aug 30, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -160,6 +160,10 @@ window.onload = wrap_img;
     <span class="s2">&quot;Favorite Songs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Someone New - Hozier&quot;</span><span class="p">,</span> <span class="s2">&quot;Marvelous - Wallows&quot;</span><span class="p">,</span> <span class="s2">&quot;Saggitarius Superstar - Coin &amp; Faye Webster&quot;</span><span class="p">]</span>
 <span class="p">})</span>
 
+<span class="n">InfoDb</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Reversed List:&#39;</span><span class="p">,</span> <span class="n">InfoDb</span><span class="p">)</span>
+
 <span class="c1"># Print the data structure</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">InfoDb</span><span class="p">)</span>
 </pre></div>
@@ -174,7 +178,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[{&#39;FirstName&#39;: &#39;Noor&#39;, &#39;LastName&#39;: &#39;Grewal&#39;, &#39;DOB&#39;: &#39;October 27&#39;, &#39;Residence&#39;: &#39;4S Ranch&#39;, &#39;Email&#39;: &#39;noorkg05@gmail.com&#39;, &#39;Car&#39;: &#39;2012-Mazda CX9&#39;, &#39;Owns Dogs&#39;: [&#39;Luna&#39;, &#39;Kahlua&#39;, &#39;Daisy&#39;], &#39;Owns Cats&#39;: [&#39;Merlot&#39;, &#39;Smeagol&#39;], &#39;Favorite Songs&#39;: [&#39;Wasting Love - Iron Maiden&#39;, &#39;Tear - The Smashing Pumpkins&#39;, &#39;Everlong - Foo Fighters&#39;]}, {&#39;FirstName&#39;: &#39;Sanika&#39;, &#39;LastName&#39;: &#39;Shahapurkar&#39;, &#39;DOB&#39;: &#39;September 29&#39;, &#39;Residence&#39;: &#39;Del Sur&#39;, &#39;Email&#39;: &#39;sanika.shahapurkar@gmail.com&#39;, &#39;Car&#39;: &#39;2018-BMW 430i&#39;, &#39;Owns Dogs&#39;: [&#39;Striver&#39;], &#39;Owns Cats&#39;: [&#39;none:(&#39;], &#39;Favorite Songs&#39;: [&#39;Someone New - Hozier&#39;, &#39;Marvelous - Wallows&#39;, &#39;Saggitarius Superstar - Coin &amp; Faye Webster&#39;]}]
+<pre>Reversed List: [{&#39;FirstName&#39;: &#39;Sanika&#39;, &#39;LastName&#39;: &#39;Shahapurkar&#39;, &#39;DOB&#39;: &#39;September 29&#39;, &#39;Residence&#39;: &#39;Del Sur&#39;, &#39;Email&#39;: &#39;sanika.shahapurkar@gmail.com&#39;, &#39;Car&#39;: &#39;2018-BMW 430i&#39;, &#39;Owns Dogs&#39;: [&#39;Striver&#39;], &#39;Owns Cats&#39;: [&#39;none:(&#39;], &#39;Favorite Songs&#39;: [&#39;Someone New - Hozier&#39;, &#39;Marvelous - Wallows&#39;, &#39;Saggitarius Superstar - Coin &amp; Faye Webster&#39;]}, {&#39;FirstName&#39;: &#39;Noor&#39;, &#39;LastName&#39;: &#39;Grewal&#39;, &#39;DOB&#39;: &#39;October 27&#39;, &#39;Residence&#39;: &#39;4S Ranch&#39;, &#39;Email&#39;: &#39;noorkg05@gmail.com&#39;, &#39;Car&#39;: &#39;2012-Mazda CX9&#39;, &#39;Owns Dogs&#39;: [&#39;Luna&#39;, &#39;Kahlua&#39;, &#39;Daisy&#39;], &#39;Owns Cats&#39;: [&#39;Merlot&#39;, &#39;Smeagol&#39;], &#39;Favorite Songs&#39;: [&#39;Wasting Love - Iron Maiden&#39;, &#39;Tear - The Smashing Pumpkins&#39;, &#39;Everlong - Foo Fighters&#39;]}]
+[{&#39;FirstName&#39;: &#39;Sanika&#39;, &#39;LastName&#39;: &#39;Shahapurkar&#39;, &#39;DOB&#39;: &#39;September 29&#39;, &#39;Residence&#39;: &#39;Del Sur&#39;, &#39;Email&#39;: &#39;sanika.shahapurkar@gmail.com&#39;, &#39;Car&#39;: &#39;2018-BMW 430i&#39;, &#39;Owns Dogs&#39;: [&#39;Striver&#39;], &#39;Owns Cats&#39;: [&#39;none:(&#39;], &#39;Favorite Songs&#39;: [&#39;Someone New - Hozier&#39;, &#39;Marvelous - Wallows&#39;, &#39;Saggitarius Superstar - Coin &amp; Faye Webster&#39;]}, {&#39;FirstName&#39;: &#39;Noor&#39;, &#39;LastName&#39;: &#39;Grewal&#39;, &#39;DOB&#39;: &#39;October 27&#39;, &#39;Residence&#39;: &#39;4S Ranch&#39;, &#39;Email&#39;: &#39;noorkg05@gmail.com&#39;, &#39;Car&#39;: &#39;2012-Mazda CX9&#39;, &#39;Owns Dogs&#39;: [&#39;Luna&#39;, &#39;Kahlua&#39;, &#39;Daisy&#39;], &#39;Owns Cats&#39;: [&#39;Merlot&#39;, &#39;Smeagol&#39;], &#39;Favorite Songs&#39;: [&#39;Wasting Love - Iron Maiden&#39;, &#39;Tear - The Smashing Pumpkins&#39;, &#39;Everlong - Foo Fighters&#39;]}]
 </pre>
 </div>
 </div>
@@ -209,6 +214,9 @@ window.onload = wrap_img;
     <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">InfoDb</span><span class="p">:</span>
         <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
 
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Reversed List:&#39;</span><span class="p">,</span> <span class="n">print_data</span><span class="p">)</span>
+
 <span class="n">for_loop</span><span class="p">()</span>
 </pre></div>
 
@@ -222,20 +230,21 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>For loop output
+<pre>Reversed List: &lt;function print_data at 0x7f2be8159c10&gt;
+For loop output
 
-Noor Grewal
-	 Residence: 4S Ranch
-	 Birthday: October 27
-	 Dogs: Luna, Kahlua, Daisy
-	 Cats: Merlot, Smeagol
-	 Favorite Songs: [&#39;Wasting Love - Iron Maiden&#39;, &#39;Tear - The Smashing Pumpkins&#39;, &#39;Everlong - Foo Fighters&#39;]
 Sanika Shahapurkar
 	 Residence: Del Sur
 	 Birthday: September 29
 	 Dogs: Striver
 	 Cats: none:(
 	 Favorite Songs: [&#39;Someone New - Hozier&#39;, &#39;Marvelous - Wallows&#39;, &#39;Saggitarius Superstar - Coin &amp; Faye Webster&#39;]
+Noor Grewal
+	 Residence: 4S Ranch
+	 Birthday: October 27
+	 Dogs: Luna, Kahlua, Daisy
+	 Cats: Merlot, Smeagol
+	 Favorite Songs: [&#39;Wasting Love - Iron Maiden&#39;, &#39;Tear - The Smashing Pumpkins&#39;, &#39;Everlong - Foo Fighters&#39;]
 </pre>
 </div>
 </div>
