@@ -14,9 +14,9 @@
     
         ,"post1": {
             "title": "Changing the theme of my blog",
-            "content": "Changing the theme of my blog . Screen captures using the remote theme “hacker” . . toc: true layout: post categories: [weeks] title: Week 2 — . . . . I noticed that my pages had gone missing, and when I changed it back, the same issue prevailed. After checking with my pair, tablemates, and finally Mr. Mortensen, I realized the error after changing it back was misspelling “minima” as “mimima.” Embarrassing. I learned how to find commit history, however. .",
-            "url": "https://nope1013.github.io/firstrepo/none/2022/08/31/Theme-change.html",
-            "relUrl": "/none/2022/08/31/Theme-change.html",
+            "content": "Changing the theme of my blog . Screen captures using the remote theme “hacker” . . . . I noticed that my pages had gone missing, and when I changed it back, the same issue prevailed. After checking with my pair, tablemates, and finally Mr. Mortensen, I realized the error after changing it back was misspelling “minima” as “mimima.” Embarrassing. I learned how to find commit history, however. .",
+            "url": "https://nope1013.github.io/firstrepo/week%202/2022/08/31/Theme-change.html",
+            "relUrl": "/week%202/2022/08/31/Theme-change.html",
             "date": " • Aug 31, 2022"
         }
         
