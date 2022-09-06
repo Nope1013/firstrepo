@@ -2,7 +2,7 @@
 layout: post
 title: "Changing the theme of my blog"
 date: 2022-08-31 10:33:31 -0000
-categories: [none]
+categories: [week 2]
 
 ---
 
@@ -10,12 +10,6 @@ categories: [none]
 
 ## Screen captures using the remote theme "hacker"
 
----
-toc: true
-layout: post
-categories: [weeks]
-title:  Week 2
----
 
 ![]({{ site.baseurl }}/images/hacker2.png)
 
