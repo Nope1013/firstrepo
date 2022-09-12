@@ -10,4 +10,4 @@ categories: [week 3]
 
 [Play Mortagascar](https://studio.code.org/projects/applab/S4fMWIVcCp7dplAW3nTbS_6kNDZkIfq64TjAhqS0H_I)
 
-[Mortagascar Plan](https://nope1013.github.io/firstrepo/2022/09/11/AppLab-Plan.html)
+[Mortagascar Plan](https://nope1013.github.io/firstrepo/2022/09/11/AppLab-Plan-(1).html)
