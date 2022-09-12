@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Changing the theme of my blog"
+title: "Mortagascar"
 date: 2022-09-12 12:05:31 -0000
 categories: [week 3]
 
