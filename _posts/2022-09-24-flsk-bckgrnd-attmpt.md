@@ -9,11 +9,11 @@ categories: [week 5]
 # Attempting to change the background of my Flask portfolio
 
 
-![]({{ site.baseurl }}/flskbckgrnd.png)
+![]({{ site.baseurl }}/images/flskbckgrnd.png)
 
-![]({{ site.baseurl }}/newvantafog.png)
+![]({{ site.baseurl }}/images/newvantafog.png)
 
-![]({{ site.baseurl }}/indexflskchnge.png)
+![]({{ site.baseurl }}/images/indexflskchnge.png)
 
 ---
 
