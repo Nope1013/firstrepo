@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Practicing with RapidAPI | Noor’s Blog :)</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Practicing with RapidAPI" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Welcome to my page!" />
+<meta property="og:description" content="Welcome to my page!" />
+<link rel="canonical" href="https://nope1013.github.io/firstrepo/week%207/2022/10/10/spotifyAPI.html" />
+<meta property="og:url" content="https://nope1013.github.io/firstrepo/week%207/2022/10/10/spotifyAPI.html" />
+<meta property="og:site_name" content="Noor’s Blog :)" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-10T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Practicing with RapidAPI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-10T00:00:00-05:00","datePublished":"2022-10-10T00:00:00-05:00","description":"Welcome to my page!","headline":"Practicing with RapidAPI","mainEntityOfPage":{"@type":"WebPage","@id":"https://nope1013.github.io/firstrepo/week%207/2022/10/10/spotifyAPI.html"},"url":"https://nope1013.github.io/firstrepo/week%207/2022/10/10/spotifyAPI.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/firstrepo/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://nope1013.github.io/firstrepo/feed.xml" title="Noor's Blog :)" /><link rel="shortcut icon" type="image/x-icon" href="/firstrepo/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/firstrepo/">Noor&#39;s Blog :)</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/firstrepo/schedule">Schedule</a><a class="page-link" href="/firstrepo/about/">About Me</a><a class="page-link" href="/firstrepo/gallery/">My Gallery</a><a class="page-link" href="/firstrepo/search/">Search</a><a class="page-link" href="/firstrepo/categories/">Tags</a><a class="page-link" href="/firstrepo/vocab/">Vocab</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Practicing with RapidAPI</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-10-10T00:00:00-05:00" itemprop="datePublished">
+        Oct 10, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      20 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/firstrepo/categories/#week 7">week 7</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/Nope1013/firstrepo/tree/master/_notebooks/2022-10-10-spotifyAPI.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/firstrepo/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/Nope1013/firstrepo/master?filepath=_notebooks%2F2022-10-10-spotifyAPI.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/firstrepo/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/Nope1013/firstrepo/blob/master/_notebooks/2022-10-10-spotifyAPI.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/firstrepo/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FNope1013%2Ffirstrepo%2Fblob%2Fmaster%2F_notebooks%2F2022-10-10-spotifyAPI.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/firstrepo/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#National-Burgers-API">National Burgers API </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-10-10-spotifyAPI.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://spotify23.p.rapidapi.com/search/"</span>
+
+<span class="n">querystring</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"q"</span><span class="p">:</span><span class="s2">"&lt;REQUIRED&gt;"</span><span class="p">,</span><span class="s2">"type"</span><span class="p">:</span><span class="s2">"multi"</span><span class="p">,</span><span class="s2">"offset"</span><span class="p">:</span><span class="s2">"0"</span><span class="p">,</span><span class="s2">"limit"</span><span class="p">:</span><span class="s2">"10"</span><span class="p">,</span><span class="s2">"numberOfTopResults"</span><span class="p">:</span><span class="s2">"5"</span><span class="p">}</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">"X-RapidAPI-Key"</span><span class="p">:</span> <span class="s2">"b4d4058738mshdb6ccac06cc335ap1eee30jsna64e9cbb2b8b"</span><span class="p">,</span>
+	<span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"spotify23.p.rapidapi.com"</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{"albums":{"totalCount":28,"items":[{"data":{"uri":"spotify:album:1rVhockt4RAiZFaK3M3zPB","name":"No Jacket Required (2016 Remaster)","artists":{"items":[{"uri":"spotify:artist:4lxfqrEsLX6N1N4OCSkILp","profile":{"name":"Phil Collins"}}]},"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e0279553c4dcec1846d3a5c49ab","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000485179553c4dcec1846d3a5c49ab","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b27379553c4dcec1846d3a5c49ab","width":640,"height":640}]},"date":{"year":1985}}},{"data":{"uri":"spotify:album:7avlHipAwnKsxcXwC9Wpin","name":"No Jacket Required (Deluxe Edition)","artists":{"items":[{"uri":"spotify:artist:4lxfqrEsLX6N1N4OCSkILp","profile":{"name":"Phil Collins"}}]},"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e0257480be4ce4fd7659a25b7d9","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000485157480be4ce4fd7659a25b7d9","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b27357480be4ce4fd7659a25b7d9","width":640,"height":640}]},"date":{"year":1985}}},{"data":{"uri":"spotify:album:3JalRx7hoyAC7pyoc7aaw7","name":"Some Assembly Required","artists":{"items":[{"uri":"spotify:artist:1dwRnam2taNMv8H3VR6isd","profile":{"name":"Assembly of Dust"}}]},"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e023a08256fb7ce8a38b41ea5ff","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d000048513a08256fb7ce8a38b41ea5ff","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b2733a08256fb7ce8a38b41ea5ff","width":640,"height":640}]},"date":{"year":2009}}},{"data":{"uri":"spotify:album:5gxL1YPTDUtyUG2Qp3wVO0","name":"Required Etiquette Vol. 1","artists":{"items":[{"uri":"spotify:artist:0LyfQWJT6nXafLPZqxe9Of","profile":{"name":"Various Artists"}}]},"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e023f494786d82cc0f20a452dbe","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d000048513f494786d82cc0f20a452dbe","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b2733f494786d82cc0f20a452dbe","width":640,"height":640}]},"date":{"year":2014}}},{"data":{"uri":"spotify:album:53aQdegVPKq4MgSGgCQuLz","name":"No Faith Required","artists":{"items":[{"uri":"spotify:artist:4DMlDJn7CPSSS0DuUf1vrH","profile":{"name":"Snowy White"}},{"uri":"spotify:artist:5zRIFTHDQwGWKZ7z61fFKb","profile":{"name":"The White Flames"}}]},"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e02c3e11f275c54926f5bfcb411","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d00004851c3e11f275c54926f5bfcb411","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b273c3e11f275c54926f5bfcb411","width":640,"height":640}]},"date":{"year":1996}}},{"data":{"uri":"spotify:album:0BbeoTXqQv0qKki6CDcznI","name":"Disassembly Required (Teaser Original Soundtrack)","artists":{"items":[{"uri":"spotify:artist:0yXeAQirPMVzAlhxGvux1s","profile":{"name":"Liam Vickers"}}]},"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e0226cf2e2751ee0aec2cf62479","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000485126cf2e2751ee0aec2cf62479","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b27326cf2e2751ee0aec2cf62479","width":640,"height":640}]},"date":{"year":2021}}},{"data":{"uri":"spotify:album:1nYOe3S7pWbZwbzS92IScH","name":"Required Repertoire for the 46th PTNA Piano Competition 2022, Vol. 1","artists":{"items":[{"uri":"spotify:artist:0LyfQWJT6nXafLPZqxe9Of","profile":{"name":"Various Artists"}}]},"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e0258c6ffa1c61bed0f61ac1204","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000485158c6ffa1c61bed0f61ac1204","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b27358c6ffa1c61bed0f61ac1204","width":640,"height":640}]},"date":{"year":2022}}},{"data":{"uri":"spotify:album:3xEUUVwjNVvTaHQjcpea8O","name":"Assembly Required","artists":{"items":[{"uri":"spotify:artist:6ytGxUYeXamODJwiXuZvjO","profile":{"name":"Olivia Penalva"}}]},"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e02e098b0f0c819f5075263fd0c","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d00004851e098b0f0c819f5075263fd0c","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b273e098b0f0c819f5075263fd0c","width":640,"height":640}]},"date":{"year":2022}}},{"data":{"uri":"spotify:album:55bIeFDVLsLwa3WEnSJe0C","name":"No Fantasy Required","artists":{"items":[{"uri":"spotify:artist:5l9wiTZVfqQTfMDOt0HtwC","profile":{"name":"Tiga"}}]},"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e023542e4268c5a12d41a98b164","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d000048513542e4268c5a12d41a98b164","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b2733542e4268c5a12d41a98b164","width":640,"height":640}]},"date":{"year":2016}}},{"data":{"uri":"spotify:album:2ZNhj2qao5CEasrS2NH45J","name":"No Assembly Required","artists":{"items":[{"uri":"spotify:artist:70BRQ5tBte6kVqHviL3srE","profile":{"name":"Pieces Of A Dream"}}]},"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e0238b547096e33bf308c492a4b","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000485138b547096e33bf308c492a4b","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b27338b547096e33bf308c492a4b","width":640,"height":640}]},"date":{"year":2004}}}]},"artists":{"totalCount":9,"items":[{"data":{"uri":"spotify:artist:1g05P4Ua1FzC0cQxSlgmyu","profile":{"name":"Required"},"visuals":{"avatarImage":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6761610000e5ebc86baaa7ad722a74dda4d43c","width":640,"height":640},{"url":"https:\/\/i.scdn.co\/image\/ab6761610000f178c86baaa7ad722a74dda4d43c","width":160,"height":160}]}}}},{"data":{"uri":"spotify:artist:2FikzP9y7jVNqwpMgvyxnk","profile":{"name":"Assembly Required"},"visuals":{"avatarImage":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6761610000e5eb4cbc0b4529e9795a45a7ffe2","width":640,"height":640},{"url":"https:\/\/i.scdn.co\/image\/ab6761610000f1784cbc0b4529e9795a45a7ffe2","width":160,"height":160}]}}}},{"data":{"uri":"spotify:artist:4C2vxz7RaHdh9A97EA4NEp","profile":{"name":"Required for Entry"},"visuals":{"avatarImage":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6761610000e5eb49f6cfb7fc3162bd3024683a","width":640,"height":640},{"url":"https:\/\/i.scdn.co\/image\/ab6761610000f17849f6cfb7fc3162bd3024683a","width":160,"height":160}]}}}},{"data":{"uri":"spotify:artist:0S5ZedpU3jHX9ihOrOVYhT","profile":{"name":"Maintenance Required"},"visuals":{"avatarImage":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6761610000e5ebbbe71234449ca45b2bc7da2a","width":640,"height":640},{"url":"https:\/\/i.scdn.co\/image\/ab6761610000f178bbe71234449ca45b2bc7da2a","width":160,"height":160}]}}}},{"data":{"uri":"spotify:artist:7npQgtl4CC9gX2uq9voTT2","profile":{"name":"No Assembly Required"},"visuals":{"avatarImage":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6761610000e5ebd0309f42daa0bfd24954bd6e","width":640,"height":640},{"url":"https:\/\/i.scdn.co\/image\/ab6761610000f178d0309f42daa0bfd24954bd6e","width":160,"height":160}]}}}},{"data":{"uri":"spotify:artist:5QDlAcYAOhP52ors9UnBah","profile":{"name":"No Assembly Required"},"visuals":{"avatarImage":null}}},{"data":{"uri":"spotify:artist:6BAFZXut0gZrxHlxNWUBzn","profile":{"name":"Hard Hat Required!!"},"visuals":{"avatarImage":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b273f47c07d1097b04371ca2474a","width":640,"height":640},{"url":"https:\/\/i.scdn.co\/image\/ab67616d00004851f47c07d1097b04371ca2474a","width":64,"height":64}]}}}},{"data":{"uri":"spotify:artist:5Ct8sSRWZX4Pp9hEJ6Qr9f","profile":{"name":"No Assembly Required"},"visuals":{"avatarImage":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b27391150be1b9ed929035666754","width":640,"height":640},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000485191150be1b9ed929035666754","width":64,"height":64}]}}}},{"data":{"uri":"spotify:artist:1q1qCPxxITofbZLotknvyB","profile":{"name":"Some Assembly Required"},"visuals":{"avatarImage":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b273783e027a2b93eb73654f71e6","width":640,"height":640},{"url":"https:\/\/i.scdn.co\/image\/ab67616d00004851783e027a2b93eb73654f71e6","width":64,"height":64}]}}}}]},"episodes":{"totalCount":900,"items":[{"data":{"uri":"spotify:episode:4afg7iiB5Ql8hv5DCpP9KH","name":"Ep. 1023 - New Medical Guidelines Say Parental Consent Not Required For Child Gender Transition","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68d306e6ebc33226673336530f8","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1f306e6ebc33226673336530f8","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8a306e6ebc33226673336530f8","width":640,"height":640}]},"duration":{"totalMilliseconds":3435546},"releaseDate":{"isoString":"2022-09-16T18:30:00Z"},"podcast":{"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68d306e6ebc33226673336530f8","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1f306e6ebc33226673336530f8","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8a306e6ebc33226673336530f8","width":640,"height":640}]}},"description":"Click here to join the member exclusive portion of my show: https:\/\/utm.io\/ueSEm\u00a0  Today on the Matt Walsh Show, the leading \u201ctransgender health\u201d organization has finally released its new guidelines recommending medical and surgical transition for kids. It also recommends going around the parents if they aren\u2019t \u201caffirming.\u201d Parental consent is now optional, says WPATH. Also, in one of the best stories of the year, governor Ron DeSantis ships plane loads of illegals to the sanctuary city of Martha\u2019s Vineyard. We\u2019ll find out how this is just like the holocaust, according to the Left. And the treasury secretary says that the IRS is the foundation of our country. In our Daily Cancellation, a fat activist on Twitter says that she\u2019s only fat because of white people. How does she connect those dots?\u00a0 \u00a0 - - -\u00a0  DailyWire+:  Stop giving your money to woke corporations that hate you. Get your Jeremy\u2019s Razors today at https:\/\/www.jeremysrazors.com.\u00a0  Get the brand new Johnny the Walrus Plushie here: https:\/\/bit.ly\/3CHeLlu\u00a0  \u00a0- - -\u00a0  Today\u2019s Sponsors:  With thousands of satisfied customers and an A+ rating with the Better Business Bureau, Birch Gold can help you protect your savings. Text \"WALSH\" to 989898 for your no-cost, no-obligation, FREE information kit.  Get 10% OFF Your Will! Use Promo Code \u2018WALSH\u2019 at EpicWill.com\u00a0 - - -  Socials:  Follow on Twitter: https:\/\/bit.ly\/3Rv1VeF\u00a0  Follow on Instagram: https:\/\/bit.ly\/3KZC3oA\u00a0  Follow on Facebook: https:\/\/bit.ly\/3eBKjiA\u00a0  Subscribe on YouTube: https:\/\/bit.ly\/3RQp4rs\u00a0 Learn more about your ad choices. Visit podcastchoices.com\/adchoices","contentRating":{"label":"NONE"}}},{"data":{"uri":"spotify:episode:3K4S63et2MdE0227PBB9dw","name":"The Video Game Required Reading List: 1995-1999 [The Resties]","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68d493f9081e6102fecccdfeddb","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1f493f9081e6102fecccdfeddb","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8a493f9081e6102fecccdfeddb","width":640,"height":640}]},"duration":{"totalMilliseconds":3833113},"releaseDate":{"isoString":"2022-10-04T06:00:00Z"},"podcast":{"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/0eac8fed3787b82b1f34f5d4ba7a890764d17e48","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/7ca66d4bb76706d2a7456813872d08815fe4b9ef","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/9dcdb02a31e7eb76c0b97e272476db6552838a3a","width":640,"height":640}]}},"description":"The Resties Required Reading List returns! \u00a0Our goal is to curate a \"must play\" list of 25 games released between 1980 to 2020. Think of it like Video Games 101. This week, we've selected games from 1995-1999. Join us as we revisit the moment when video games went \u00a0mainstream!\u00a0Visit @thebestiespod on Twitter to see a full list of games from this week's episode.Previous picks:1985-89 - Super Mario Bros., The Legend of Zelda, SimCity2005-09 - Resident Evil 4, Wii Sports, Call of Duty: Modern WarfareThis week's bonus recs:\u00a0Deep Rock Galactic and When Worlds Collide (1951)\u00a0","contentRating":{"label":"EXPLICIT"}}},{"data":{"uri":"spotify:episode:1K69VSdmJf2iWMGd7Ys21j","name":"No More Than This Is Required | Ask Daily Stoic","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68d8488dbb4b623f432a3b6a673","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1f8488dbb4b623f432a3b6a673","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8a8488dbb4b623f432a3b6a673","width":640,"height":640}]},"duration":{"totalMilliseconds":973635},"releaseDate":{"isoString":"2022-09-30T07:00:00Z"},"podcast":{"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68d8488dbb4b623f432a3b6a673","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1f8488dbb4b623f432a3b6a673","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8a8488dbb4b623f432a3b6a673","width":640,"height":640}]}},"description":"We are impressed by people who do incredible things\u2013whether it\u2019s creating some great work of art or pulling off some impossible athletic feat, bringing about social change or building an enormous organization. How did they do it? Where did that come from? Sometimes to excuse our own failures, we tell ourselves it was genius or genetics, inspiration rather than perspiration.\ud83d\udcd5 Ryan Holiday's new book \"Discipline Is Destiny\" is available for pre-order now! We\u2019ve put together a bunch of cool preorder bonuses\u2014among them is a signed and numbered page from the original manuscript of the book. You can learn more about those and how to receive them over at Dailystoic.com\/preorder.\u00a0\u2709\ufe0f Want Stoic wisdom delivered to your inbox daily? Sign up for the FREE Daily Stoic email at https:\/\/dailystoic.com\/dailyemail\ud83d\udcf1 Follow us: Instagram, Twitter, YouTube, TikTok, and Facebook\u00a0See Privacy Policy at https:\/\/art19.com\/privacy and California Privacy Notice at https:\/\/art19.com\/privacy#do-not-sell-my-info.","contentRating":{"label":"NONE"}}},{"data":{"uri":"spotify:episode:0KoDcIN8UXlDFKYYiuwClc","name":"S7E2: No Roadmap Required","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68dc003d1a0800c56a9b3a5f29c","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1fc003d1a0800c56a9b3a5f29c","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8ac003d1a0800c56a9b3a5f29c","width":640,"height":640}]},"duration":{"totalMilliseconds":2357774},"releaseDate":{"isoString":"2022-09-20T00:00:00Z"},"podcast":{"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68dc003d1a0800c56a9b3a5f29c","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1fc003d1a0800c56a9b3a5f29c","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8ac003d1a0800c56a9b3a5f29c","width":640,"height":640}]}},"description":"Michaela always craved the kind of life she didn\u2019t have as a kid. She\u2019d find a stable guy, settle down, and start a family. For several years, she seemed to be on her way. But then she discovered that, no matter how clear that original path may have seemed, she ultimately had to build her own. Email us at loveletters@boston.com.","contentRating":{"label":"EXPLICIT"}}},{"data":{"uri":"spotify:episode:4GN7MqKoicdv5lXOVpLRGc","name":"Orgasms &amp; Oral (No Penetration Required)","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68de0ba39359ef77404cd19e8e5","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1fe0ba39359ef77404cd19e8e5","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8ae0ba39359ef77404cd19e8e5","width":640,"height":640}]},"duration":{"totalMilliseconds":1971853},"releaseDate":{"isoString":"2022-07-12T18:21:00Z"},"podcast":{"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68de0ba39359ef77404cd19e8e5","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1fe0ba39359ef77404cd19e8e5","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8ae0ba39359ef77404cd19e8e5","width":640,"height":640}]}},"description":"It\u2019s a good time to expand our definition of sex. At the end of the day, sex is play for adults: it\u2019s where we collaborate with another person, creating a momentary world of pleasure and eroticism with them. But so often, we assume that sex equals penetration, and here\u2019s the problem with that: not everyone orgasms during penetration. Not everyone feels erotic during penetration! So let\u2019s make sex more interesting and exploratory, shall we?On today\u2019s show, I\u2019m talking up all the different types of non-penetrative sex \u2013 like mutual masturbation, sensual massage, toys, hand stuff \u2013 to help you break out of a conventional sex script, and have sex that\u2019s more tailored to your personality and desires. Because you never have to take penetration off the table entirely\u2026but what would happen if you took it off the table for a little while? (Hint: probably more orgasms.)\u00a0Show Notes:Prostate Play 101Want to Try a Sex Cleanse?\u00a0Penis Problems, Solved\u00a0Shop with Emily4 Ways to Close The Orgasm GapFirst Date, First Orgasm, First Threesome\u00a0 Hosted on Acast. See acast.com\/privacy for more information.","contentRating":{"label":"EXPLICIT"}}},{"data":{"uri":"spotify:episode:1pIV5kyw1Yg1NULRJyM240","name":"The Flagship: 'All Gas, No Breaks' mentality required for Texas facing embattled Oklahoma","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68d75db97843096b67fa8a949f7","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1f75db97843096b67fa8a949f7","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8a75db97843096b67fa8a949f7","width":640,"height":640}]},"duration":{"totalMilliseconds":2805916},"releaseDate":{"isoString":"2022-10-07T19:29:00Z"},"podcast":{"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68d5a9969c4a0d7dca4426ac445","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1f5a9969c4a0d7dca4426ac445","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8a5a9969c4a0d7dca4426ac445","width":640,"height":640}]}},"description":"One of the most unique rivalry games in College Football kicks off Saturday morning when Texas takes on Oklahoma in the Red River Showdown. The Flagship Podcast delivers a loaded shows leading up to kickoff as Horns247's Chip Brown and Taylor Estes deliver the latest intel on the Longhorns QB situation, what to expect from Texas against this embattled OU team and much, much more!   To learn more about listener data and our privacy practices visit: https:\/\/www.audacyinc.com\/privacy-policy     Learn more about your ad choices. Visit https:\/\/podcastchoices.com\/adchoices","contentRating":{"label":"NONE"}}},{"data":{"uri":"spotify:episode:4zdN5vspt3aA2uxmq0sQDt","name":"BARD - Required Standard of Care","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68dc368e8f06ee575aa1e13b698","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1fc368e8f06ee575aa1e13b698","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8ac368e8f06ee575aa1e13b698","width":640,"height":640}]},"duration":{"totalMilliseconds":894563},"releaseDate":{"isoString":"2022-10-02T17:00:00Z"},"podcast":{"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68dc368e8f06ee575aa1e13b698","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1fc368e8f06ee575aa1e13b698","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8ac368e8f06ee575aa1e13b698","width":640,"height":640}]}},"description":"Mark and Gary link up on Sunday morning to discuss Gavin Newsom's signing of previously discussed California Assembly Bill 2098 governing what doctors can say to their patients. They also discuss a development in the Erika Jayne Tom Girardi saga and tease a story that'll be covered in further depth early this week with Adam.  Watch Beyond A Reasonable Doubt on YouTube at YouTube.com\/ReasonableDoubtPodcast and subscribe while you're there.","contentRating":{"label":"NONE"}}},{"data":{"uri":"spotify:episode:5JTNmxeJ0xysbdspkgDElm","name":"Peloton: Some Assembly Required","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68d7bc876aa398b648f92bceaa5","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1f7bc876aa398b648f92bceaa5","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8a7bc876aa398b648f92bceaa5","width":640,"height":640}]},"duration":{"totalMilliseconds":1358367},"releaseDate":{"isoString":"2022-08-24T20:00:00Z"},"podcast":{"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68d7bc876aa398b648f92bceaa5","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1f7bc876aa398b648f92bceaa5","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8a7bc876aa398b648f92bceaa5","width":640,"height":640}]}},"description":"Amazon becomes the first partner to sell Peloton's equipment and apparel on their own site. (0:21) Bill Mann discusses: - The upside potential for Peloton - Whether Peloton may become part of Amazon's Prime membership offerings - Toll Brothers blaming supply chain and labor shortages for a cut in guidance - Nordstrom's challenges with inventory and family ownership (11:31) Jeremy Bowman and Jason Hall engage in a Bull vs. Bear debate over Beyond Meat. Who won the debate? You can cast your vote in our poll on Twitter @MotleyFoolMoney. Stocks mentioned: PTON, AMZN, TOL, JWN, BYND, YUM Host: Chris Hill Guest: Bill Mann Producer: Ricky Mulvey Engineer: Dan Boyd","contentRating":{"label":"NONE"}}},{"data":{"uri":"spotify:episode:5b7S50H9UhDr1iSQHBDxnD","name":"WHATEVER IS REQUIRED","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/bcc27befd398f1cb53da780aeac22af6c3d6264f","width":64,"height":36},{"url":"https:\/\/i.scdn.co\/image\/4b3673c2783a84793200bcfc75186a6f94b47284","width":300,"height":169},{"url":"https:\/\/i.scdn.co\/image\/935182f3581b526209c3c7236987a6717865d362","width":640,"height":360}]},"duration":{"totalMilliseconds":211644},"releaseDate":{"isoString":"2018-09-27T02:06:00Z"},"podcast":{"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/1dfd39d29f4f582a1b05fc0e5b09e00d97c780b4","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/f52eb414473d024bcd8edf24ba8787a4cbdb0059","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/9daaf33e2fe6b144fc5423ce2bdc19fc3c9190f4","width":640,"height":640}]}},"description":"This episode is spoken by Dr. Ken Friendly, Les Brown, Eric Thomas and Andy Frisella. You can see more of Dr. Ken Friendly at tr.im\/DrKenFriendly, Les Brown at tr.im\/LesBrown, Eric Thomas at tr.im\/EricThomas and Andy Frisella at tr.im\/AndyFrisella. The music is MK Ultra by Really Slow Motion. You can see more of Really Slow Motion at tr.im\/ReallySlowMotion.","contentRating":{"label":"NONE"}}},{"data":{"uri":"spotify:episode:7ApZigXnepkUslqMgFDrwC","name":"r\/Choosingbeggars JOB OPENING: PhD required. Pay: $0","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/8ac63e7a1028fce0c8790ed9738614d4d886b6cc","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/a07c27c4d7bdd30b14c8f828002d1c3f0a74d1ad","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/b62520a69d29390116eb0f9f9a911f780c54960e","width":640,"height":640}]},"duration":{"totalMilliseconds":954618},"releaseDate":{"isoString":"2021-02-05T14:07:00Z"},"podcast":{"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/8ac63e7a1028fce0c8790ed9738614d4d886b6cc","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/a07c27c4d7bdd30b14c8f828002d1c3f0a74d1ad","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/b62520a69d29390116eb0f9f9a911f780c54960e","width":640,"height":640}]}},"description":"r\/Choosingbeggars Are you ready for an exciting new career with CHOOSING BEGGARS INCORPORATED?! We've got a great new job opening for a qualified candidate who has a PhD and 20 years of work experience. The pay is only $0 to start, but if you work here you will be rewarded with a sense of pride and accomplishment!","contentRating":{"label":"NONE"}}}]},"genres":{"totalCount":0,"items":[]},"playlists":{"totalCount":3,"items":[{"data":{"uri":"spotify:playlist:4Je4L7rV8xRuiybokARidj","name":"Audiophile\u2019s Guide to Eargasms: Headphones Required \ud83c\udfa7","description":"An eclectic mix of some of my favorite songs to listen to with headphones. Headphones Required for Eargasm Experience!","images":{"items":[{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67706c0000da848349d25e06538a01f545e4b4","width":640,"height":640}]}]},"owner":{"name":"Priscilla Bernstein"}}},{"data":{"uri":"spotify:playlist:4mTq7OtfwClwWcCGOseL6Y","name":"Lipscomb Rock and Roll - Required Recordings","description":"This playlist was created to facilitate study of the history of rock and roll as presented in Scott D. Lipscomb&amp;#x27;s &amp;quot;Rock and roll: Its history and stylistic development&amp;quot; (8th edition). See the Recommended Recordings list for additional suggestions beyond this core set of tracks.","images":{"items":[{"sources":[{"url":"https:\/\/mosaic.scdn.co\/640\/ab67616d00001e022f017e3180aca26809813d2cab67616d00001e0246556d7ac53c73f319d33442ab67616d00001e028f5281f66452016858aef137ab67616d00001e02a0b8a1ce10fddbba6879262e","width":640,"height":640},{"url":"https:\/\/mosaic.scdn.co\/300\/ab67616d00001e022f017e3180aca26809813d2cab67616d00001e0246556d7ac53c73f319d33442ab67616d00001e028f5281f66452016858aef137ab67616d00001e02a0b8a1ce10fddbba6879262e","width":300,"height":300},{"url":"https:\/\/mosaic.scdn.co\/60\/ab67616d00001e022f017e3180aca26809813d2cab67616d00001e0246556d7ac53c73f319d33442ab67616d00001e028f5281f66452016858aef137ab67616d00001e02a0b8a1ce10fddbba6879262e","width":60,"height":60}]}]},"owner":{"name":"Scott Lipscomb"}}},{"data":{"uri":"spotify:playlist:5HcGRtFtRbYIXuzn50QMdP","name":"We Are Scientists - Required Reading","description":"Using a careful combination of streaming statistics and the clapping sounds we hear at shows, we\u2019ve generated the definitive Greatest Hits playlist. For fans of We Are Scientists, and of rock &amp;amp; roll music, this is truly\u2026 Required Reading.","images":{"items":[{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67706c0000da8457377918dcef0337833b2456","width":640,"height":640}]}]},"owner":{"name":"We Are Scientists"}}}]},"podcasts":{"totalCount":0,"items":[]},"topResults":{"items":[{"data":{"uri":"spotify:artist:1g05P4Ua1FzC0cQxSlgmyu","profile":{"name":"Required"},"visuals":{"avatarImage":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6761610000e5ebc86baaa7ad722a74dda4d43c","width":640,"height":640},{"url":"https:\/\/i.scdn.co\/image\/ab6761610000f178c86baaa7ad722a74dda4d43c","width":160,"height":160}]}}}},{"data":{"uri":"spotify:track:0AzjJdpWFNfl2Jfq8PiNwA","id":"0AzjJdpWFNfl2Jfq8PiNwA","name":"Required","albumOfTrack":{"uri":"spotify:album:0TCeHxWUMuwosZORJ6yBd9","name":"God Works","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e0285c561c798615f07db3b3642","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000485185c561c798615f07db3b3642","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b27385c561c798615f07db3b3642","width":640,"height":640}]},"id":"0TCeHxWUMuwosZORJ6yBd9","sharingInfo":{"shareUrl":"https:\/\/open.spotify.com\/album\/0TCeHxWUMuwosZORJ6yBd9?si=5eaziRaKQsmcHsS1iLV1tQ"}},"artists":{"items":[{"uri":"spotify:artist:6aEn1FrJfuRVm9CXpxzLge","profile":{"name":"Papy Jeico"}}]},"contentRating":{"label":"NONE"},"duration":{"totalMilliseconds":45375},"playability":{"playable":true}}},{"data":{"uri":"spotify:playlist:4Je4L7rV8xRuiybokARidj","name":"Audiophile\u2019s Guide to Eargasms: Headphones Required \ud83c\udfa7","description":"An eclectic mix of some of my favorite songs to listen to with headphones. Headphones Required for Eargasm Experience!","images":{"items":[{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67706c0000da848349d25e06538a01f545e4b4","width":640,"height":640}]}]},"owner":{"name":"Priscilla Bernstein"}}},{"data":{"uri":"spotify:album:1rVhockt4RAiZFaK3M3zPB","name":"No Jacket Required (2016 Remaster)","artists":{"items":[{"uri":"spotify:artist:4lxfqrEsLX6N1N4OCSkILp","profile":{"name":"Phil Collins"}}]},"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e0279553c4dcec1846d3a5c49ab","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000485179553c4dcec1846d3a5c49ab","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b27379553c4dcec1846d3a5c49ab","width":640,"height":640}]},"date":{"year":1985}}},{"data":{"uri":"spotify:episode:4afg7iiB5Ql8hv5DCpP9KH","name":"Ep. 1023 - New Medical Guidelines Say Parental Consent Not Required For Child Gender Transition","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68d306e6ebc33226673336530f8","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1f306e6ebc33226673336530f8","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8a306e6ebc33226673336530f8","width":640,"height":640}]},"duration":{"totalMilliseconds":3435546},"releaseDate":{"isoString":"2022-09-16T18:30:00Z"},"podcast":{"coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab6765630000f68d306e6ebc33226673336530f8","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67656300005f1f306e6ebc33226673336530f8","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab6765630000ba8a306e6ebc33226673336530f8","width":640,"height":640}]}},"description":"Click here to join the member exclusive portion of my show: https:\/\/utm.io\/ueSEm\u00a0  Today on the Matt Walsh Show, the leading \u201ctransgender health\u201d organization has finally released its new guidelines recommending medical and surgical transition for kids. It also recommends going around the parents if they aren\u2019t \u201caffirming.\u201d Parental consent is now optional, says WPATH. Also, in one of the best stories of the year, governor Ron DeSantis ships plane loads of illegals to the sanctuary city of Martha\u2019s Vineyard. We\u2019ll find out how this is just like the holocaust, according to the Left. And the treasury secretary says that the IRS is the foundation of our country. In our Daily Cancellation, a fat activist on Twitter says that she\u2019s only fat because of white people. How does she connect those dots?\u00a0 \u00a0 - - -\u00a0  DailyWire+:  Stop giving your money to woke corporations that hate you. Get your Jeremy\u2019s Razors today at https:\/\/www.jeremysrazors.com.\u00a0  Get the brand new Johnny the Walrus Plushie here: https:\/\/bit.ly\/3CHeLlu\u00a0  \u00a0- - -\u00a0  Today\u2019s Sponsors:  With thousands of satisfied customers and an A+ rating with the Better Business Bureau, Birch Gold can help you protect your savings. Text \"WALSH\" to 989898 for your no-cost, no-obligation, FREE information kit.  Get 10% OFF Your Will! Use Promo Code \u2018WALSH\u2019 at EpicWill.com\u00a0 - - -  Socials:  Follow on Twitter: https:\/\/bit.ly\/3Rv1VeF\u00a0  Follow on Instagram: https:\/\/bit.ly\/3KZC3oA\u00a0  Follow on Facebook: https:\/\/bit.ly\/3eBKjiA\u00a0  Subscribe on YouTube: https:\/\/bit.ly\/3RQp4rs\u00a0 Learn more about your ad choices. Visit podcastchoices.com\/adchoices","contentRating":{"label":"NONE"}}}],"featured":[]},"tracks":{"totalCount":27,"items":[{"data":{"uri":"spotify:track:0AzjJdpWFNfl2Jfq8PiNwA","id":"0AzjJdpWFNfl2Jfq8PiNwA","name":"Required","albumOfTrack":{"uri":"spotify:album:0TCeHxWUMuwosZORJ6yBd9","name":"God Works","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e0285c561c798615f07db3b3642","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000485185c561c798615f07db3b3642","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b27385c561c798615f07db3b3642","width":640,"height":640}]},"id":"0TCeHxWUMuwosZORJ6yBd9","sharingInfo":{"shareUrl":"https:\/\/open.spotify.com\/album\/0TCeHxWUMuwosZORJ6yBd9?si=98KV-4ixQBiTTZenCJfptw"}},"artists":{"items":[{"uri":"spotify:artist:6aEn1FrJfuRVm9CXpxzLge","profile":{"name":"Papy Jeico"}}]},"contentRating":{"label":"NONE"},"duration":{"totalMilliseconds":45375},"playability":{"playable":true}}},{"data":{"uri":"spotify:track:10UNa6qLnyJqCidBklPGm0","id":"10UNa6qLnyJqCidBklPGm0","name":"Required","albumOfTrack":{"uri":"spotify:album:2smT3A7MjmmfKNFwlDnEBd","name":"Pre Heat","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e020520ecfcc5dfbe14ef8cf183","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d000048510520ecfcc5dfbe14ef8cf183","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b2730520ecfcc5dfbe14ef8cf183","width":640,"height":640}]},"id":"2smT3A7MjmmfKNFwlDnEBd","sharingInfo":{"shareUrl":"https:\/\/open.spotify.com\/album\/2smT3A7MjmmfKNFwlDnEBd?si=aIyysYl2THa1tsTwu6JkdA"}},"artists":{"items":[{"uri":"spotify:artist:57fgfg6PTbTqtPegX6rXV5","profile":{"name":"HEAVY CHEST"}}]},"contentRating":{"label":"NONE"},"duration":{"totalMilliseconds":167206},"playability":{"playable":true}}},{"data":{"uri":"spotify:track:1cIfODqkOniMnWWl0EcRMc","id":"1cIfODqkOniMnWWl0EcRMc","name":"Disassembly Required (Teaser Original Soundtrack)","albumOfTrack":{"uri":"spotify:album:0BbeoTXqQv0qKki6CDcznI","name":"Disassembly Required (Teaser Original Soundtrack)","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e0226cf2e2751ee0aec2cf62479","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000485126cf2e2751ee0aec2cf62479","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b27326cf2e2751ee0aec2cf62479","width":640,"height":640}]},"id":"0BbeoTXqQv0qKki6CDcznI","sharingInfo":{"shareUrl":"https:\/\/open.spotify.com\/album\/0BbeoTXqQv0qKki6CDcznI?si=TzH7pMHuRvq919Pr__7q5Q"}},"artists":{"items":[{"uri":"spotify:artist:0yXeAQirPMVzAlhxGvux1s","profile":{"name":"Liam Vickers"}}]},"contentRating":{"label":"NONE"},"duration":{"totalMilliseconds":120000},"playability":{"playable":true}}},{"data":{"uri":"spotify:track:2R6EjjxkSop7x8adokEnqb","id":"2R6EjjxkSop7x8adokEnqb","name":"REQUIRED MALFUNCTION","albumOfTrack":{"uri":"spotify:album:79B1nOppxSiiA8rfe7EGzg","name":"DIVISION","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e026baeeab4c2084620dca4fc02","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d000048516baeeab4c2084620dca4fc02","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b2736baeeab4c2084620dca4fc02","width":640,"height":640}]},"id":"79B1nOppxSiiA8rfe7EGzg","sharingInfo":{"shareUrl":"https:\/\/open.spotify.com\/album\/79B1nOppxSiiA8rfe7EGzg?si=FJnNob_pT2WhhtGaGjQfPQ"}},"artists":{"items":[{"uri":"spotify:artist:4gRFSxjAcJkb54BDjqo7Bc","profile":{"name":"the GazettE"}}]},"contentRating":{"label":"NONE"},"duration":{"totalMilliseconds":247253},"playability":{"playable":true}}},{"data":{"uri":"spotify:track:6ce7mZm67N4CB6llmyRPib","id":"6ce7mZm67N4CB6llmyRPib","name":"Assembly Required","albumOfTrack":{"uri":"spotify:album:3xEUUVwjNVvTaHQjcpea8O","name":"Assembly Required","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e02e098b0f0c819f5075263fd0c","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d00004851e098b0f0c819f5075263fd0c","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b273e098b0f0c819f5075263fd0c","width":640,"height":640}]},"id":"3xEUUVwjNVvTaHQjcpea8O","sharingInfo":{"shareUrl":"https:\/\/open.spotify.com\/album\/3xEUUVwjNVvTaHQjcpea8O?si=OY0IuWUSQCCFrmK9nXXJlw"}},"artists":{"items":[{"uri":"spotify:artist:6ytGxUYeXamODJwiXuZvjO","profile":{"name":"Olivia Penalva"}}]},"contentRating":{"label":"NONE"},"duration":{"totalMilliseconds":225684},"playability":{"playable":true}}},{"data":{"uri":"spotify:track:22S28x7QBBJmVSIzz4YCnE","id":"22S28x7QBBJmVSIzz4YCnE","name":"Some Assembly Required","albumOfTrack":{"uri":"spotify:album:7FuOdULJORMIFwOFb7EXTG","name":"Singles","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e02c158d1d8cc70e1b6d3152eb7","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d00004851c158d1d8cc70e1b6d3152eb7","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b273c158d1d8cc70e1b6d3152eb7","width":640,"height":640}]},"id":"7FuOdULJORMIFwOFb7EXTG","sharingInfo":{"shareUrl":"https:\/\/open.spotify.com\/album\/7FuOdULJORMIFwOFb7EXTG?si=B65bqLuSRR2juoEATyQxSQ"}},"artists":{"items":[{"uri":"spotify:artist:1gUi2utSbJLNPddYENJAp4","profile":{"name":"Abhi The Nomad"}},{"uri":"spotify:artist:20Ec073CbzajOXt5a3rfsI","profile":{"name":"Foster"}}]},"contentRating":{"label":"EXPLICIT"},"duration":{"totalMilliseconds":157000},"playability":{"playable":true}}},{"data":{"uri":"spotify:track:4eLPlC9E0XWQcJd5WjjKQL","id":"4eLPlC9E0XWQcJd5WjjKQL","name":"Wanna Fly","albumOfTrack":{"uri":"spotify:album:2gEl3qFsgQQtiK8TqMotBt","name":"Wanna Fly","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e02358f83f11f3df253118efe7a","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d00004851358f83f11f3df253118efe7a","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b273358f83f11f3df253118efe7a","width":640,"height":640}]},"id":"2gEl3qFsgQQtiK8TqMotBt","sharingInfo":{"shareUrl":"https:\/\/open.spotify.com\/album\/2gEl3qFsgQQtiK8TqMotBt?si=UdIJyf0RQ9i1y-3LkzzzUA"}},"artists":{"items":[{"uri":"spotify:artist:4xSp6WltH5N47OrAu4pjKw","profile":{"name":"Revelation"}},{"uri":"spotify:artist:1g05P4Ua1FzC0cQxSlgmyu","profile":{"name":"Required"}}]},"contentRating":{"label":"NONE"},"duration":{"totalMilliseconds":184511},"playability":{"playable":true}}},{"data":{"uri":"spotify:track:7EpuVjHnXlbLOyYOvIUcXx","id":"7EpuVjHnXlbLOyYOvIUcXx","name":"Some Assembly Required","albumOfTrack":{"uri":"spotify:album:5l1BFWphq5XiWlpbYUjrhr","name":"Portal 2: Songs to Test By (Collectors Edition)","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e0294008f6625cab88b318e3c49","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000485194008f6625cab88b318e3c49","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b27394008f6625cab88b318e3c49","width":640,"height":640}]},"id":"5l1BFWphq5XiWlpbYUjrhr","sharingInfo":{"shareUrl":"https:\/\/open.spotify.com\/album\/5l1BFWphq5XiWlpbYUjrhr?si=PaxQAWBJTlm6uMb3kYGoRw"}},"artists":{"items":[{"uri":"spotify:artist:7d58WZ8qQHy2Sm5p52V2NP","profile":{"name":"Aperture Science Psychoacoustic Laboratories"}}]},"contentRating":{"label":"NONE"},"duration":{"totalMilliseconds":112106},"playability":{"playable":true}}},{"data":{"uri":"spotify:track:5vdTsxP1p3Vshq9TaI9Ffr","id":"5vdTsxP1p3Vshq9TaI9Ffr","name":"Some Assembly Required","albumOfTrack":{"uri":"spotify:album:6aBCXfFv8Nq5u7pnrwrpmd","name":"The Beginning Of All Things To End","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e026cdfc4722c49b54cf6dd27da","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d000048516cdfc4722c49b54cf6dd27da","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b2736cdfc4722c49b54cf6dd27da","width":640,"height":640}]},"id":"6aBCXfFv8Nq5u7pnrwrpmd","sharingInfo":{"shareUrl":"https:\/\/open.spotify.com\/album\/6aBCXfFv8Nq5u7pnrwrpmd?si=wJ1ExY25RY-p9e7yGscTKg"}},"artists":{"items":[{"uri":"spotify:artist:2Pfv2w8a20xzC7Dr7QXRqM","profile":{"name":"Mudvayne"}}]},"contentRating":{"label":"EXPLICIT"},"duration":{"totalMilliseconds":166840},"playability":{"playable":true}}},{"data":{"uri":"spotify:track:0PJt62CEBPvMdLDY1RQ0Oo","id":"0PJt62CEBPvMdLDY1RQ0Oo","name":"No Names Required","albumOfTrack":{"uri":"spotify:album:4zNKdLbL3B21JpSfVllCPC","name":"Midnight","coverArt":{"sources":[{"url":"https:\/\/i.scdn.co\/image\/ab67616d00001e02678d47c8733f90365864b5e8","width":300,"height":300},{"url":"https:\/\/i.scdn.co\/image\/ab67616d00004851678d47c8733f90365864b5e8","width":64,"height":64},{"url":"https:\/\/i.scdn.co\/image\/ab67616d0000b273678d47c8733f90365864b5e8","width":640,"height":640}]},"id":"4zNKdLbL3B21JpSfVllCPC","sharingInfo":{"shareUrl":"https:\/\/open.spotify.com\/album\/4zNKdLbL3B21JpSfVllCPC?si=gbP4PwQGRJ6EQcjxU-4A6A"}},"artists":{"items":[{"uri":"spotify:artist:2LANxYqr0jAMn7BpUV5hOp","profile":{"name":"Lord of the Dream"}}]},"contentRating":{"label":"NONE"},"duration":{"totalMilliseconds":93351},"playability":{"playable":true}}}]},"users":{"totalCount":1,"items":[{"data":{"uri":"spotify:user:jwbe7sw2exw0sswleoende557","id":"jwbe7sw2exw0sswleoende557","displayName":"no headphones required","username":"jwbe7sw2exw0sswleoende557","image":{"smallImageUrl":"https:\/\/i.scdn.co\/image\/ab67757000003b827365e3e82a12ae1089dd8fde","largeImageUrl":"https:\/\/i.scdn.co\/image\/ab6775700000ee857365e3e82a12ae1089dd8fde"}}}]}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Tried to format with json with print(response.json) and other methods, unsuccessful</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="National-Burgers-API">
+<a class="anchor" href="#National-Burgers-API" aria-hidden="true"><span class="octicon octicon-link"></span></a>National Burgers API<a class="anchor-link" href="#National-Burgers-API"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://burgers1.p.rapidapi.com/burgers"</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">"X-RapidAPI-Key"</span><span class="p">:</span> <span class="s2">"b4d4058738mshdb6ccac06cc335ap1eee30jsna64e9cbb2b8b"</span><span class="p">,</span>
+	<span class="s2">"X-RapidAPI-Host"</span><span class="p">:</span> <span class="s2">"burgers1.p.rapidapi.com"</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">"GET"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[
+  {
+    "id": 0,
+    "name": "Tribute Burger",
+    "restaurant": "Honest Burgers",
+    "web": "www.honestburgers.co.uk",
+    "description": "A mouth-watering honest beef burger",
+    "ingredients": [
+      "beef",
+      "american cheese",
+      "burger sauce",
+      "french mustard",
+      "pickes",
+      "onion",
+      "lettuce"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "75",
+        "line1": "Venn Street",
+        "line2": "Clapham",
+        "postcode": "SW4 0BD",
+        "country": "United Kingdom"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Pulled Mooshie",
+    "restaurant": "Mooshies",
+    "web": "www.veganburger.org",
+    "description": "Spicy vegan burger with jackfruit",
+    "ingredients": [
+      "jackfruit",
+      "coleslaw",
+      "gluten free bun"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "104",
+        "line1": "Brick Lane",
+        "line2": "Shoreditch",
+        "postcode": "E1 6RL",
+        "country": "United Kingdom"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Krabby Patty",
+    "restaurant": "Krusty Krab",
+    "web": "https://twitter.com/SpongeBob",
+    "description": "The only people who don't like a Krabby Patty have never tasted one.",
+    "ingredients": [
+      "bun",
+      "patty",
+      "ketchup",
+      "mustard",
+      "pickles",
+      "onions",
+      "lettuce",
+      "cheese",
+      "tomato",
+      "bun"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "831",
+        "line1": "Bottom Feeder Lane",
+        "line2": "",
+        "postcode": "",
+        "country": "Bikini Bottom, Pacific Ocean"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "The Good Burger",
+    "restaurant": "Good Burger",
+    "web": "https://en.wikipedia.org/wiki/Good_Burger",
+    "description": "Welcome to Good Burger, home of the Good Burger, can I take your order?",
+    "ingredients": [
+      "bun",
+      "tomato",
+      "Ed's secret sauce",
+      "lettuce",
+      "onions",
+      "cheese"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "000",
+        "line1": "Good Burger",
+        "line2": "437 Glendora Ave.",
+        "postcode": "CA",
+        "country": "United States"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Crunchy Nacho Burger",
+    "restaurant": "Max Burgers",
+    "web": "https://www.max.se/maten/meny/burgare/crunchy-nacho-burger/",
+    "description": "The best combination of crunchiness and softness, all in one single burger",
+    "ingredients": [
+      "sesame bun",
+      "salsa",
+      "cheddar",
+      "nachos",
+      "beef",
+      "tomato",
+      "pickled onion",
+      "lettuce",
+      "jalapeño mayonnaise"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "48D",
+        "line1": "Skeppsbrogatan",
+        "line2": "Luleå",
+        "postcode": "971 25",
+        "country": "Sweden"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Barbie Burger",
+    "restaurant": "Flower Burger",
+    "web": "https://www.flowerburger.it/",
+    "description": "From a pink explosion was born Barbie Burger, a special edition in partnership with Mattel",
+    "ingredients": [
+      "pink bun",
+      "lentil and beetroot burger",
+      "tomatoes",
+      "gentilina salad",
+      "barbie hummus",
+      "barbie mayo"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "12",
+        "line1": "Porta Genova",
+        "line2": "Via Tortona",
+        "postcode": "20144",
+        "country": "Italy"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Curry On My Wayward Bun",
+    "restaurant": "Bob's Burgers",
+    "web": "https://bobs-burgers.fandom.com/wiki/Burger_of_the_Day",
+    "description": "N/A",
+    "ingredients": [
+      "beef",
+      "curry",
+      "bun"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "0",
+        "line1": "Ocean Avenue",
+        "line2": "NJ",
+        "postcode": "08260",
+        "country": "United States"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "MEISTER ALLER KLASSEN",
+    "restaurant": "Burgermeister",
+    "web": "https://burger-meister.de",
+    "description": "Fast food joint located in a public toilet? Why on earth?!",
+    "ingredients": [
+      "2 x meat",
+      "2 x cheese",
+      "bacon",
+      "barbequesauce",
+      "jalapenos"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "1",
+        "line1": "Potsdamer Platz",
+        "line2": "Berlin",
+        "postcode": "10785",
+        "country": "Germany"
+      },
+      {
+        "addressId": 1,
+        "number": "45",
+        "line1": "Eberswalder, Schönhauser Allee",
+        "line2": "Berlin",
+        "postcode": "10435",
+        "country": "Germany"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Vegetarian Burger (Indian Style)",
+    "restaurant": "Indian Burgers",
+    "web": "https://www.cookwithmanali.com/vegetarian-burger-indian-style/",
+    "description": "With summer around the corner, I had to share a vegetarian burger recipe with you guys. Actually I plan to share more in the next month but I thought I will start with this Indian style Vegetarian Burger aka Masala Burger!",
+    "ingredients": [
+      "american cheese",
+      "burger sauce",
+      "french mustard",
+      "pickes",
+      "onion",
+      "Veggies"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "007",
+        "line1": "Line1",
+        "line2": "Line2",
+        "postcode": "",
+        "country": "India"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Fat Santa",
+    "restaurant": "Sky City Hamilton",
+    "web": "https://skycityhamilton.co.nz/eat-drink/eat-burger/",
+    "description": "A Christmas themed burger",
+    "ingredients": [
+      "chicken thigh",
+      "champagne ham",
+      "sage and onion stuffing",
+      "gravy mash",
+      "lettuce",
+      "tomato",
+      "cranberry sauce"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "348",
+        "line1": "Victoria street",
+        "line2": "Hamilton Central, Hamilton",
+        "postcode": "3204",
+        "country": "New Zealand"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Blondie",
+    "restaurant": "Yankys",
+    "web": "http://yankyslambton.co.za/menu/",
+    "description": "Delicious steak burger",
+    "ingredients": [
+      "steak",
+      "BBQ sauce",
+      "bacon",
+      "egg",
+      "cheese",
+      "lettuce",
+      "tomato",
+      "onion",
+      "gerkins"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "114",
+        "line1": "Webber Road",
+        "line2": "Lambton, Germiston",
+        "postcode": "1414",
+        "country": "South Africa"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Monster Burger",
+    "restaurant": "Yankys",
+    "web": "http://yankyslambton.co.za/menu/",
+    "description": "Massive meaty burger - the size of a dinner plate",
+    "ingredients": [
+      "250g patty",
+      "bacon",
+      "cheese",
+      "2 eggs",
+      "steak",
+      "BBQ sauce",
+      "lettuce",
+      "tomato",
+      "onion",
+      "gerkins"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "114",
+        "line1": "Webber Road",
+        "line2": "Lambton, Germiston",
+        "postcode": "1414",
+        "country": "South Africa"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Buffalo chicken burger",
+    "restaurant": "Meat Mission",
+    "web": "http://meatliquor.com/",
+    "description": "Large, messy, super tasty buffalo chicken burger",
+    "ingredients": [
+      "Fried chicken breast",
+      "House-made buffalo sauce",
+      "Lettuce",
+      "Red onions",
+      "Blue cheese sauce"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "15",
+        "line1": "Hoxton Market,",
+        "line2": "Hackney, London",
+        "postcode": "N1 6HG",
+        "country": "United Kingdom"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Cheatday Burger",
+    "restaurant": "Burgeramt",
+    "web": "https://www.burgeramt.com/",
+    "description": "Perfect when you need a day off from your workout routine",
+    "ingredients": [
+      "double beef",
+      "chilli-cheese sauce",
+      "2 slices cheddar cheese",
+      "crispy bacon stripes",
+      "nachos",
+      "mayonnaise",
+      "mustard"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "21 - 22",
+        "line1": "Krossener Straße",
+        "line2": "Berlin",
+        "postcode": "10245",
+        "country": "Germany"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "The Truffler (vegan)",
+    "restaurant": "Byron Burgers",
+    "web": "https://www.byron.co.uk/",
+    "description": "Beyond Meat patty, crispy onions, mushrooms, pickled red onions, lettuce American mustard, truffle ‘cheese’ fondue, truffle ‘mayo’",
+    "ingredients": [
+      "1/4 Beyond Meat patty",
+      "crispy onions",
+      "sauteed mushrooms",
+      "pickled red onions",
+      "lettuce",
+      "American mustard",
+      "truffle vegan cheese fondue",
+      "truffle vegan mayo"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "41-45",
+        "line1": "The Cut",
+        "line2": "London",
+        "postcode": "SE1 8LF",
+        "country": "United Kingdom"
+      },
+      {
+        "addressId": 1,
+        "number": "The Loft",
+        "line1": "Westfield Shopping Centre",
+        "line2": "London",
+        "postcode": "W12 7GF",
+        "country": "United Kingdom"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Aloette Buger",
+    "restaurant": "Aloette",
+    "web": "https://aloetterestaurant.com/",
+    "description": "Haute cuisine meets cravings for cheeseburgers.",
+    "ingredients": [
+      "6oz beef patty, served medium",
+      "griddled beaufort cheese",
+      "cheddar mayo",
+      "shredded lettuce",
+      "potato roll"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "163",
+        "line1": "Spadina Ave",
+        "line2": "Toronto",
+        "postcode": "M5V 2A5",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "BBQ Burger",
+    "restaurant": "Fresh Plant Powered",
+    "web": "https://freshplantpowered.com/",
+    "description": "Vegan burger made from whole, natural ingredients.",
+    "ingredients": [
+      "house-made grain burger",
+      "bbq sauce",
+      "quinoa onion rings",
+      "vegan garlic mayo",
+      "napa cabbage",
+      "banana chillies",
+      "tomato",
+      "lettuce"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "147",
+        "line1": "Spadina Ave",
+        "line2": "Toronto",
+        "postcode": "M5V 2L7",
+        "country": "Canada"
+      },
+      {
+        "addressId": 1,
+        "number": "326",
+        "line1": "Bloor Street West",
+        "line2": "Toronto",
+        "postcode": "M5S 1W5",
+        "country": "Canada"
+      },
+      {
+        "addressId": 2,
+        "number": "894",
+        "line1": "Queen Street West",
+        "line2": "Toronto",
+        "postcode": "M6J 1G3",
+        "country": "Canada"
+      },
+      {
+        "addressId": 3,
+        "number": "90",
+        "line1": "Eglinton Avenue East",
+        "line2": "Toronto",
+        "postcode": "M4P 2Y3",
+        "country": "Canada"
+      },
+      {
+        "addressId": 4,
+        "number": "47",
+        "line1": "Front Street East",
+        "line2": "Toronto",
+        "postcode": "M5E 1B3",
+        "country": "Canada"
+      },
+      {
+        "addressId": 5,
+        "number": "95",
+        "line1": "Queen Elizabeth Blvd",
+        "line2": "Etobicoke",
+        "postcode": "M8Z 1P3",
+        "country": "Canada"
+      },
+      {
+        "addressId": 6,
+        "number": "8768",
+        "line1": "Sunset Blvd",
+        "line2": "Los Angeles",
+        "postcode": "90069",
+        "country": "United States"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Carroll's Cheese Burger",
+    "restaurant": "Carroll's Pub Worms",
+    "web": "https://www.carrolls-pub-worms.de/",
+    "description": "Tasty black angus beef burger.",
+    "ingredients": [
+      "Irish black angus beef",
+      "tomato",
+      "lettuce",
+      "caramelized onions",
+      "pickles",
+      "cheddar cheese",
+      "tomato relish"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "54",
+        "line1": "Rheinstraße",
+        "line2": "Worms",
+        "postcode": "67547",
+        "country": "Germany"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Mojitto Burger",
+    "restaurant": "Burger King India",
+    "web": "www.mojitto.com",
+    "description": "Burger a day keeps the fat away",
+    "ingredients": [
+      "bread",
+      "maida",
+      "chick",
+      "patty"
+    ],
+    "addresses": [
+      {
+        "addressID": 0,
+        "number": "8A",
+        "line1": "Kaythye millath street",
+        "postcode": "620020",
+        "country": "India"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Double Slab Burger",
+    "restaurant": "Slab Burgers",
+    "web": "www.slabburgers.com",
+    "description": "taste of hormone-free running cows",
+    "ingredients": [
+      "beef",
+      "caramelized onions",
+      "slab sauce",
+      "pickles",
+      "mushrooms",
+      "tomato",
+      "lettuce"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "47",
+        "line1": "Charles Street West",
+        "line2": "Toronto, Ontario",
+        "postcode": "M4Y 2R4",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Du Brown",
+    "restaurant": "Du Brown Burger Café",
+    "web": "https://www.dubrown.com/",
+    "description": "Home of the no bullshit burger",
+    "ingredients": [
+      "beef",
+      "bacon",
+      "caramelized onions",
+      "cheddar cheese",
+      "barbecue sauce",
+      "onion rings",
+      "jalepeños",
+      "tomato",
+      "lettuce",
+      "chipote mayonaise"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "12",
+        "line1": "rue St Léonard",
+        "line2": "Nantes",
+        "postcode": "44000",
+        "country": "France"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Melting Potes",
+    "restaurant": "Melting Potes Nantes",
+    "web": "https://www.meltingpotesnantes.com/",
+    "description": "Home of the no bullshit burger",
+    "ingredients": [
+      "beef",
+      "poutine",
+      "raclette cheese",
+      "honey mustard sauce",
+      "goats cheese",
+      "crispy onions"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "12",
+        "line1": "boulevard de la Prairie au Duc",
+        "line2": "Ile de Nantes, Nantes",
+        "postcode": "44000",
+        "country": "France"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Big Fernand",
+    "restaurant": "Big Fernand",
+    "web": "https://bigfernand.com/",
+    "description": "L'atelier du Hamburgé - The burger workshop",
+    "ingredients": [
+      "beef",
+      "sundried tomates",
+      "tatar sauce",
+      "confit onions",
+      "blue cheese",
+      "smokey bacon"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "7",
+        "line1": "rue des Halles",
+        "line2": "Nantes",
+        "postcode": "44000",
+        "country": "France"
+      },
+      {
+        "addressId": 1,
+        "number": "3",
+        "line1": "Place de Béthune",
+        "line2": "Lille",
+        "postcode": "59000",
+        "country": "France"
+      },
+      {
+        "addressId": 2,
+        "number": "6",
+        "line1": "place Jean Jaurès",
+        "line2": "Montpellier",
+        "postcode": "34000",
+        "country": "France"
+      },
+      {
+        "addressId": 3,
+        "number": "86",
+        "line1": "Boulevard du Montparnasse",
+        "line2": "Paris",
+        "postcode": "75014",
+        "country": "France"
+      },
+      {
+        "addressId": 4,
+        "number": "55",
+        "line1": "rue de Faubourg Poissonnière",
+        "line2": "Paris",
+        "postcode": "75009",
+        "country": "France"
+      },
+      {
+        "addressId": 5,
+        "number": "4",
+        "line1": "rue du Parchemin",
+        "line2": "Strasbourg",
+        "postcode": "67000",
+        "country": "France"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "PNY Burger",
+    "restaurant": "PNY Burger",
+    "web": "https://pnyburger.com/",
+    "description": "Home of the no bullshit burger",
+    "ingredients": [
+      "beef",
+      "poutine",
+      "raclette cheese",
+      "honey mustard sauce",
+      "goats cheese",
+      "crispy onions"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "50",
+        "line1": "rue de Cautartin",
+        "line2": "Paris",
+        "postcode": "75009",
+        "country": "France"
+      },
+      {
+        "addressId": 1,
+        "number": "120",
+        "line1": "rue du Faubourg St Antoine",
+        "line2": "Paris",
+        "postcode": "75012",
+        "country": "France"
+      },
+      {
+        "addressId": 2,
+        "number": "1",
+        "line1": "rue Perrée",
+        "line2": "Paris",
+        "postcode": "75003",
+        "country": "France"
+      },
+      {
+        "addressId": 3,
+        "number": "96",
+        "line1": "rue Oberkampf",
+        "line2": "Paris",
+        "postcode": "75011",
+        "country": "France"
+      },
+      {
+        "addressId": 4,
+        "number": "24",
+        "line1": "rue Pierre Fontaine",
+        "line2": "Paris",
+        "postcode": "75009",
+        "country": "France"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "231 East",
+    "restaurant": "231 East Street",
+    "web": "https://www.231-east.fr/",
+    "description": "True New York style burger in France",
+    "ingredients": [
+      "beef",
+      "smoked bacon",
+      "chicken",
+      "veggie burgers",
+      "brioche bun",
+      "honey mustard sauce",
+      "onion chutney",
+      "pepper sauce",
+      "avacado"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "7",
+        "line1": "rue de la Couronne",
+        "line2": "Aix-en-Provence",
+        "postcode": "13100",
+        "country": "France"
+      },
+      {
+        "addressId": 1,
+        "number": "9",
+        "line1": "faubourg Sainte-Claire",
+        "line2": "Annecy",
+        "postcode": "7400",
+        "country": "France"
+      },
+      {
+        "addressId": 2,
+        "number": "10",
+        "line1": "Grande rue",
+        "line2": "Grenoble",
+        "postcode": "38000",
+        "country": "France"
+      },
+      {
+        "addressId": 3,
+        "number": "2",
+        "line1": "rue de la Pépinière",
+        "line2": "Paris",
+        "postcode": "75008",
+        "country": "France"
+      },
+      {
+        "addressId": 4,
+        "number": "",
+        "line1": "boulevard Géneral de Gaulle",
+        "line2": "Nantes",
+        "postcode": "44000",
+        "country": "France"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Cajun Black Bean Burger",
+    "restaurant": "The Chicago Diner",
+    "web": "www.veggiediner.com",
+    "description": "a hearty veggie burger with a kick that goes great with sweet potato fries",
+    "ingredients": [
+      "spicy black bean veggie patty",
+      "sautéed onions",
+      "mushrooms",
+      "spinach",
+      "tomato",
+      "fried jalapeño",
+      "cheddar sauce",
+      "creole mustard"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "3411",
+        "line1": "N Halsted St",
+        "line2": "Chicago, Illinois",
+        "postcode": "60657",
+        "country": "USA"
+      },
+      {
+        "addressId": 1,
+        "number": "2333",
+        "line1": "N Milwaukee Ave",
+        "line2": "Chicago, Illinois",
+        "postcode": "60647",
+        "country": "USA"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Hatch Green Chile Bacon Burger",
+    "restaurant": "Whataburger",
+    "web": "www.whataburger.com",
+    "description": "burger with hatch green chiles, bacon and cheese",
+    "ingredients": [
+      "beef",
+      "cheese",
+      "bacon",
+      "hatch green chiles",
+      "mayonnaise"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "984",
+        "line1": "388 E Stacy Rd",
+        "line2": "Allen, TX",
+        "postcode": "75002",
+        "country": "USA"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "The Street Burgers and Coctail Bar Prague 1",
+    "restaurant": "The Street",
+    "web": "www.thestreet.cz",
+    "description": "American, Bar, International, European, Vegetarian Friendly",
+    "ingredients": [
+      "beef",
+      "cheddar cheese",
+      "blue cheese",
+      "onion",
+      "mozzarella",
+      "bacon",
+      "lettuce"
+    ],
+    "addresses": [
+      {
+        "addressId": 0,
+        "number": "11",
+        "line1": "Konviktska",
+        "line2": "Prague",
+        "postcode": "110 00",
+        "country": "The Czech Republic"
+      }
+    ]
+  }
+]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/firstrepo/week%207/2022/10/10/spotifyAPI.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/firstrepo/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/firstrepo/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/firstrepo/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Welcome to my page!</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/Nope1013" target="_blank" title="Nope1013"><svg class="svg-icon grey"><use xlink:href="/firstrepo/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/firstrepo/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
