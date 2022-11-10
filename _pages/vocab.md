@@ -25,3 +25,8 @@ permalink: /vocab/
 | sequence    | - | - | Two or more lines of code |
 | List | - | square brackets [] | A way of grouping data in an ordered sequence, and will be a big part of the requirement for the College Board Create Task project |
 | Dictionary | - | curly braces {} | A way of grouping data into in key-value relationships |
+| Keys | dict.keys() | - | Expresses the value |
+| Values | dict.values() | - | Value corresponds with the keys in a list or dictionary |
+| API | - | - | a set of functions and procedures allowing the creation of applications that access the features or data of an operating system, application, or other service |
+| rapidAPI | - | - | a site that offers multiple APIs for our use |
+| AWS | - | - | Subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis |
