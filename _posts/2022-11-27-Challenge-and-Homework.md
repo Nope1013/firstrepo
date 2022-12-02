@@ -36,29 +36,35 @@ layout: notebook
         <span class="mi">100</span><span class="p">,</span> <span class="mi">306</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">108</span><span class="p">]</span>    <span class="c1"># list of the different numerical values</span>
 <span class="n">min_valid</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># minimum value</span>
 <span class="n">max_valid</span> <span class="o">=</span> <span class="mi">200</span>  <span class="c1"># maximum value</span>
+
+<span class="c1"># my work</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is the list of numerical values that are not within the valid range 100-200, and their position in the list:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_valid</span> <span class="ow">or</span> <span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">min_valid</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; is at position &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span> 
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This is the list of numerical values that are not within the valid range 100-200, and their position in the list:
+4 is at position 3
+308 is at position 5
+5 is at position 7
+306 is at position 10
+</pre>
 </div>
-    {% endraw %}
+</div>
 
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">9</span> <span class="mi">306</span>
-<span class="mi">6</span> <span class="mi">5</span>
-<span class="mi">4</span> <span class="mi">308</span>
-<span class="mi">2</span> <span class="mi">4</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -118,32 +124,28 @@ layout: notebook
      <span class="p">]</span>
      <span class="p">),</span>
 <span class="p">]</span>
+
+<span class="c1"># my work</span>
+<span class="n">album</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;enter a number 1-4 to select an album&#39;</span><span class="p">)</span>
+<span class="n">song</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;enter a number that correlates with a song to select it&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;now playing:  &quot;</span>  <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">albums</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">album</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="n">song</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>now playing:  (3, &#39;The Black Widow&#39;)
+</pre>
 </div>
-    {% endraw %}
+</div>
 
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span>
-<span class="mi">1</span>
-<span class="n">Playing</span> <span class="s2">&quot;Welcome to my Nightmare&quot;</span>
-
-<span class="mi">2</span>
-<span class="mi">2</span>
-<span class="n">Playing</span> <span class="s2">&quot;Rock Steady&quot;</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
