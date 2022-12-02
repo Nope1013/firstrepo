@@ -20,7 +20,8 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Vocab:-fill-in-the-blanks">Vocab: fill in the blanks<a class="anchor-link" href="#Vocab:-fill-in-the-blanks"> </a></h3><p>the symbol for exponent is ^
+<h3 id="Vocab">Vocab<a class="anchor-link" href="#Vocab"> </a></h3><p>fill in the blanks</p>
+<p>the symbol for exponent is ^
 the symbol for addition is +
 the symbol for subtraction is -
 the symbol for multiplication is *
@@ -33,7 +34,8 @@ an algorithm is a sequence of steps that performs a specific task</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sequencing-Practice:-the-code-below-does-not-follow-the-intended-steps-below.-change-the-code-so-that-it-does-so.">Sequencing Practice: the code below does not follow the intended steps below. change the code so that it does so.<a class="anchor-link" href="#Sequencing-Practice:-the-code-below-does-not-follow-the-intended-steps-below.-change-the-code-so-that-it-does-so."> </a></h3><ol>
+<h3 id="Sequencing-Practice">Sequencing Practice<a class="anchor-link" href="#Sequencing-Practice"> </a></h3><p>the code below does not follow the intended steps below. change the code so that it does so.</p>
+<ol>
 <li>divide value1 by 10(value1 = 5)</li>
 <li>multiply 2 from the result of the step 1</li>
 <li>subtract 4 from the result of the step 2</li>
@@ -102,7 +104,8 @@ an algorithm is a sequence of steps that performs a specific task</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Selection/Iteration-Practice:-Create-a-function-to-print-ONLY-the-numbers-of-numlist-that-are-divisble-by-3.">Selection/Iteration Practice: Create a function to print ONLY the numbers of numlist that are divisble by 3.<a class="anchor-link" href="#Selection/Iteration-Practice:-Create-a-function-to-print-ONLY-the-numbers-of-numlist-that-are-divisble-by-3."> </a></h3>
+<h3 id="Selection/Iteration-Practice">Selection/Iteration Practice<a class="anchor-link" href="#Selection/Iteration-Practice"> </a></h3><p>Create a function to print ONLY the numbers of numlist that are divisble by 3.</p>
+
 </div>
 </div>
 </div>
@@ -146,7 +149,8 @@ an algorithm is a sequence of steps that performs a specific task</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Homework/Binary-Adaptation:-Create-a-python-function-that-will-convert-a-decimal-number-1-255-to-binary-using-mathematical-operations-and-powers-of-2.-Challenge:-add-frontend-with-javascript-or-html.">Homework/Binary Adaptation: Create a python function that will convert a decimal number 1-255 to binary using mathematical operations and powers of 2. Challenge: add frontend with javascript or html.<a class="anchor-link" href="#Homework/Binary-Adaptation:-Create-a-python-function-that-will-convert-a-decimal-number-1-255-to-binary-using-mathematical-operations-and-powers-of-2.-Challenge:-add-frontend-with-javascript-or-html."> </a></h3>
+<h3 id="Homework/Binary-Adaptation">Homework/Binary Adaptation<a class="anchor-link" href="#Homework/Binary-Adaptation"> </a></h3><p>Create a python function that will convert a decimal number 1-255 to binary using mathematical operations and powers of 2. Challenge: add frontend with javascript or html.</p>
+
 </div>
 </div>
 </div>
@@ -192,7 +196,8 @@ an algorithm is a sequence of steps that performs a specific task</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Vocab:-fill-in-the-blanks-using-the-video">Vocab: fill in the blanks using the video<a class="anchor-link" href="#Vocab:-fill-in-the-blanks-using-the-video"> </a></h3><p>Index is a number representing a position, like a character's position in a string or a string's position in a list
+<h3 id="Vocab">Vocab<a class="anchor-link" href="#Vocab"> </a></h3><p>fill in the blanks using the video</p>
+<p>Index is a number representing a position, like a character's position in a string or a string's position in a list
 Concatenation is combining two strings
 Length is how many characters are in a string 
 A substring is part of a string
@@ -285,7 +290,8 @@ bye
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Homework/List-Adaptation:-create-a-function-that-prints-the-name-of-each-string-in-the-list-and-the-string's-length.">Homework/List Adaptation: create a function that prints the name of each string in the list and the string's length.<a class="anchor-link" href="#Homework/List-Adaptation:-create-a-function-that-prints-the-name-of-each-string-in-the-list-and-the-string's-length."> </a></h3>
+<h3 id="Homework/List-Adaptation">Homework/List Adaptation<a class="anchor-link" href="#Homework/List-Adaptation"> </a></h3><p>create a function that prints the name of each string in the list and the string's length.</p>
+
 </div>
 </div>
 </div>
