@@ -78,7 +78,7 @@ an algorithm is a sequence of steps that performs a specific task</p>
 <span class="n">value3</span> <span class="o">=</span> <span class="n">value2</span> <span class="o">*</span> <span class="mi">2</span> <span class="c1">#step 2</span>
 <span class="n">value4</span> <span class="o">=</span> <span class="n">value3</span> <span class="o">-</span> <span class="mi">4</span> <span class="c1">#step 3</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">value4</span><span class="p">)</span>
-<span class="c1"># calue 4 is -3</span>
+<span class="c1"># value 4 is -3</span>
 </pre></div>
 
     </div>
