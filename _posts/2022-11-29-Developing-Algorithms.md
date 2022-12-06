@@ -81,8 +81,12 @@ To solve the same problem, many different algorithms can be used.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <ol>
 <li>What does the algorithm do? Please explain in words.</li>
+</ol>
+<p>The algorithm determines whether or not the number is divisible by 2. It</p>
+<ol>
 <li>What if I put in 30 as num and 4 as num2. What would be the output?</li>
 </ol>
+<p>The output would be "False"</p>
 
 </div>
 </div>
@@ -96,6 +100,7 @@ To solve the same problem, many different algorithms can be used.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>What is the output of this algorithm?</p>
+<p>It is too hot outside</p>
 
 </div>
 </div>
@@ -121,6 +126,20 @@ To solve the same problem, many different algorithms can be used.</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>it is too hot outside
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -138,16 +157,30 @@ To solve the same problem, many different algorithms can be used.</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mi">95</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="mi">90</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;it is too hot outside&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">):</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">temp</span> <span class="o">&gt;=</span> <span class="mi">65</span><span class="p">):</span> <span class="c1"># turn it into an elif to get the desired output</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i will go outside&quot;</span><span class="p">)</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">&lt;</span> <span class="mi">65</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;it is too cold outside&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;it is too cold outside&quot;</span><span class="p">)</span> <span class="c1"># A temperature under 65 will yield the output &quot;it is too cold outside&quot;</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>it is too hot outside
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -237,14 +270,33 @@ The resulting sum is 15.</li>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span> <span class="o">=</span> <span class="o">?</span>
-<span class="n">counter</span> <span class="o">=</span> <span class="o">?</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="err">?</span><span class="p">):</span>
-    <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="o">?</span>
-    <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">+</span> <span class="o">?</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span> <span class="c1"># integers 0-5 for first 5 odd integers </span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">counter</span> <span class="c1"># so that it will loop 5 times</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">2</span> <span class="c1"># to make it odd if it begins at 1, then 3, then 5, and so on</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span> <span class="c1"># print result</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+4
+9
+16
+25
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 

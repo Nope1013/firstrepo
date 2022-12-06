@@ -52,8 +52,9 @@ for (let i = <em>number</em>; i < <em>number</em>; i++) {
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">sunny</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> 
-<span class="nx">rainy</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="nx">sunny</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// boolean is the true or false function</span>
+<span class="nx">rainy</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> 
+<span class="c1">// I cannot run anything in javascript because there was a kernel error that nobody (teachers included) could resolve</span>
 </pre></div>
 
     </div>
