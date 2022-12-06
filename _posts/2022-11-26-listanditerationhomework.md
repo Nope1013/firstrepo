@@ -125,6 +125,67 @@ layout: notebook
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Iteration-Challenge">Iteration Challenge<a class="anchor-link" href="#Iteration-Challenge"> </a></h3>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">drewpets</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Drew&quot;</span><span class="p">,</span> <span class="p">({</span><span class="s2">&quot;dogs&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;cats&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;fish&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}))]</span>
+<span class="n">ajpets</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;AJ&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;dogs&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;cats&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;fish&quot;</span><span class="p">:</span> <span class="mi">329</span><span class="p">})]</span>
+<span class="n">johnnypets</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Johnny&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;dogs&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;cats&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;fish&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">})]</span>
+<span class="n">allpets</span> <span class="o">=</span> <span class="p">[</span><span class="n">drewpets</span><span class="p">,</span> <span class="n">ajpets</span><span class="p">,</span> <span class="n">johnnypets</span><span class="p">]</span> <span class="c1">#a collection of all pet lists</span>
+
+<span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">allpets</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="nb">dict</span> <span class="ow">in</span> <span class="n">person</span><span class="p">:</span> <span class="c1">#unpacking the name and dictionary</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;&#39;s pets:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">pet</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1">#use .items() to go through keys and values</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">pet</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span> <span class="c1">#capitalizes first letter</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Drew&#39;s pets:
+Dogs: 1
+Cats: 1
+Fish: 0
+
+AJ&#39;s pets:
+Dogs: 1
+Cats: 0
+Fish: 329
+
+Johnny&#39;s pets:
+Dogs: 2
+Cats: 0
+Fish: 0
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Hacks">Hacks<a class="anchor-link" href="#Hacks"> </a></h3><p>Here are some ideas of things you can do to make your program even cooler. Doing these will raise your grade if done correctly.</p>
 <ul>
 <li>Add more than five questions with more than three answer choices</li>
