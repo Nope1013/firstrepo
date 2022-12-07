@@ -82,47 +82,19 @@ layout: notebook
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Overview-and-Notes:--3.8---Iteration">Overview and Notes:  3.8 - Iteration<a class="anchor-link" href="#Overview-and-Notes:--3.8---Iteration"> </a></h2><p>Add your <mark>OWN</mark> Notes for 3.8 here:</p>
+<ul>
+<li>Iteration is just repetition</li>
+<li>It is repeating a set of actions based on a set of conditions</li>
+<li>Loops are necessary to automate functions so that there is no repetitive code</li>
+<li>If a loop is not closed, it will keep repeating</li>
+<li>For loops, recursive loops, and while loops are all example of iterative loops</li>
+<li>They can be used to check the values in a list or automate code</li>
+<li>Also nested loops, which are loops within loops</li>
+</ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Homework-Assignment">Homework Assignment<a class="anchor-link" href="#Homework-Assignment"> </a></h2><p>Instead of us making a quiz for you to take, we would like YOU to make a quiz about the material we reviewed.</p>
-<p>We would like you to <mark>input questions into a list</mark>, and use some sort of iterative system to print the questions, detect an input, and determine if you answered correctly. There should be <em>at least</em> <mark>five questions</mark>, each with <em>at least</em> <mark>three possible answers</mark>.</p>
-<p>You may use the template below as a framework for this assignment.</p>
-
-</div>
-</div>
-</div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">questions</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="c1">#questions go here (remember to make them strings!)</span>
-<span class="p">]</span>
-
-<span class="k">def</span> <span class="nf">questionloop</span><span class="p">():</span>
-    <span class="k">pass</span>
-    <span class="c1">#make an iterative function to ask the questions</span>
-    <span class="c1">#this can be any loop you want as long as it works!</span>
-
-<span class="k">def</span> <span class="nf">answercheck</span><span class="p">():</span>
-    <span class="k">pass</span>
-    <span class="c1">#make a function to check if the answer was correct or not</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Iteration-Challenge">Iteration Challenge<a class="anchor-link" href="#Iteration-Challenge"> </a></h3>
@@ -175,6 +147,182 @@ Cats: 0
 Fish: 0
 
 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">noorcar</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Noor&quot;</span><span class="p">,</span> <span class="p">({</span><span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="s2">&quot;mazda&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;CX9&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;white&quot;</span><span class="p">}))]</span>
+<span class="n">momcar</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Mom&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="s2">&quot;tesla&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;white&quot;</span><span class="p">})]</span>
+<span class="n">dadcar</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;Dad&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="s2">&quot;ford&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="s2">&quot;F350&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;brown&quot;</span><span class="p">})]</span>
+<span class="n">allcars</span> <span class="o">=</span> <span class="p">[</span><span class="n">noorcar</span><span class="p">,</span> <span class="n">momcar</span><span class="p">,</span> <span class="n">dadcar</span><span class="p">]</span> <span class="c1">#a dictionary of the cars</span>
+
+<span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">allcars</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="nb">dict</span> <span class="ow">in</span> <span class="n">person</span><span class="p">:</span> <span class="c1">#unpacking the name and dictionary</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;&#39;s car:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">car</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1">#use .items() to go through keys and values</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">num</span><span class="p">)</span> <span class="c1">#capitalizes first letter</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Noor&#39;s car:
+Brand: mazda
+Model: CX9
+Color: white
+
+Mom&#39;s car:
+Brand: tesla
+Model: 3
+Color: white
+
+Dad&#39;s car:
+Brand: ford
+Model: F350
+Color: brown
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Homework-Assignment">Homework Assignment<a class="anchor-link" href="#Homework-Assignment"> </a></h2><p>Instead of us making a quiz for you to take, we would like YOU to make a quiz about the material we reviewed.</p>
+<p>We would like you to <mark>input questions into a list</mark>, and use some sort of iterative system to print the questions, detect an input, and determine if you answered correctly. There should be <em>at least</em> <mark>five questions</mark>, each with <em>at least</em> <mark>three possible answers</mark>.</p>
+<p>You may use the template below as a framework for this assignment.</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is my homework quiz. Enter the correct letter to earn points.&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">question</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">answer</span><span class="p">):</span> <span class="c1"># automated if else statement from an early lesson</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">msg</span> <span class="o">==</span> <span class="n">answer</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot; is correct&quot;</span><span class="p">)</span>
+        <span class="k">return</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="s2">&quot; is not the right answer...&quot;</span><span class="p">)</span>
+        <span class="k">return</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">quiz</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">&quot;What is an index?&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;A) A data structure that could store large amounts of data&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;B) A way to count and organize data&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;C) A loop within a loop&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;D) A loop within a loop within a loop&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;B&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;What number do collegeboard psuedocode indexes start at&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;A) 0&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;B) 1&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;C) 40392942&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;D) 2&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;B&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;What does the command aList(i) = x do?&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;A) Turn everything into x&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;B) Assigns the value of &#39;x&#39; to the element of a list at index i&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;C) Removes x and location i&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;D) Appends item x to the list&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;B&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;What is iteration?&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;A) repetition&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;B) indexing&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;C) suffering&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;D) counting&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;What is a nested loop?&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;A) A group of indexes&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;B) When the elements in a loop are in the shape of a nest&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;C) A loop within a loop&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;D) A bird&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;C&quot;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s2">&quot;What happens if a loop is dead?&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;A) It will kill you too&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;B) Bad things&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;C) The loop does not begin&quot;</span><span class="p">,</span> 
+    <span class="s2">&quot;D) It will continue to repeat&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;D&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">numqs</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">quiz</span><span class="p">:</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">question</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">quiz</span><span class="p">[</span><span class="n">item</span><span class="p">])</span> <span class="c1"># I have been trying to debug this for hours and I keep getting the same error </span>
+    <span class="c1"># theoretically this code should run just fine and I&#39;m not sure why it isn&#39;t !!!</span>
+    <span class="n">correct</span> <span class="o">=</span> <span class="n">correct</span> <span class="o">+</span> <span class="n">num</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You scored&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">numqs</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your percentage is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="o">/</span><span class="n">numqs</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">correct</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;W (you passed)&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L (you failed)&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>This is my homework quiz. Enter the correct letter to earn points.
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb Cell 8</span> in <span class="ansi-cyan-fg">&lt;cell line: 55&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=52&#39;&gt;53&lt;/a&gt;</span> correct = 0
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=54&#39;&gt;55&lt;/a&gt;</span> for item in quiz:
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=55&#39;&gt;56&lt;/a&gt;</span>     num = question(item, quiz[item])
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=56&#39;&gt;57&lt;/a&gt;</span>     correct = correct + num
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=58&#39;&gt;59&lt;/a&gt;</span> print(&#34;You scored&#34; + str(correct) +&#34;/&#34; + str(numqs))
+
+<span class="ansi-red-fg">TypeError</span>: &#39;set&#39; object is not subscriptable</pre>
 </div>
 </div>
 
@@ -285,19 +433,36 @@ artichokes
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">binarylist</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&quot;01001001&quot;</span><span class="p">,</span> <span class="s2">&quot;10101010&quot;</span><span class="p">,</span> <span class="s2">&quot;10010110&quot;</span><span class="p">,</span> <span class="s2">&quot;00110111&quot;</span><span class="p">,</span> <span class="s2">&quot;11101100&quot;</span><span class="p">,</span> <span class="s2">&quot;11010001&quot;</span><span class="p">,</span> <span class="s2">&quot;10000001&quot;</span>
-<span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">binarylist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;01001001&quot;</span><span class="p">,</span> <span class="s2">&quot;10101010&quot;</span><span class="p">,</span> <span class="s2">&quot;10010110&quot;</span><span class="p">,</span> <span class="s2">&quot;00110111&quot;</span><span class="p">,</span> <span class="s2">&quot;11101100&quot;</span><span class="p">,</span> <span class="s2">&quot;11010001&quot;</span><span class="p">,</span> <span class="s2">&quot;10000001&quot;</span><span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">binary_convert</span><span class="p">(</span><span class="n">binary</span><span class="p">):</span>
-    <span class="k">pass</span>
+<span class="n">final_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">def</span> <span class="nf">binary_convert</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
     <span class="c1">#use this function to convert every binary value in binarylist to decimal</span>
     <span class="c1">#afterward, get rid of the values that are greater than 100 in decimal</span>
-
-<span class="c1">#when done, print the results</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">binarylist</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">binary_convert</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">:</span> <span class="c1"># identifying the numbers in the list that are greater than or equal to 100 so that they remain in the list</span>
+        <span class="n">final_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="c1"># adding those values</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">binary_convert</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="c1"># prints the values, discluding those larger than 100</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>73
+55
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
