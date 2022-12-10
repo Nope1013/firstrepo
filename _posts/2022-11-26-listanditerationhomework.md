@@ -318,11 +318,11 @@ Color: brown
 <span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb Cell 8</span> in <span class="ansi-cyan-fg">&lt;cell line: 55&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=52&#39;&gt;53&lt;/a&gt;</span> correct = 0
 <span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=54&#39;&gt;55&lt;/a&gt;</span> for item in quiz:
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=55&#39;&gt;56&lt;/a&gt;</span>     num = question(item, quiz[item])
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=56&#39;&gt;57&lt;/a&gt;</span>     correct = correct + num
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=58&#39;&gt;59&lt;/a&gt;</span> print(&#34;You scored&#34; + str(correct) +&#34;/&#34; + str(numqs))
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=55&#39;&gt;56&lt;/a&gt;</span>     num = question(item, quiz(item)) # I have been trying to debug this for hours and I keep getting the same error 
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=56&#39;&gt;57&lt;/a&gt;</span>     # theoretically this code should run just fine and I&#39;m not sure why it isn&#39;t !!!
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2022-11-26-listanditerationhomework.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=57&#39;&gt;58&lt;/a&gt;</span>     correct = correct + num
 
-<span class="ansi-red-fg">TypeError</span>: &#39;set&#39; object is not subscriptable</pre>
+<span class="ansi-red-fg">TypeError</span>: &#39;list&#39; object is not callable</pre>
 </div>
 </div>
 
