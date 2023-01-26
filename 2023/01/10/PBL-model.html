@@ -566,15 +566,15 @@ Test 4, make a dictionary
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2023-01-10-PBL-model.ipynb Cell 9</span> in <span class="ansi-cyan-fg">&lt;cell line: 13&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-01-10-PBL-model.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9'&gt;10&lt;/a&gt;</span> 18
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-01-10-PBL-model.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span> import json
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-01-10-PBL-model.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span> from werkzeug.security import generate_password_hash, check_password_hash
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-01-10-PBL-model.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=13'&gt;14&lt;/a&gt;</span> from datetime import date
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-01-10-PBL-model.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=15'&gt;16&lt;/a&gt;</span> class User:    
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2023-01-10-PBL-model.ipynb Cell 9</span> in <span class="ansi-cyan-fg">&lt;cell line: 112&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-01-10-PBL-model.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=109'&gt;110&lt;/a&gt;</span>         return f'User(name={self._name}, uid={self._uid}, password={self._password},dob={self._dob}, classOf={self._classOf}, location={self._loc})'
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-01-10-PBL-model.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=111'&gt;112&lt;/a&gt;</span> if __name__ == "__main__":
+<span class="ansi-green-fg">--&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-01-10-PBL-model.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=112'&gt;113&lt;/a&gt;</span>     u1 = User(name='Thomas Edison', uid='toby', password='123toby', dob=date(1847, 2, 11), location='San Diego' )# used help from team and example here
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-01-10-PBL-model.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=113'&gt;114&lt;/a&gt;</span>     print("Raw Variables of object:\n", vars(u1), "\n") 
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-01-10-PBL-model.ipynb#X11sdnNjb2RlLXJlbW90ZQ%3D%3D?line=114'&gt;115&lt;/a&gt;</span>     print("Raw Attributes and Methods of object:\n", dir(u1), "\n")
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'werkzeug'</pre>
+<span class="ansi-red-fg">TypeError</span>: __init__() got an unexpected keyword argument 'location'</pre>
 </div>
 </div>
 
