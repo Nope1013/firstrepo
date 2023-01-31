@@ -80,7 +80,7 @@
     
         ,"post7": {
             "title": "Preformance Task Plan",
-            "content": "Portion of Project I will use for Create Performance Task . “What’s In Your Fridge?” . | Purpose: To provide users with recipes as a result of the food they have in their household at the time | User inputs: Ingredients in their household | Outputs: List of recipes wthat contain the ingredients a user has selected | Frontend: | . . Backend: Will require the “MyCookbook.io” API to select recipes that correspond with the chosen ingredients | . Video Plan . Will run the program by checking off some ingredients | Clicking the “enter” button | Should spit out recipes that include the ingredients selected | The link to the recipe will go to an outside source | .",
+            "content": "Portion of Project I will use for Create Performance Task . “What’s In Your Fridge?” . Purpose: To provide users with recipes as a result of the food they have in their household at the time | User inputs: Ingredients in their household | Outputs: List of recipes wthat contain the ingredients a user has selected | Frontend: | . . Backend: Will require the “MyCookbook.io” API to select recipes that correspond with the chosen ingredients | . Video Plan . Will run the program by checking off some ingredients | Clicking the “enter” button | Should spit out recipes that include the ingredients selected | The link to the recipe will go to an outside source | .",
             "url": "https://nope1013.github.io/firstrepo/2023/01/29/cbplan.html",
             "relUrl": "/2023/01/29/cbplan.html",
             "date": " • Jan 29, 2023"
