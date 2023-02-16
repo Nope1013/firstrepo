@@ -1,0 +1,392 @@
+---
+layout: default
+permalink: /foodforyourmood/
+title: Food For Your Mood
+search_exclude: true
+---
+
+<style>
+	body {
+	  background-color: #719371;
+	}
+	
+	</style>
+	
+	<title>-</title>
+	<style>
+	div.container {
+	background-color: #f1f7f1;
+	}
+	div.container p {
+	font-family: Georgia;
+	font-size: 50px;
+	font-style: normal;
+	text-align: center;
+	font-weight: normal;
+	text-decoration: underline;
+	text-transform: none;
+	color: #ffffff;
+	background-color: #204528;
+	}
+	div.container h5 {
+	text-align: center;
+	font-family: Georgia;
+	}
+	
+	</style>
+	<div class="container">
+	<p>Food for Your Mood</p>
+	<h5>How much do you know about how food affects our brains and mood?</h5>
+	</div>
+	</br>
+	</br>
+	<body>
+		<img src="https://wallpaperaccess.com/full/6133151.jpg" alt="" >
+	 </body>
+	 </br>
+	 </br>
+	 </br>
+	 </br>
+	 </br>
+
+	 <div id="container">
+		<header>
+		  <h1>Answer the following questions!</h1>
+		</header>
+		<section>
+		  <form name="quizForm" >
+			<h3>1. ________ of your serotonin is produced in your gastrointestinal tract</h3>
+			<input type="radio" name="q1" value="a" id="q1a"> 75% <br>
+			<input type="radio" name="q1" value="b" id="q1b"> 35% <br>
+			<input type="radio" name="q1" value="c" id="q1c"> 95% <br>
+			<input type="radio" name="q1" value="d" id="q1d"> 12% <br>
+	  
+			<h3>2. Which of these ingredients are scientifically proven to make you feel happier</h3>
+			<input type="radio" name="q2" value="a" id="q2a"> Strawberries, Anchovies, Lactic Acid<br>
+			<input type="radio" name="q2" value="b" id="q2b"> Quinoa, Dark Chocolate, Folic acid<br>
+			<input type="radio" name="q2" value="c" id="q2c"> Cheese, Milk, Acetic Acid<br>
+			<input type="radio" name="q2" value="d" id="q2d"> Tilapia, Potato, Acetate <br>
+	  
+			<h3>3. Turkey meat contains tryptophan, an amino acid that </h3>
+			<input type="radio" name="q3" value="a" id="q3a"> Makes you feel alert and stressed<br>
+			<input type="radio" name="q3" value="b" id="q3b"> Increases your heart rate <br>
+			<input type="radio" name="q3" value="c" id="q3c"> Decreases your chance of developing kidney cancer<br>
+			<input type="radio" name="q3" value="d" id="q3d"> Makes you sleepy and relaxed<br>
+	  
+			<h3>4. The Mediterranean diet reduces the risk of developing depression by 42% </h3>
+			<input type="radio" name="q4" value="a" id="q4a"> True<br>
+			<input type="radio" name="q4" value="b" id="q4b"> False<br>
+	  
+			<h3>5. ___ out of the ___ amino acids your body needs, are obtained through food </h3>
+			<input type="radio" name="q5" value="a" id="q5a"> 9, 20 <br>
+			<input type="radio" name="q5" value="b" id="q5b"> 10, 19 <br>
+			<input type="radio" name="q5" value="c" id="q5c"> 14, 26 <br>
+			<input type="radio" name="q5" value="d" id="q5d"> 7, 20 <br>
+
+			<h3>6. On average, the brain consumes ___ of a person's daily caloric intake </h3>
+			<input type="radio" name="q6" value="a" id="q6a"> 90 %<br>
+			<input type="radio" name="q6" value="b" id="q6b"> 15 % <br>
+			<input type="radio" name="q6" value="c" id="q6c"> 20 %<br>
+			<input type="radio" name="q6" value="d" id="q6d"> 60 % <br>
+
+			<h3>7. Omega-3 fatty acids have been shown to be effective as either stand-alone or adjunctive treatment for... </h3>
+			<input type="radio" name="q7" value="a" id="q7a"> Post traumatic stress disorder (PTSD), popcorn-lung, and depression <br>
+			<input type="radio" name="q7" value="b" id="q7b"> Certain forms of brain cancer, major depressive disorder, kidney stones, and attention deficit hyperactivity disorder (ADHD)  <br>
+			<input type="radio" name="q7" value="c" id="q7c"> Obsessive-compulsive disorder (OCD), depression, and borderline personality disorder (BPD) <br>
+			<input type="radio" name="q7" value="d" id="q7d"> Attention deficit hyperactivity disorder (ADHD), major depressive disorder, bipolar depression, and post traumatic stress disorder (PTSD) <br>
+			
+      <h3>8. How are you feeling today? </h3>
+			<input type="radio" name="q8" value="a" id="q8a"> Happy <br>
+			<input type="radio" name="q8" value="b" id="q8b"> Sad  <br>
+			<input type="radio" name="q8" value="c" id="q8c"> Stressed <br>
+			<input type="radio" name="q8" value="d" id="q8d"> Angry <br>
+      <input type="radio" name="q8" value="d" id="q8e"> Meh/Not Sure <br>
+      
+      <br><br>
+			<input type="submit" value="Submit Answers">
+			<input type="name" name = "name" value="Enter your name/username">
+      <button onclick="generateLink()">Generate Recipe For Me</button>
+      <p id="recipe-link"></p>
+		  </form>
+		  <div id="results"></div>
+		</section>
+	  </div>
+
+<style>
+
+body {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+[id=container] {
+  width: 50 ;
+  background: white;
+  color: #000;
+  margin: 20px auto;
+  overflow: auto;
+  padding: 2.6rem;
+  border: 2px solid #0b472a;
+}
+
+header {
+  text-align: center;
+  border-bottom: #E7D8C9 dashed 1px;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+header p {
+  padding: 0;
+  margin-top: 5px;
+  color: #000;
+}
+
+input[type="submit"] {
+  background: #14321a;
+  border: 0;
+  color: #fff;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+[id=results] {
+  margin-top: 1rem;
+}
+
+[id=results] h3 {
+  background: #EEE4E1;
+  padding: 10px;
+  margin: 10px 0;
+  color: #000;
+}
+
+</style>
+
+<script>
+var formElement = document.forms['quizForm'];
+
+formElement.onsubmit = function submitAnswers(){
+	var total = 7;
+	var score = 0;
+	
+	// Get User Input
+	var q1 = document.forms["quizForm"]["q1"].value,
+	    q2 = document.forms["quizForm"]["q2"].value,
+	    q3 = document.forms["quizForm"]["q3"].value,
+	    q4 = document.forms["quizForm"]["q4"].value,
+	    q5 = document.forms["quizForm"]["q5"].value;
+		  q6 = document.forms["quizForm"]["q6"].value;
+		  q7 = document.forms["quizForm"]["q7"].value;
+      q7 = document.forms["quizForm"]["q8"].value;
+		name = document.forms["quizForm"]["name"].value;
+	
+	// Validation
+	for(i = 1; i <= total;i++){
+		if(eval('q'+i) === null || eval('q'+i) === ''){
+			alert('You missed question '+ i);
+			return false;
+		}
+	}
+	
+	// Set Correct Answers
+	var answers = ["c","b","d","a","a","c","d"];
+	
+	// Check Answers
+	for(i = 1; i <= total;i++){
+		if(eval('q'+i) === answers[i - 1]){
+			score++;
+		}
+	}
+
+	// Display Results
+	var results = document.getElementById('results');
+	results.innerHTML = '<h3>'+name+', you scored <span>'+score+'</span> out of <span>'+total+'</span></h3>';
+
+	
+	return false;
+}
+
+  //Recipe Generator
+  function generateLink() {
+        // List of recipes
+        const recipeLinks = [
+          "https://www.foodnetwork.com/recipes/ina-garten/roast-chicken-recipe-1940592",
+          "https://www.allrecipes.com/recipe/27010/classic-beef-stroganoff/",
+          "https://www.epicurious.com/recipes/food/views/pork-tacos-with-pineapple-salsa-56389926",
+          "https://www.delish.com/uk/cooking/recipes/a31010080/chicken-alfredo-pasta-bake-recipe/",
+          "https://www.bbcgoodfood.com/recipes/ultimate-spaghetti-carbonara-recipe",
+          "https://www.simplyrecipes.com/recipes/banana_bread/",
+          "https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/",
+          "https://www.abeautifulplate.com/the-best-homemade-margherita-pizza/",
+          "https://www.modernhoney.com/the-best-snickerdoodle-cookie-recipe/",
+          "https://www.allrecipes.com/recipe/82659/old-fashioned-onion-rings/",
+          "https://www.modernhoney.com/fettuccine-alfredo/",
+        ];
+
+        // Generate a  recipe link
+        const randomLink = recipeLinks[Math.floor(Math.random() * recipeLinks.length)];
+
+        // Display the  recipe link
+        const recipeLink = document.getElementById("recipe-link");
+        recipeLink.innerHTML = "Here's a recipe for you!--->"+"<a href='" + randomLink + "'>" + randomLink + "</a>";
+  }
+
+</script>
+
+
+<!-- CODE FOR SCOREBOARD -->.
+
+<button id="viewbutton"
+        onclick="view('Look at scoreboard');">View Scoreboard</button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Score</th>
+    <th>Name</th>
+  </tr>
+  </thead>
+  <tbody id="result">
+    <!-- javascript generated data -->
+  </tbody>
+</table>
+
+<p>Enter your score</p>
+
+<form action="javascript:create_user()">
+    <p><label>
+		Name:
+        <input type="text" name="name" id="name" required>
+    </label></p>
+        Score:
+        <input type="text" name="uid" id="uid" required>
+    </label></p>
+    <p><label>
+    <p>
+        <button>Create</button>
+    </p>
+</form>
+
+<script>
+  // prepare HTML result container for new output
+  const resultContainer = document.getElementById("result");
+  // prepare URL's to allow easy switch from deployment and localhost
+  const url = "http://172.24.52.125:8086/api/scores"
+  const create_fetch = url + '/create';
+  const read_fetch = url + '/';
+
+  // Load users on buttonclick event
+	
+	read_users();
+
+  // Display User Table, data is fetched from Backend Database
+  function read_users() {
+    // prepare fetch options
+    const read_options = {
+      method: 'GET', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'omit', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    };
+
+    // fetch the data from API
+    fetch(read_fetch, read_options)
+      // response is a RESTful "promise" on any successful fetch
+      .then(response => {
+        // check for response errors
+        if (response.status !== 200) {
+            const errorMsg = 'Database read error: ' + response.status;
+            console.log(errorMsg);
+            const tr = document.createElement("tr");
+            const td = document.createElement("td");
+            td.innerHTML = errorMsg;
+            tr.appendChild(td);
+            resultContainer.appendChild(tr);
+            return;
+        }
+        // valid response will have json data
+        response.json().then(data => {
+            console.log(data);
+            for (let row in data) {
+              console.log(data[row]);
+              add_row(data[row]);
+            }
+        })
+    })
+    // catch fetch errors (ie ACCESS to server blocked)
+    .catch(err => {
+      console.error(err);
+      const tr = document.createElement("tr");
+      const td = document.createElement("td");
+      td.innerHTML = err;
+      tr.appendChild(td);
+      resultContainer.appendChild(tr);
+    });
+  }
+
+  function create_user(){
+    //Validate Password (must be 6-20 characters in len)
+    //verifyPassword("click");
+    const body = {
+        uid: document.getElementById("uid").value,
+        name: document.getElementById("name").value,
+    };
+    const requestOptions = {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
+        },
+    };
+
+    // URL for Create API
+    // Fetch API call to the database to create a new user
+    fetch(create_fetch, requestOptions)
+      .then(response => {
+        // trap error response from Web API
+        if (response.status !== 200) {
+          const errorMsg = 'Database create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
+        // response contains valid result
+        response.json().then(data => {
+            console.log(data);
+            //add a table row for the new/created userid
+            add_row(data);
+        })
+    })
+  }
+
+  function add_row(data) {
+    const tr = document.createElement("tr");
+    const uid = document.createElement("td");
+    const name = document.createElement("td");
+  
+
+    // obtain data that is specific to the API
+    uid.innerHTML = data.uid; 
+    name.innerHTML = data.name; 
+
+    // add HTML to container
+    tr.appendChild(uid);
+    tr.appendChild(name);
+
+    resultContainer.appendChild(tr);
+  }
+
+</script>
