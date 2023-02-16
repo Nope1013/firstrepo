@@ -231,44 +231,10 @@ formElement.onsubmit = function submitAnswers(){
 
         // Display the  recipe link
         const recipeLink = document.getElementById("recipe-link");
-        recipeLink.innerHTML = "Here's a recipe for you!--->"+"<a href='" + randomLink + "'>" + randomLink + "</a>";
+        recipeLink.innerHTML = "Here's the recipe we think you should make!--->"+"<a href='" + randomLink + "'>" + randomLink + "</a>";
   }
 
 </script>
-
-
-<!-- CODE FOR SCOREBOARD -->.
-
-<button id="viewbutton"
-        onclick="view('Look at scoreboard');">View Scoreboard</button>
-
-<table>
-  <thead>
-  <tr>
-    <th>Score</th>
-    <th>Name</th>
-  </tr>
-  </thead>
-  <tbody id="result">
-    <!-- javascript generated data -->
-  </tbody>
-</table>
-
-<p>Enter your score</p>
-
-<form action="javascript:create_user()">
-    <p><label>
-		Name:
-        <input type="text" name="name" id="name" required>
-    </label></p>
-        Score:
-        <input type="text" name="uid" id="uid" required>
-    </label></p>
-    <p><label>
-    <p>
-        <button>Create</button>
-    </p>
-</form>
 
 <script>
   // prepare HTML result container for new output
