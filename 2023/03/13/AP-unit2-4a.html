@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      12 min read
     
 </span></p>
 
@@ -217,7 +217,7 @@ window.onload = wrap_img;
 <span class="c1"># Setup of key Flask object (app)</span>
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 <span class="c1"># Setup SQLAlchemy object and properties for the database (db)</span>
-<span class="n">database</span> <span class="o">=</span> <span class="s1">'sqlite:///files/sqlite.db'</span>  <span class="c1"># path and filename of database</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">'sqlite:///sqlite.db'</span>  <span class="c1"># path and filename of database</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_TRACK_MODIFICATIONS'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_DATABASE_URI'</span><span class="p">]</span> <span class="o">=</span> <span class="n">database</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SECRET_KEY'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'SECRET_KEY'</span>
@@ -501,12 +501,126 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Created new uid toby
-Created new uid niko
-Created new uid lex
-Created new uid whit
-Created new uid indi
-Created new uid raven
+<pre>Unexpected exception formatting exception. Falling back to standard exception
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Traceback (most recent call last):
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3256, in _wrap_pool_connect
+    The returned object is a proxied version of the DBAPI
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    for fn, target in events:
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    self.__close(terminate=True)
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    def status(self) -&gt; str:
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    _dialect = _AsyncConnDialect()
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self, connection: DBAPIConnection, *, terminate: bool = False
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    )
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    Ultimately we would need to rewrite our "decorator" routine completely
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    "fresh",
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    util.warn_deprecated(
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    )
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/IPython/core/interactiveshell.py", line 3369, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "/tmp/ipykernel_21143/276902621.py", line 30, in &lt;cell line: 30&gt;
+    initUsers()
+  File "/tmp/ipykernel_21143/276902621.py", line 8, in initUsers
+    db.create_all()
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/__init__.py", line 1094, in create_all
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/__init__.py", line 1086, in _execute_for_all_tables
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/schema.py", line 4864, in create_all
+    Defines a composite (one or more column) INDEX.
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3122, in _run_ddl_visitor
+    @property
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3038, in begin
+    inherits the events of the parent, and new events can be associated
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3210, in connect
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    shared among threads using properly synchronized access, it is still
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3289, in raw_connection
+    def __init__(
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3259, in _wrap_pool_connect
+    connection, except that its ``close()`` method will result in the
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2106, in _handle_dbapi_exception_noconnection
+    sub_params,
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    Ultimately we would need to rewrite our "decorator" routine completely
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3256, in _wrap_pool_connect
+    The returned object is a proxied version of the DBAPI
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    for fn, target in events:
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    self.__close(terminate=True)
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    def status(self) -&gt; str:
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    _dialect = _AsyncConnDialect()
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self, connection: DBAPIConnection, *, terminate: bool = False
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    )
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    Ultimately we would need to rewrite our "decorator" routine completely
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    "fresh",
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    util.warn_deprecated(
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    )
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/IPython/core/interactiveshell.py", line 1982, in showtraceback
+    stb = self.InteractiveTB.structured_traceback(
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/IPython/core/ultratb.py", line 1118, in structured_traceback
+    return FormattedTB.structured_traceback(
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/IPython/core/ultratb.py", line 1012, in structured_traceback
+    return VerboseTB.structured_traceback(
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/IPython/core/ultratb.py", line 865, in structured_traceback
+    formatted_exception = self.format_exception_as_a_whole(etype, evalue, etb, number_of_lines_of_context,
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/IPython/core/ultratb.py", line 818, in format_exception_as_a_whole
+    frames.append(self.format_record(r))
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/IPython/core/ultratb.py", line 736, in format_record
+    result += ''.join(_format_traceback_lines(frame_info.lines, Colors, self.has_colors, lvals))
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/stack_data/utils.py", line 145, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/stack_data/core.py", line 698, in lines
+    pieces = self.included_pieces
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/stack_data/utils.py", line 145, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/stack_data/core.py", line 649, in included_pieces
+    pos = scope_pieces.index(self.executing_piece)
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/stack_data/utils.py", line 145, in cached_property_wrapper
+    value = obj.__dict__[self.func.__name__] = self.func(obj)
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/stack_data/core.py", line 628, in executing_piece
+    return only(
+  File "/home/nope1013/anaconda3/lib/python3.9/site-packages/executing/executing.py", line 164, in only
+    raise NotOneValueFound('Expected one value, found 0')
+executing.executing.NotOneValueFound: Expected one value, found 0
 </pre>
 </div>
 </div>
@@ -658,7 +772,7 @@ Created new uid raven
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Created
- {'id': 8, 'name': 'Noor Grewal', 'uid': 'grandpa', 'dob': '10-27-2005', 'age': 17}
+ {'id': 7, 'name': 'Bruce Wayne', 'uid': 'bruce', 'dob': '02-20-2020', 'age': 3}
 </pre>
 </div>
 </div>
@@ -735,17 +849,17 @@ Created new uid raven
  {'id': 2,
   'name': 'Nikola Tesla',
   'uid': 'niko',
-  'dob': '03-14-2023',
+  'dob': '03-15-2023',
   'age': 0},
  {'id': 3,
   'name': 'Alexander Graham Bell',
   'uid': 'lex',
-  'dob': '03-14-2023',
+  'dob': '03-15-2023',
   'age': 0},
  {'id': 4,
   'name': 'Eli Whitney',
   'uid': 'whit',
-  'dob': '03-14-2023',
+  'dob': '03-15-2023',
   'age': 0},
  {'id': 5,
   'name': 'Indiana Jones',
@@ -758,15 +872,10 @@ Created new uid raven
   'dob': '10-21-1921',
   'age': 101},
  {'id': 7,
-  'name': 'matt murdock',
-  'uid': 'matt',
-  'dob': '09-19-1980',
-  'age': 42},
- {'id': 8,
-  'name': 'Noor Grewal',
-  'uid': 'grandpa',
-  'dob': '10-27-2005',
-  'age': 17}]</pre>
+  'name': 'Bruce Wayne',
+  'uid': 'bruce',
+  'dob': '02-20-2020',
+  'age': 3}]</pre>
 </div>
 
 </div>
