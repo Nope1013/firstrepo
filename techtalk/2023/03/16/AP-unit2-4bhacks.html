@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      5 min read
     
 </span></p>
 
@@ -170,10 +170,19 @@ window.onload = wrap_img;
 <p>Uses PRAGMA statement to read schema.</p>
 </blockquote>
 <p>Describe Schema, here is resource <a href="https://www.sqlite.org/index.html">Resource</a>- What is a database schema?</p>
+
+<pre><code>- database schema is like a blueprint
+</code></pre>
 <ul>
-<li>What is the purpose of identity Column in SQL database?</li>
-<li>What is the purpose of a primary key in SQL database?</li>
-<li>What are the Data Types in SQL table?</li>
+<li>What is the purpose of identity Column in SQL database?<ul>
+<li>Identity column defines the variable</li>
+<li>In this case it was UID</li>
+</ul>
+</li>
+<li>What is the purpose of a primary key in SQL database?<ul>
+<li>Identifies the user</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -228,10 +237,26 @@ window.onload = wrap_img;
 <p>Uses SQL SELECT statement to read data</p>
 </blockquote>
 <ul>
-<li>What is a connection object?  After you google it, what do you think it does?</li>
-<li>Same for cursor object?</li>
-<li>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?</li>
-<li>Is "results" an object?  How do you know?</li>
+<li>What is a connection object?  After you google it, what do you think it does?<ul>
+<li>should connect to a database</li>
+</ul>
+</li>
+<li>Same for cursor object?<ul>
+<li>makes the connection for executing SQL</li>
+</ul>
+</li>
+<li>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?<ul>
+<li>special variables</li>
+<li>database</li>
+<li>file</li>
+<li>sqlite3</li>
+</ul>
+</li>
+<li>Is "results" an object?  How do you know?<ul>
+<li>results is not an object</li>
+<li>does not show up as an attribute in debugger</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -282,20 +307,20 @@ window.onload = wrap_img;
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-red-fg">OperationalError</span>                          Traceback (most recent call last)
 <span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb Cell 6</span> in <span class="ansi-cyan-fg">&lt;cell line: 24&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=20'&gt;21&lt;/a&gt;</span>     cursor.close()
 <span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=21'&gt;22&lt;/a&gt;</span>     conn.close()
 <span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=23'&gt;24&lt;/a&gt;</span> read()
 
 <span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb Cell 6</span> in <span class="ansi-cyan-fg">read</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> def read():
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span>     # Connect to the database file
-<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span>     conn = sqlite3.connect(database)
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span>     # Create a cursor object to execute SQL queries
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span>     cursor = conn.cursor()
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span> cursor = conn.cursor()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9'&gt;10&lt;/a&gt;</span> # Execute a SELECT statement to retrieve data from a table
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span> results = cursor.execute('SELECT * FROM recipes').fetchall()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span> # Print the results
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=13'&gt;14&lt;/a&gt;</span> if len(results) == 0:
 
-<span class="ansi-red-fg">NameError</span>: name 'database' is not defined</pre>
+<span class="ansi-red-fg">OperationalError</span>: no such table: recipes</pre>
 </div>
 </div>
 
@@ -371,23 +396,9 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb Cell 8</span> in <span class="ansi-cyan-fg">&lt;cell line: 31&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=27'&gt;28&lt;/a&gt;</span>     cursor.close()
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=28'&gt;29&lt;/a&gt;</span>     conn.close()
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=30'&gt;31&lt;/a&gt;</span> create()
-
-<span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb Cell 8</span> in <span class="ansi-cyan-fg">create</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> recipecuisine = input("Enter recipe cuisine:")
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8'&gt;9&lt;/a&gt;</span> # Connect to the database file
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9'&gt;10&lt;/a&gt;</span> conn = sqlite3.connect(database)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span> # Create a cursor object to execute SQL commands
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span> cursor = conn.cursor()
-
-<span class="ansi-red-fg">NameError</span>: name 'database' is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Error while executing the INSERT: no such table: recipes
+</pre>
 </div>
 </div>
 
@@ -406,9 +417,19 @@ window.onload = wrap_img;
 <blockquote>
 <p>Uses SQL UPDATE to modify password</p>
 <ul>
-<li>What does the hacked part do?</li>
-<li>Explain try/except, when would except occur?</li>
-<li>What code seems to be repeated in each of these examples to point, why is it repeated?</li>
+<li>What does the hacked part do?<ul>
+<li>prevents passwords that don't meet criteria</li>
+</ul>
+</li>
+<li>Explain try/except, when would except occur?<ul>
+<li>except occurs when the user input is an exception to the set rules</li>
+</ul>
+</li>
+<li>What code seems to be repeated in each of these examples to point, why is it repeated?<ul>
+<li>The repeated code seems to be input and close</li>
+<li>done to close the cursor and connection objects</li>
+</ul>
+</li>
 </ul>
 </blockquote>
 
@@ -465,25 +486,9 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb Cell 10</span> in <span class="ansi-cyan-fg">&lt;cell line: 32&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=28'&gt;29&lt;/a&gt;</span>     cursor.close()
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=29'&gt;30&lt;/a&gt;</span>     conn.close()
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=31'&gt;32&lt;/a&gt;</span> update()
-
-<span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb Cell 10</span> in <span class="ansi-cyan-fg">update</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span> recipetype = input("Enter recipe type to update")
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> #recipecuisine = input("Enter recipe cuisine to update")
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span> 
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8'&gt;9&lt;/a&gt;</span> # Connect to the database file
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9'&gt;10&lt;/a&gt;</span> conn = sqlite3.connect(database)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span> # Create a cursor object to execute SQL commands
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span> cursor = conn.cursor()
-
-<span class="ansi-red-fg">NameError</span>: name 'database' is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Error while executing the UPDATE: no such table: recipes
+</pre>
 </div>
 </div>
 
@@ -551,6 +556,20 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Error while executing the DELETE: no such table: recipes
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -563,8 +582,10 @@ window.onload = wrap_img;
 <blockquote>
 <p>CRUD and Schema interactions from one location by running menu. Observe input at the top of VSCode, observe output underneath code cell.</p>
 <ul>
-<li>Why does the menu repeat?</li>
-<li>Could you refactor this menu?  Make it work with a List?</li>
+<li>Why does the menu repeat?<ul>
+<li>the call function is a recursion to repeat the menu</li>
+</ul>
+</li>
 </ul>
 </blockquote>
 
