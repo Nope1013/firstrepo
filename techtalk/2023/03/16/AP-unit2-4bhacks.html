@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      9 min read
     
 </span></p>
 
@@ -188,6 +188,231 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
+<span class="sd">These imports define the key objects</span>
+<span class="sd">"""</span>
+
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+
+<span class="sd">"""</span>
+<span class="sd">These object and definitions are used throughout the Jupyter Notebook.</span>
+<span class="sd">"""</span>
+
+<span class="c1"># Setup of key Flask object (app)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="c1"># Setup SQLAlchemy object and properties for the database (db)</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">'sqlite:///sqlite.db'</span>  <span class="c1"># path and filename of database</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_TRACK_MODIFICATIONS'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_DATABASE_URI'</span><span class="p">]</span> <span class="o">=</span> <span class="n">database</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SECRET_KEY'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'SECRET_KEY'</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">()</span>
+
+
+<span class="c1"># This belongs in place where it runs once per project</span>
+<span class="n">db</span><span class="o">.</span><span class="n">init_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">""" database dependencies to support sqliteDB examples """</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="kn">import</span> <span class="n">IntegrityError</span>
+
+
+<span class="sd">''' Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into Python shell and follow along '''</span>
+
+
+<span class="c1"># Define the Recipe class to manage actions in the 'recipes' table</span>
+<span class="c1"># -- Object Relational Mapping (ORM) is the key concept of SQLAlchemy</span>
+<span class="c1"># -- a.) db.Model is like an inner layer of the onion in ORM</span>
+<span class="c1"># -- b.) Recipe represents data we want to store, something that is built on db.Model</span>
+<span class="c1"># -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL</span>
+<span class="k">class</span> <span class="nc">Recipe</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">'recipes'</span>  <span class="c1"># table name is plural, class name is singular</span>
+
+    <span class="c1"># Define the User schema with "vars" from object</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">_recipename</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_recipelink</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_recipetype</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_recipecuisine</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="c1"># Defines a relationship between Recipe record and Notes table, one-to-many (one recipe to many notes)</span>
+
+    <span class="c1"># constructor of a User object, initializes the instance variables within object (self)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">recipename</span><span class="p">,</span> <span class="n">recipelink</span><span class="p">,</span> <span class="n">recipetype</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_recipename</span> <span class="o">=</span> <span class="n">recipename</span>    <span class="c1"># variables with self prefix become part of the object, </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_recipelink</span> <span class="o">=</span> <span class="n">recipelink</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_recipetype</span> <span class="o">=</span> <span class="n">recipetype</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_recipecuisine</span> <span class="o">=</span> <span class="n">recipecuisine</span>
+
+    <span class="c1"># a name getter method, extracts name from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">recipename</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recipename</span>
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    <span class="nd">@recipename</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">recipename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">recipename</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_recipename</span> <span class="o">=</span> <span class="n">recipename</span>
+        
+    <span class="c1"># a getter method, extracts link from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">recipelink</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recipelink</span>
+    <span class="c1"># a setter function, allows link to be updated after initial object creation</span>
+    <span class="nd">@recipelink</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">recipelink</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">recipelink</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_recipelink</span> <span class="o">=</span> <span class="n">recipelink</span>
+        
+    <span class="c1"># a getter method, extracts link from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">recipetype</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recipetype</span>
+    <span class="c1"># a setter function, allows link to be updated after initial object creation</span>
+    <span class="nd">@recipetype</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">recipetype</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">recipetype</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_recipetype</span> <span class="o">=</span> <span class="n">recipetype</span>
+
+    <span class="c1"># a getter method, extracts link from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">recipecuisine</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_recipecuisine</span>
+    <span class="c1"># a setter function, allows link to be updated after initial object creation</span>
+    <span class="nd">@recipecuisine</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">recipecuisine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_recipecuisine</span> <span class="o">=</span> <span class="n">recipecuisine</span>
+        
+    
+    <span class="nd">@property</span>
+    <span class="c1"># output content using str(object) in human readable form, uses getter</span>
+    <span class="c1"># output content using json dumps, this is ready for API response</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+    <span class="c1"># CRUD create/add a new record to the table</span>
+    <span class="c1"># returns self or None on error</span>
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># creates a person object from User(db.Model) class, passes initializers</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>  <span class="c1"># add prepares to persist person object to Users table</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>  <span class="c1"># SqlAlchemy "unit of work pattern" requires a manual commit</span>
+            <span class="k">return</span> <span class="bp">self</span>
+        <span class="k">except</span> <span class="n">IntegrityError</span><span class="p">:</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># CRUD read converts self to dictionary</span>
+    <span class="c1"># returns dictionary</span>
+    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">"id"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">"recipename"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">recipename</span><span class="p">,</span>
+            <span class="s2">"recipelink"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">recipelink</span><span class="p">,</span>
+            <span class="s2">"recipetype"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">recipetype</span><span class="p">,</span>
+            <span class="s2">"recipecuisine"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">recipecuisine</span><span class="p">,</span>
+        <span class="p">}</span>
+
+    <span class="c1"># CRUD update: updates user name, password, phone</span>
+    <span class="c1"># returns self</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">recipename</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">recipelink</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">recipetype</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
+        <span class="sd">"""only updates values with length"""</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">recipename</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">recipename</span> <span class="o">=</span> <span class="n">recipename</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">recipelink</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">recipelink</span> <span class="o">=</span> <span class="n">recipelink</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">recipetype</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">recipetype</span> <span class="o">=</span> <span class="n">recipetype</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">recipecuisine</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">recipecuisine</span> <span class="o">=</span> <span class="n">recipecuisine</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="c1"># CRUD delete: remove self</span>
+    <span class="c1"># None</span>
+    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""Database Creation and Testing """</span>
+
+
+<span class="c1"># Builds working data for testing</span>
+<span class="k">def</span> <span class="nf">initRecipes</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="sd">"""Create database and tables"""</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
+        <span class="sd">"""Tester data for table"""</span>
+        <span class="n">r1</span> <span class="o">=</span> <span class="n">Recipe</span><span class="p">(</span><span class="n">recipename</span><span class="o">=</span><span class="s1">'Avocado Toast'</span><span class="p">,</span> <span class="n">recipelink</span><span class="o">=</span><span class="s1">'link1'</span><span class="p">,</span> <span class="n">recipetype</span><span class="o">=</span><span class="s1">'Breakfast'</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="o">=</span><span class="s1">'American'</span><span class="p">)</span>
+        <span class="n">r2</span> <span class="o">=</span> <span class="n">Recipe</span><span class="p">(</span><span class="n">recipename</span><span class="o">=</span><span class="s1">'Scrambled Eggs'</span><span class="p">,</span> <span class="n">recipelink</span><span class="o">=</span><span class="s1">'link2'</span><span class="p">,</span> <span class="n">recipetype</span><span class="o">=</span><span class="s1">'Breakfast'</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="o">=</span><span class="s1">'American'</span><span class="p">)</span>
+        <span class="n">r3</span> <span class="o">=</span> <span class="n">Recipe</span><span class="p">(</span><span class="n">recipename</span><span class="o">=</span><span class="s1">'Pancake'</span><span class="p">,</span> <span class="n">recipelink</span><span class="o">=</span><span class="s1">'link3'</span><span class="p">,</span> <span class="n">recipetype</span><span class="o">=</span><span class="s1">'Breakfast'</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="o">=</span><span class="s1">'American'</span><span class="p">)</span>
+        <span class="n">r4</span> <span class="o">=</span> <span class="n">Recipe</span><span class="p">(</span><span class="n">recipename</span><span class="o">=</span><span class="s1">'Mac and Cheese'</span><span class="p">,</span> <span class="n">recipelink</span><span class="o">=</span><span class="s1">'link4'</span><span class="p">,</span> <span class="n">recipetype</span><span class="o">=</span><span class="s1">'Lunch'</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="o">=</span><span class="s1">'American'</span><span class="p">)</span>
+        <span class="n">r5</span> <span class="o">=</span> <span class="n">Recipe</span><span class="p">(</span><span class="n">recipename</span><span class="o">=</span><span class="s1">'Panini Sandwich'</span><span class="p">,</span> <span class="n">recipelink</span><span class="o">=</span><span class="s1">'link5'</span><span class="p">,</span> <span class="n">recipetype</span><span class="o">=</span><span class="s1">'Lunch'</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="o">=</span><span class="s1">'French'</span><span class="p">)</span>
+        <span class="n">r6</span> <span class="o">=</span> <span class="n">Recipe</span><span class="p">(</span><span class="n">recipename</span><span class="o">=</span><span class="s1">'Salad'</span><span class="p">,</span> <span class="n">recipelink</span><span class="o">=</span><span class="s1">'link6'</span><span class="p">,</span> <span class="n">recipetype</span><span class="o">=</span><span class="s1">'Lunch'</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="o">=</span><span class="s1">'Mediterranean'</span><span class="p">)</span>
+        <span class="n">r7</span> <span class="o">=</span> <span class="n">Recipe</span><span class="p">(</span><span class="n">recipename</span><span class="o">=</span><span class="s1">'Minestrone Soup'</span><span class="p">,</span> <span class="n">recipelink</span><span class="o">=</span><span class="s1">'link7'</span><span class="p">,</span> <span class="n">recipetype</span><span class="o">=</span><span class="s1">'Dinner'</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="o">=</span><span class="s1">'Italian'</span><span class="p">)</span>
+        <span class="n">r8</span> <span class="o">=</span> <span class="n">Recipe</span><span class="p">(</span><span class="n">recipename</span><span class="o">=</span><span class="s1">'Lasagna'</span><span class="p">,</span> <span class="n">recipelink</span><span class="o">=</span><span class="s1">'link8'</span><span class="p">,</span> <span class="n">recipetype</span><span class="o">=</span><span class="s1">'Dinner'</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="o">=</span><span class="s1">'Italian'</span><span class="p">)</span>
+        <span class="n">r9</span> <span class="o">=</span> <span class="n">Recipe</span><span class="p">(</span><span class="n">recipename</span><span class="o">=</span><span class="s1">'Pasta'</span><span class="p">,</span> <span class="n">recipelink</span><span class="o">=</span><span class="s1">'link9'</span><span class="p">,</span> <span class="n">recipetype</span><span class="o">=</span><span class="s1">'Dinner'</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="o">=</span><span class="s1">'Italian'</span><span class="p">)</span>
+        <span class="n">r10</span> <span class="o">=</span> <span class="n">Recipe</span><span class="p">(</span><span class="n">recipename</span><span class="o">=</span><span class="s1">'Brownies'</span><span class="p">,</span> <span class="n">recipelink</span><span class="o">=</span><span class="s1">'link10'</span><span class="p">,</span> <span class="n">recipetype</span><span class="o">=</span><span class="s1">'Dessert'</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="o">=</span><span class="s1">'German'</span><span class="p">)</span>
+        <span class="n">r11</span> <span class="o">=</span> <span class="n">Recipe</span><span class="p">(</span><span class="n">recipename</span><span class="o">=</span><span class="s1">'Chocolate Chip Cookies'</span><span class="p">,</span> <span class="n">recipelink</span><span class="o">=</span><span class="s1">'link11'</span><span class="p">,</span> <span class="n">recipetype</span><span class="o">=</span><span class="s1">'Dessert'</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="o">=</span><span class="s1">'American'</span><span class="p">)</span>
+        <span class="n">r12</span> <span class="o">=</span> <span class="n">Recipe</span><span class="p">(</span><span class="n">recipename</span><span class="o">=</span><span class="s1">'Custard Pudding'</span><span class="p">,</span> <span class="n">recipelink</span><span class="o">=</span><span class="s1">'link12'</span><span class="p">,</span> <span class="n">recipetype</span><span class="o">=</span><span class="s1">'Dessert'</span><span class="p">,</span> <span class="n">recipecuisine</span><span class="o">=</span><span class="s1">'German'</span><span class="p">)</span>
+    
+        <span class="n">recipes</span> <span class="o">=</span> <span class="p">[</span><span class="n">r1</span><span class="p">,</span> <span class="n">r2</span><span class="p">,</span> <span class="n">r3</span><span class="p">,</span> <span class="n">r4</span><span class="p">,</span> <span class="n">r5</span><span class="p">,</span> <span class="n">r6</span><span class="p">,</span> <span class="n">r7</span><span class="p">,</span> <span class="n">r8</span><span class="p">,</span> <span class="n">r9</span><span class="p">,</span> <span class="n">r10</span><span class="p">,</span> <span class="n">r11</span><span class="p">,</span> <span class="n">r12</span><span class="p">]</span>
+
+        <span class="sd">"""Builds sample user/note(s) data"""</span>
+        <span class="k">for</span> <span class="n">recipe</span> <span class="ow">in</span> <span class="n">recipes</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">recipe</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+            <span class="k">except</span> <span class="n">IntegrityError</span><span class="p">:</span>
+                <span class="sd">'''fails with bad or duplicate data'''</span>
+                <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Records exist, duplicate email, or error: </span><span class="si">{</span><span class="n">recipe</span><span class="o">.</span><span class="n">model</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -308,12 +533,12 @@ window.onload = wrap_img;
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">OperationalError</span>                          Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb Cell 6</span> in <span class="ansi-cyan-fg">&lt;cell line: 24&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb Cell 9</span> in <span class="ansi-cyan-fg">&lt;cell line: 24&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=20'&gt;21&lt;/a&gt;</span>     cursor.close()
 <span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=21'&gt;22&lt;/a&gt;</span>     conn.close()
 <span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=23'&gt;24&lt;/a&gt;</span> read()
 
-<span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb Cell 6</span> in <span class="ansi-cyan-fg">read</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb Cell 9</span> in <span class="ansi-cyan-fg">read</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span> cursor = conn.cursor()
 <span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9'&gt;10&lt;/a&gt;</span> # Execute a SELECT statement to retrieve data from a table
 <span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/home/nope1013/vscode/firstrepo/_notebooks/2023-03-16-AP-unit2-4bhacks.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span> results = cursor.execute('SELECT * FROM recipes').fetchall()
@@ -507,8 +732,10 @@ window.onload = wrap_img;
 <blockquote>
 <p>Uses a delete function to remove a user based on a user input of the id.</p>
 <ul>
-<li>Is DELETE a dangerous operation?  Why?</li>
-<li>In the print statemements, what is the "f" and what does {uid} do?</li>
+<li>Is DELETE a dangerous operation?  Why?<ul>
+<li>data cannot be recovered</li>
+</ul>
+</li>
 </ul>
 </blockquote>
 
