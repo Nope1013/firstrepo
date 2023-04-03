@@ -10,17 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Observing hashmaps with python dictionaries" />
 <meta property="og:description" content="Observing hashmaps with python dictionaries" />
-<link rel="canonical" href="https://nope1013.github.io/firstrepo/2023/03/29/DS-hashmaps.html" />
-<meta property="og:url" content="https://nope1013.github.io/firstrepo/2023/03/29/DS-hashmaps.html" />
+<link rel="canonical" href="https://nope1013.github.io/firstrepo/ap%20prep/2023/03/29/DS-hashmaps.html" />
+<meta property="og:url" content="https://nope1013.github.io/firstrepo/ap%20prep/2023/03/29/DS-hashmaps.html" />
 <meta property="og:site_name" content="Noor’s Blog :)" />
-<meta property="og:image" content="https://nope1013.github.io/firstrepo/images/python.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-03-29T00:00:00-05:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://nope1013.github.io/firstrepo/images/python.png" />
+<meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-29T00:00:00-05:00","datePublished":"2023-03-29T00:00:00-05:00","description":"Observing hashmaps with python dictionaries","headline":"Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions","image":"https://nope1013.github.io/firstrepo/images/python.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://nope1013.github.io/firstrepo/2023/03/29/DS-hashmaps.html"},"url":"https://nope1013.github.io/firstrepo/2023/03/29/DS-hashmaps.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-29T00:00:00-05:00","datePublished":"2023-03-29T00:00:00-05:00","description":"Observing hashmaps with python dictionaries","headline":"Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions","mainEntityOfPage":{"@type":"WebPage","@id":"https://nope1013.github.io/firstrepo/ap%20prep/2023/03/29/DS-hashmaps.html"},"url":"https://nope1013.github.io/firstrepo/ap%20prep/2023/03/29/DS-hashmaps.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/firstrepo/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://nope1013.github.io/firstrepo/feed.xml" title="Noor's Blog :)" /><link rel="shortcut icon" type="image/x-icon" href="/firstrepo/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -81,10 +79,17 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      9 min read
     
 </span></p>
 
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/firstrepo/categories/#ap prep">ap prep</a>
+        
+      
+      </p>
     
 
     
@@ -143,14 +148,15 @@ window.onload = wrap_img;
 <p>A hashtable is a data structure that with a collection of key-value pairs, where each key maps to a value, and the keys must be unique and hashable.</p>
 </blockquote>
 <ul>
-<li>In Python there is a built in hashtable known as a <strong><strong><strong>___</strong></strong></strong>.</li>
+<li>In Python there is a built in hashtable known as a <strong>dictionary</strong>.</li>
 </ul>
 <blockquote>
 <p>The primary purpose of a hashtable is to provide efficient lookup, insertion, and deletion operations. When an element is to be inserted into the hashtable, a hash function is used to map the key to a specific index in the underlying array that is used to store the key-value pairs. The value is then stored at that index. When searching for a value, the hash function is used again to find the index where the value is stored.</p>
 <p>The key advantage of a hashtable over other data structures like arrays and linked lists is its average-case time complexity for lookup, insertion, and deletion operations.</p>
 </blockquote>
 <ul>
-<li>The typical time complexity of a hashtable is <strong><strong><strong>___</strong></strong></strong>. </li>
+<li>The typical time complexity of a hashtable is <strong>O(1)</strong>. </li>
+<li>each key only has 1 value</li>
 </ul>
 
 </div>
@@ -184,15 +190,29 @@ window.onload = wrap_img;
 <span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>  
 
 <span class="c1"># What do you notice in the output?</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1"># It did not print repeats</span>
+<span class="c1"># It printed in numerical order</span>
 
 <span class="c1"># Why do you think Sets are in the same tech talk as Hashmaps/Hashtables?</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1"># They look like dictionaries </span>
+<span class="c1"># No duplicates</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1, 2, 3}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -245,14 +265,29 @@ window.onload = wrap_img;
 <span class="p">}</span>
 
 <span class="c1"># What data structures do you see?</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1"># Lists</span>
+<span class="c1"># Integers</span>
+<span class="c1"># Dictionary</span>
 
 <span class="c1"># Printing the dictionary</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'title': 'Lover', 'artist': 'Taylor Swift', 'year': 2019, 'genre': ['Pop', 'Synth-pop'], 'tracks': {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight'}}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -275,6 +310,21 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight'}
+{1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight'}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -294,6 +344,21 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The Man
+The Man
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -307,14 +372,27 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lover_album</span><span class="p">[</span><span class="s2">"producer"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Taylor Swift'</span><span class="p">,</span> <span class="s1">'Jack Antonoff'</span><span class="p">,</span> <span class="s1">'Joel Little'</span><span class="p">,</span> <span class="s1">'Taylor Swift'</span><span class="p">,</span> <span class="s1">'Louis Bell'</span><span class="p">,</span> <span class="s1">'Frank Dukes'</span><span class="p">]</span>
 
 <span class="c1"># What can you change to make sure there are no duplicate producers?</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1"># Use a set to remove duplicates#</span>
 
 <span class="c1"># Printing the dictionary</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'title': 'Lover', 'artist': 'Taylor Swift', 'year': 2019, 'genre': ['Pop', 'Synth-pop'], 'tracks': {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight'}, 'producer': ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes']}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -331,14 +409,27 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lover_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="mi">19</span><span class="p">:</span> <span class="s2">"All Of The Girls You Loved Before"</span><span class="p">})</span>
 
 <span class="c1"># How would add an additional genre to the dictionary, like electropop? </span>
-<span class="c1"># </span>
-<span class="c1"># </span>
+<span class="c1"># Add it to the genre set</span>
 
 <span class="c1"># Printing the dictionary</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lover_album</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'title': 'Lover', 'artist': 'Taylor Swift', 'year': 2019, 'genre': ['Pop', 'Synth-pop'], 'tracks': {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight', 19: 'All Of The Girls You Loved Before'}, 'producer': ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes']}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -356,11 +447,29 @@ window.onload = wrap_img;
     <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
 
 <span class="c1"># Write your own code to print tracks in readable format</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1"># check dm_album</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>title: Lover
+artist: Taylor Swift
+year: 2019
+genre: ['Pop', 'Synth-pop']
+tracks: {1: 'I Forgot That You Existed', 2: 'Cruel Summer', 3: 'Lover', 4: 'The Man', 5: 'The Archer', 6: 'I Think He Knows', 7: 'Miss Americana &amp; The Heartbreak Prince', 8: 'Paper Rings', 9: 'Cornelia Street', 10: 'Death By A Thousand Cuts', 11: 'London Boy', 12: "Soon You'll Get Better (feat. Dixie Chicks)", 13: 'False God', 14: 'You Need To Calm Down', 15: 'Afterglow', 16: 'Me! (feat. Brendon Urie of Panic! At The Disco)', 17: "It's Nice To Have A Friend", 18: 'Daylight', 19: 'All Of The Girls You Loved Before'}
+producer: ['Taylor Swift', 'Jack Antonoff', 'Joel Little', 'Taylor Swift', 'Louis Bell', 'Frank Dukes']
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -384,11 +493,24 @@ window.onload = wrap_img;
 <span class="n">search</span><span class="p">()</span>
 
 <span class="c1"># This is a very basic code segment, how can you improve upon this code?</span>
-<span class="c1">#</span>
-<span class="c1">#</span>
+<span class="c1"># Error checking</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['Pop', 'Synth-pop']
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -413,18 +535,212 @@ window.onload = wrap_img;
 <p>Build your own album showing features of a python dictionary</p>
 </li>
 <li>
-<p>For Mr. Yeung's class: Justify your favorite Taylor Swift song, answer may effect seed</p>
+<p>For Mr. Yeung's class: Justify your favorite Taylor Swift song, answer may affect seed</p>
 </li>
 </ul>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dm_album</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Death Magnetic"</span><span class="p">,</span>
+    <span class="s2">"artist"</span><span class="p">:</span> <span class="s2">"Metallica"</span><span class="p">,</span>
+    <span class="s2">"label"</span><span class="p">:</span> <span class="s2">"Vertigo Records"</span><span class="p">,</span>
+    <span class="s2">"year"</span><span class="p">:</span> <span class="mi">2008</span><span class="p">,</span>
+    <span class="s2">"genre"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Heavy metal"</span><span class="p">,</span> <span class="s2">"Thrash metal"</span><span class="p">],</span>
+    <span class="s2">"awards"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Kerrang! Award for Best Album"</span><span class="p">,</span> <span class="s2">"Grammy Award for Best Recording Package"</span><span class="p">],</span>
+    <span class="s2">"tracks"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">"That Was Just Your Life"</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">"The End of the Line"</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">"Broken, Beat &amp; Scarred"</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">"The Day That Never Comes"</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">"All Nightmare Long"</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">"Cyanide"</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">"The Unforgiven III"</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">"The Judas Kiss"</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">"Suicide &amp; Redemption"</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">"My Apocalypse"</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dm_album</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{'title': 'Death Magnetic', 'artist': 'Metallica', 'label': 'Vertigo Records', 'year': 2008, 'genre': ['Heavy metal', 'Thrash metal'], 'awards': ['Kerrang! Award for Best Album', 'Grammy Award for Best Recording Package'], 'tracks': {1: 'That Was Just Your Life', 2: 'The End of the Line', 3: 'Broken, Beat &amp; Scarred', 4: 'The Day That Never Comes', 5: 'All Nightmare Long', 6: 'Cyanide', 7: 'The Unforgiven III', 8: 'The Judas Kiss', 9: 'Suicide &amp; Redemption', 10: 'My Apocalypse'}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Noor's favorite songs from this album are:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dm_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="s2">", and "</span> <span class="o">+</span> <span class="n">dm_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">][</span><span class="mi">7</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Noor's favorite songs from this album are:
+The Day That Never Comes, and The Unforgiven III
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dm_album</span><span class="p">[</span><span class="s2">"band members"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'James Hetfield'</span><span class="p">,</span> <span class="s1">'Kirk Hammett'</span><span class="p">,</span> <span class="s1">'Robert Trujillo'</span><span class="p">,</span> <span class="s1">'Lars Ulrich'</span><span class="p">,</span> <span class="s1">'Kirk Hammett'</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dm_album</span><span class="p">[</span><span class="s2">"band members"</span><span class="p">])</span>
+
+<span class="n">band_members</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">'James Hetfield'</span><span class="p">,</span> <span class="s1">'Kirk Hammett'</span><span class="p">,</span> <span class="s1">'Robert Trujillo'</span><span class="p">,</span> <span class="s1">'Lars Ulrich'</span><span class="p">,</span> <span class="s1">'Kirk Hammett'</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">band_members</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['James Hetfield', 'Kirk Hammett', 'Robert Trujillo', 'Lars Ulrich', 'Kirk Hammett']
+{'Robert Trujillo', 'Lars Ulrich', 'James Hetfield', 'Kirk Hammett'}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dm_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="mi">11</span><span class="p">:</span> <span class="s2">"Nonexistent but Epic Metallica Song"</span><span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dm_album</span><span class="p">[</span><span class="s2">"tracks"</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1: 'That Was Just Your Life', 2: 'The End of the Line', 3: 'Broken, Beat &amp; Scarred', 4: 'The Day That Never Comes', 5: 'All Nightmare Long', 6: 'Cyanide', 7: 'The Unforgiven III', 8: 'The Judas Kiss', 9: 'Suicide &amp; Redemption', 10: 'My Apocalypse', 11: 'Nonexistent but Epic Metallica Song'}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">dm_album</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>title: Death Magnetic
+artist: Metallica
+label: Vertigo Records
+year: 2008
+genre: ['Heavy metal', 'Thrash metal']
+awards: ['Kerrang! Award for Best Album', 'Grammy Award for Best Recording Package']
+tracks: {1: 'That Was Just Your Life', 2: 'The End of the Line', 3: 'Broken, Beat &amp; Scarred', 4: 'The Day That Never Comes', 5: 'All Nightmare Long', 6: 'Cyanide', 7: 'The Unforgiven III', 8: 'The Judas Kiss', 9: 'Suicide &amp; Redemption', 10: 'My Apocalypse', 11: 'Nonexistent but Epic Metallica Song'}
+band members: ['James Hetfield', 'Kirk Hammett', 'Robert Trujillo', 'Lars Ulrich', 'Kirk Hammett']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
 
-  </div><a class="u-url" href="/firstrepo/2023/03/29/DS-hashmaps.html" hidden></a>
+  </div><a class="u-url" href="/firstrepo/ap%20prep/2023/03/29/DS-hashmaps.html" hidden></a>
 </article>
 
       </div>
