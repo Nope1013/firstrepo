@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Welcome to my page!" />
 <meta property="og:description" content="Welcome to my page!" />
-<link rel="canonical" href="https://nope1013.github.io/firstrepo/2023/04/23/sass-lesson.html" />
-<meta property="og:url" content="https://nope1013.github.io/firstrepo/2023/04/23/sass-lesson.html" />
+<link rel="canonical" href="https://nope1013.github.io/firstrepo/2023/04/28/sass-lesson.html" />
+<meta property="og:url" content="https://nope1013.github.io/firstrepo/2023/04/28/sass-lesson.html" />
 <meta property="og:site_name" content="Noor’s Blog :)" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-04-23T00:00:00-05:00" />
+<meta property="article:published_time" content="2023-04-28T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="SASS" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-23T00:00:00-05:00","datePublished":"2023-04-23T00:00:00-05:00","description":"Welcome to my page!","headline":"SASS","mainEntityOfPage":{"@type":"WebPage","@id":"https://nope1013.github.io/firstrepo/2023/04/23/sass-lesson.html"},"url":"https://nope1013.github.io/firstrepo/2023/04/23/sass-lesson.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-28T00:00:00-05:00","datePublished":"2023-04-28T00:00:00-05:00","description":"Welcome to my page!","headline":"SASS","mainEntityOfPage":{"@type":"WebPage","@id":"https://nope1013.github.io/firstrepo/2023/04/28/sass-lesson.html"},"url":"https://nope1013.github.io/firstrepo/2023/04/28/sass-lesson.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/firstrepo/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://nope1013.github.io/firstrepo/feed.xml" title="Noor's Blog :)" /><link rel="shortcut icon" type="image/x-icon" href="/firstrepo/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,13 +73,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">SASS</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-23T00:00:00-05:00" itemprop="datePublished">
-        Apr 23, 2023
+    <h1 class="post-title p-name" itemprop="name headline">SASS</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-28T00:00:00-05:00" itemprop="datePublished">
+        Apr 28, 2023
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      6 min read
     
 </span></p>
 
@@ -127,7 +127,7 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Why-SASS?">Why SASS?<a class="anchor-link" href="#Why-SASS?"> </a></h1><p>SASS is an improvement on CSS in that there are methods of abstraction. It is a <strong><em>__</em></strong> language that is <strong>_</strong> into CSS, which means that <strong><strong>__</strong></strong>, which is what your web browser can read.</p>
+<h1 id="Why-SASS?">Why SASS?<a class="anchor-link" href="#Why-SASS?"> </a></h1><p>SASS is an improvement on CSS in that there are methods of abstraction. It is a stylesheet language that is compiled into CSS, which means that Sass will translate the Sass code you wrote into CSS, which is what your web browser can read.</p>
 <h1 id="SASS-vs-SCSS">SASS vs SCSS<a class="anchor-link" href="#SASS-vs-SCSS"> </a></h1><p>As you learn about Sass, you might notice something called Scss. They are basically the same thing except that Scss uses curly braces and semicolons to distinguish between lines. Sass uses indentation and newlines instead.</p>
 <p>We will be teaching the Scss syntax because it is more commonly used.</p>
 
@@ -149,7 +149,44 @@ window.onload = wrap_img;
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Nesting">Nesting<a class="anchor-link" href="#Nesting"> </a></h1><p>Take notes here</p>
+<h1 id="Nesting">Nesting<a class="anchor-link" href="#Nesting"> </a></h1><ul>
+<li>Many selectors to share the same element</li>
+<li>SASS allows for nesting which lets you style like HTML</li>
+<li>A div element controls font, and then you can create other elements within that one to alter size, color, etc
+```</li>
+</ul>
+
+<pre><code>.font {
+
+     .title {
+
+    font-family: "Times New Roman", serif;
+
+    font-size: 3em;
+
+    .text {
+
+     font-family: "Times New Roman", serif;
+
+     font-size: 1em;/div&gt;
+
+}
+
+&lt;div class="font"&gt;
+
+    &lt;div class="title"&gt;
+
+    &lt;p&gt;Title&lt;/p&gt;
+
+    &lt;/div&gt;
+
+    &lt;div class="text"&gt;
+
+    &lt;p&gt;This is some text&lt;/p&gt;
+
+    &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
 
 </div>
 </div>
@@ -165,6 +202,16 @@ window.onload = wrap_img;
 .a .c {
     color: blue;
 }</code></pre>
+<p>Sass equivalent:
+```
+.a {
+  .b {
+    color: green;
+  }</p>
+<p>.c {
+    color: blue;
+  }
+}</p>
 
 </div>
 </div>
@@ -172,35 +219,122 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Extend/Inheritance">Extend/Inheritance<a class="anchor-link" href="#Extend/Inheritance"> </a></h1><p>What are some similarities that the buttons share? What are the differences?</p>
-<p>Take notes here</p>
+<ul>
+<li>All have color gradients</li>
+<li>They all have the same height and width</li>
+<li>some differences are the colors</li>
+<li>Same attributes except for the hue</li>
+<li>We can create a placeholder class that stores the code we want to reuse</li>
+<li>Example of placeholder:</li>
+</ul>
+<p>%class-name { }</p>
+<p>Can use SASS to specify height, width, color, and much more. A selector needs to be created for each button in order to call with extend. The color gradients are also specified in this area.</p>
+<ol>
+<li><p>Create a placeholder class for the layout of each button
+```
+%buttonLayout is the template each button
+%buttonLayout {</p>
+<p>width: 15em;</p>
+<p>height: 15em;</p>
+<p>color: #ffffff;</p>
+<p>margin-right: 10%;</p>
+</li>
+</ol>
+<p>}</p>
+
+<pre><code>2. Create a selector for each button</code></pre>
+<p>call code from the placeholder class using @extend %class-name
+.gettingStartedButton, .nestingButton, .extendButton {</p>
+
+<pre><code>@extend %buttonLayout;
+
+</code></pre>
+<p>}
+```</p>
+<ol>
+<li>Customize each button.<ul>
+<li>use different background colors</li>
+<li>they must be individually coded</li>
+</ul>
+</li>
+</ol>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Mixin">Mixin<a class="anchor-link" href="#Mixin"> </a></h1><p>Take notes here</p>
+<h1 id="Mixin">Mixin<a class="anchor-link" href="#Mixin"> </a></h1><ul>
+<li>Similar to extend in that it creates code templates that can be reused and manipulated in order for styling</li>
+<li>Mixin also allows for styling rules that do not take in variables</li>
+<li><p>With the buttons example, mixin uses two colors to create one gradient</p>
+<ul>
+<li><p>mixin can take in parameters to create dynamic styling:</p>
+
+<pre><code>@mixin buttonLayout($innerColor, $outerColor) {
+
+background: radial-gradient($innerColor, $outerColor);
+
+}</code></pre>
+</li>
+</ul>
+</li>
+<li>Can use mixin to place styling rules that don't take in variables</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Mini-hack">Mini-hack<a class="anchor-link" href="#Mini-hack"> </a></h1><p>Write out a mixin in SASS that takes in a color and a font size as the parameter. Within the mixin, set the background color and font color to the color parameter, and set the font size to the font size parameter. Then create a selector that calls the mixin, and pass in a color and font size of your choice as the arguments.</p>
+<h1 id="Mini-hack">Mini-hack<a class="anchor-link" href="#Mini-hack"> </a></h1><p>Write out a mixin in SASS that takes in a color and a font size as the parameter. Within the mixin, set the background color and font color to the color parameter, and set the font size to the font size parameter. Then create a selector that calls the mixin, and pass in a color and font size of your choice as the arguments.
+```
+@mixin newFont($background-color, $font-color, $font-size) {</p>
+
+<pre><code>background-color: $color;
+font-color: $color;
+font-size: $font-size
+
+</code></pre>
+<p>}</p>
+<p>.selector {
+    @include newFont(#6e0000, #000000, 14px);
+}</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Function">Function<a class="anchor-link" href="#Function"> </a></h1><p>Take notes here</p>
+<h1 id="Function">Function<a class="anchor-link" href="#Function"> </a></h1><ul>
+<li>An invert function is used to change between light and dark mode</li>
+<li>The Sass function takes in an rbg value and returns an inverted rbg color</li>
+<li><p>To invert colors, we need to subtract each rgb value from 255:</p>
+
+<pre><code>@function sassInvert($r, $g, $b) {
+
+  $newColor: rgb(255 - $r, 255 - $g, 255 - $b);
+
+  @return $newColor;
+}</code></pre>
+</li>
+<li>You can call functions by specifying the function name with parentheses</li>
+<li>Within those parentheses, you specify the arguments</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Import">Import<a class="anchor-link" href="#Import"> </a></h1><p>Take notes here</p>
+<h1 id="Import">Import<a class="anchor-link" href="#Import"> </a></h1><ul>
+<li>A Sass file can get cluttered if too much styling is configured</li>
+<li>We can split code into multiple files, and import them into one file</li>
+<li>For instance, to put the styling for function.html in another SASS file, first create a directory called _sass</li>
+<li>Within the directory, create another SASS file (functionStyle.scss)</li>
+<li>Write your SASS code in that file. Once you are finished, switch back to style.scss and import the file with @import "file-name"</li>
+<li>For example, to import the functionStyle.scss file into style.scss, the import statement would be @import "functionStyle"</li>
+</ul>
 
 </div>
 </div>
@@ -221,11 +355,82 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Quiz-Questions">Quiz Questions<a class="anchor-link" href="#Quiz-Questions"> </a></h3><ol>
+<li><p>What is SASS?</p>
+<p>b. A scripting language that has many styling operations</p>
+</li>
+<li><p>What is the difference between SASS and SCSS?</p>
+<p>a. They are very similar in their function, but their syntax is slightly different</p>
+</li>
+<li><p>What is an example of an advantage of using SASS over just CSS?</p>
+<p>a. SASS has more functions than CSS</p>
+</li>
+<li><p>What does SASS stand for?</p>
+<p>b. Syntactically Awesome Style Sheets</p>
+</li>
+<li><p>Which of the following is NOT an example of an available SASS directive?</p>
+<p>d. compute</p>
+</li>
+<li><p>The __ directive is used to share rules and relationships between selectors.</p>
+<p>b. extend</p>
+</li>
+<li><p>What is “@___” called?</p>
+<p>b. Directive</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Hack-3">Hack 3<a class="anchor-link" href="#Hack-3"> </a></h3>
+<pre><code>.button {
+  padding: 10px;
+  border: 1px solid #000000;
+}
+
+.submit-button {
+  @extend .button;
+  background-color: #977aff;
+  color: #fff;
+}</code></pre>
+<p>For this hack, I followed a W3Schools tutorial to create a basic button selector, ".button," which can be used for multiple different types of buttons. For the .submit-button selector, I used the styles from the .button index to create a submit button, and defined my own colors for it.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Extra-Credit">Extra Credit<a class="anchor-link" href="#Extra-Credit"> </a></h3><p>Sass directives:</p>
+<ul>
+<li>@import: used to import one SASS file into another.</li>
+<li>@extend: used to inherit styles from one selector to another.</li>
+<li>@mixin: used to define a reusable set of styles.</li>
+<li>@include: used to include a mixin in a selector.</li>
+<li>@if: used to control the flow of code based on conditions.</li>
+<li>@else: used to define an alternate code path for an @if statement.</li>
+<li>@for: used to create a loop that iterates a specific number of times.</li>
+<li>@while: used to create a loop that continues as long as a condition is true.</li>
+<li>@each: used to iterate over a list or map.</li>
+<li>@function: used to define a reusable block of code that returns a value.</li>
+<li>@return: used to return a value from a function.</li>
+<li>@debug: used to print a debug message to the console during compilation.</li>
+<li>@warn: used to print a warning message to the console during compilation.</li>
+<li>@error: used to throw an error during compilation.</li>
+</ul>
+<p>Sass can be used to create programs for other programming languages such as JavaScript and Python, using directives such as @if, @else, @for, @while, @each, @function, and @return.</p>
+
+</div>
+</div>
+</div>
 </div>
 
 
 
-  </div><a class="u-url" href="/firstrepo/2023/04/23/sass-lesson.html" hidden></a>
+  </div><a class="u-url" href="/firstrepo/2023/04/28/sass-lesson.html" hidden></a>
 </article>
 
       </div>
