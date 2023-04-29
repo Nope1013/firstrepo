@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -529,11 +529,19 @@ false
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kr">const</span> <span class="nx">myObject</span> <span class="o">=</span> <span class="p">{</span>
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">//const myObject = {</span>
+    <span class="c1">//[mySymbol]: &#39;Hello World&#39;</span>
+  <span class="c1">//};</span>
+  
+  <span class="c1">//console.log(mySymbol);original code</span>
+
+<span class="c1">// I&#39;ve always had a problem installing the java kernel, so I cannot run java code, but the code I wrote shoudl theoretically operate </span>
+<span class="kr">const</span> <span class="nx">mySymbol</span> <span class="o">=</span> <span class="nx">Symbol</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">myObject</span> <span class="o">=</span> <span class="p">{</span>
     <span class="p">[</span><span class="nx">mySymbol</span><span class="p">]</span><span class="o">:</span> <span class="s1">&#39;Hello World&#39;</span>
   <span class="p">};</span>
-  
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myObject</span><span class="p">);</span>
+    
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myObject</span><span class="p">[</span><span class="nx">mySymbol</span><span class="p">]);</span>
 </pre></div>
 
     </div>
@@ -577,8 +585,8 @@ false
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Object</p>
 <ul>
-<li>Identify the name/keys in the object below: <strong><strong>, </strong></strong>, <em>__</em></li>
-<li>Identify the values in the object below: <strong><strong>, </strong></strong>, <em>__</em></li>
+<li>Identify the name/keys in the object below: name, breed, age, color</li>
+<li>Identify the values in the object below: Elly, Rottweiler, 4, black</li>
 </ul>
 
 </div>
@@ -839,6 +847,33 @@ false
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kd">let</span> <span class="nx">today</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+<span class="kd">let</span> <span class="nx">currentHour</span> <span class="o">=</span> <span class="nx">today</span><span class="p">.</span><span class="nx">getHours</span><span class="p">();</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">currentHour</span> <span class="o">&lt;</span> <span class="mf">12</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Good morning!&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">currentHour</span> <span class="o">&lt;</span> <span class="mf">18</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Good afternoon!&quot;</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Good evening!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">// as mentioned before, I cannot run my code due to my kernel issue</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Functions:">Functions:<a class="anchor-link" href="#Functions:"> </a></h3>
@@ -867,10 +902,28 @@ false
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="JavaScript-in-HTML--Questions">JavaScript in HTML- Questions<a class="anchor-link" href="#JavaScript-in-HTML--Questions"> </a></h1><ol>
 <li>Where do you store the JavaScript Code?</li>
+</ol>
+<ul>
+<li>In the &lt; head &gt; section of an HTML page</li>
+</ul>
+<ol>
 <li>How do you import a JS file into HTML?</li>
+</ol>
+<ul>
+<li>You first save the JS file with a .js extension, and then use the src attribute to refer to it in HTML: the &lt; script &gt; tag within the code</li>
+</ul>
+<ol>
 <li>What is onClick?</li>
+</ol>
+<ul>
+<li>The function that allows code to be executed when someone clicks on it</li>
+</ul>
+<ol>
 <li>What tag do you use to write JavaScript code?</li>
 </ol>
+<ul>
+<li>the &lt; script&gt; tag</li>
+</ul>
 
 </div>
 </div>
