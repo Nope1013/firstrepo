@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      12 min read
+      21 min read
     
 </span></p>
 
@@ -163,24 +163,20 @@ window.onload = wrap_img;
 <h1 id="Predictive-Analysis">
 <a class="anchor" href="#Predictive-Analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Predictive Analysis<a class="anchor-link" href="#Predictive-Analysis"> </a>
 </h1>
-<p>Predictive analysis is the use of <strong><strong>_</strong></strong>, data mining, and machine learning techniques to analyze current and historical data in order to make predictions about future events or behaviors. It involves identifying <strong><em>__</em></strong> and trends in data, and then using that information to forecast what is likely to happen in the future.</p>
+<p>Predictive analysis is the use of statistical analysis, data mining, and machine learning techniques to analyze current and historical data in order to make predictions about future events or behaviors. It involves identifying pattenrs and trends in data, and then using that information to forecast what is likely to happen in the future.</p>
 <p>Predictive analysis is used in a wide range of applications, from forecasting sales and demand, to predicting customer behavior, to detecting fraudulent transactions. It involves collecting and analyzing data from a variety of sources, including historical data, customer data, financial data, and social media data, among others.</p>
 <p>The process of predictive analysis typically involves the following steps:</p>
 <ol>
 <li>Defining the problem and identifying the relevant data sources</li>
-<li>
-<hr>
-</li>
+<li>Collecting and Cleaning data</li>
 <li>Exploring and analyzing the data to identify patterns and trends</li>
 <li>Selecting an appropriate model or algorithm to use for predictions</li>
 <li>Training and validating the model using historical data</li>
-<li>
-<hr>
-</li>
+<li>Using the model to make predictions on new data</li>
 <li>Monitoring and evaluating the performance of the model over time</li>
 </ol>
 <p>Predictive analysis can help organizations make more informed decisions, improve efficiency, and gain a competitive advantage by leveraging insights from data.</p>
-<p>It is most commonly used in <strong><strong>__</strong></strong>, where workers try to predict which products would be most popular and try to advertise those products as much as possible, and also <strong><strong>___</strong></strong>, where algorithms analyze patterns and reveal prerequisites for diseases and suggest preventive treatment, predict the results of various treatments and choose the best option for each patient individually, and predict disease outbreaks and epidemics.</p>
+<p>It is most commonly used in retail, where workers try to predict which products would be most popular and try to advertise those products as much as possible, and also healthcare, where algorithms analyze patterns and reveal prerequisites for diseases and suggest preventive treatment, predict the results of various treatments and choose the best option for each patient individually, and predict disease outbreaks and epidemics.</p>
 
 </div>
 </div>
@@ -191,7 +187,7 @@ window.onload = wrap_img;
 <h1 id="1.-Intro-to-NumPy-and-the-features-it-consists">
 <a class="anchor" href="#1.-Intro-to-NumPy-and-the-features-it-consists" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Intro to NumPy and the features it consists<a class="anchor-link" href="#1.-Intro-to-NumPy-and-the-features-it-consists"> </a>
 </h1>
-<p>Numpy, by definition, is the fundamental package for <strong><strong><em>__</em></strong></strong> in Python which can be used to perform <strong><strong><strong><strong>__</strong></strong></strong></strong>, provide <strong><strong><strong>__</strong></strong></strong>, and makes <strong><strong><em>__</em></strong></strong> much <strong><em>__</em></strong>. Numpy is very important and useful when it comes to data analysis, as it can easily use its features to complete and perform any mathematical operation, as well as analyze data files.</p>
+<p>Numpy, by definition, is the fundamental package for scientific computing in Python which can be used to perform meth operations, provide multidimensional array objects and makes data analysis much easier. Numpy is very important and useful when it comes to data analysis, as it can easily use its features to complete and perform any mathematical operation, as well as analyze data files.</p>
 <p>If you don't already have numpy installed, you can do so using <code>conda install numpy</code> or <code>pip install numpy</code></p>
 <p>Once that is complete, to import numpy in your code, all you must do is:</p>
 
@@ -205,7 +201,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 
     </div>
@@ -221,7 +217,7 @@ window.onload = wrap_img;
 <h1 id="2.-Using-NumPy-to-create-arrays">
 <a class="anchor" href="#2.-Using-NumPy-to-create-arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Using NumPy to create arrays<a class="anchor-link" href="#2.-Using-NumPy-to-create-arrays"> </a>
 </h1>
-<p>An array is the central <strong><strong><strong>__</strong></strong></strong> of the NumPy library. They are used as <strong><strong><strong>__</strong></strong></strong> which are able to store more than one item at the same time. Using the function <code>np.array</code> is used to create an array, in which you can create multidimensional arrays.</p>
+<p>An array is the central data structure of the NumPy library. They are used as containers which are able to store more than one item at the same time. Using the function <code>np.array</code> is used to create an array, in which you can create multidimensional arrays.</p>
 <p>Shown below is how to create a 1D array:</p>
 
 </div>
@@ -234,12 +230,26 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> 
 <span class="c1"># this creates a 1D array</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1 2 3]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -261,10 +271,27 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -286,11 +313,25 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span> <span class="c1"># organizes it all in a single line of output</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[1 2 3 4 5 6 7 8 9]]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -312,12 +353,27 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:</span><span class="mi">2</span><span class="p">])</span>
 <span class="c1"># the 1: means "start at row 1 and select all the remaining rows"</span>
 <span class="c1"># the :2 means "select the first two columns"</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[4 5]
+ [7 8]]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -330,7 +386,7 @@ window.onload = wrap_img;
 <h1 id="3.-Basic-array-operations">
 <a class="anchor" href="#3.-Basic-array-operations" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Basic array operations<a class="anchor-link" href="#3.-Basic-array-operations"> </a>
 </h1>
-<p>One of the most basic operations that can be performed on arrays is <strong><strong><strong>___</strong></strong></strong>. With numpy, it is very easy to perform arithmetic operations on arrays. You can <strong><em>__</em></strong>, <strong><strong>_</strong></strong>, <strong><strong>__</strong></strong> and <strong><strong>__</strong></strong> arrays, just like you would with regular numbers. When performing these operations, numpy applies the operation element-wise, meaning that it performs the operation on each element in the array separately. This makes it easy to perform operations on large amounts of data quickly and efficiently.</p>
+<p>One of the most basic operations that can be performed on arrays is arithmetic operations. With numpy, it is very easy to perform arithmetic operations on arrays. You can add, subtract, multiply and divide arrays, just like you would with regular numbers. When performing these operations, numpy applies the operation element-wise, meaning that it performs the operation on each element in the array separately. This makes it easy to perform operations on large amounts of data quickly and efficiently.</p>
 
 </div>
 </div>
@@ -342,7 +398,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># adds each value based on the column the integer is in</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># subtracts each value based on the column the integer is in</span>
@@ -354,6 +410,23 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[5 7 9]
+[-3 -3 -3]
+[ 4 10 18]
+[0.25 0.4  0.5 ]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -364,13 +437,28 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 <span class="n">e</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[ 54.59815003 148.4131591  403.42879349]
+[2.         2.23606798 2.44948974]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -392,13 +480,55 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="c1"># calculate cos</span>
-<span class="c1"># calculate tan</span>
-<span class="c1"># calculate natural log</span>
-<span class="c1"># calculate log10</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="n">sin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># calculate sin</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sin</span><span class="p">)</span>
+<span class="n">cos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># calculate sin</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cos</span><span class="p">)</span><span class="c1"># calculate cos</span>
+<span class="n">tan</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># calculate sin</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tan</span><span class="p">)</span><span class="c1"># calculate tan</span>
+<span class="n">natlog</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># calculate sin</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">natlog</span><span class="p">)</span><span class="c1"># calculate natural log</span>
+<span class="n">log10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># calculate sin</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">log10</span><span class="p">)</span><span class="c1"># calculate log10</span>
+
+<span class="n">sin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c1"># calculate sin</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sin</span><span class="p">)</span>
+<span class="n">cos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c1"># calculate sin</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cos</span><span class="p">)</span><span class="c1"># calculate cos</span>
+<span class="n">tan</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c1"># calculate sin</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tan</span><span class="p">)</span><span class="c1"># calculate tan</span>
+<span class="n">natlog</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c1"># calculate sin</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">natlog</span><span class="p">)</span><span class="c1"># calculate natural log</span>
+<span class="n">log10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="c1"># calculate sin</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">log10</span><span class="p">)</span><span class="c1"># calculate log10</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0.84147098 0.90929743 0.14112001]
+[ 0.54030231 -0.41614684 -0.9899925 ]
+[ 1.55740772 -2.18503986 -0.14254654]
+[0.         0.69314718 1.09861229]
+[0.         0.30103    0.47712125]
+[-0.7568025  -0.95892427 -0.2794155 ]
+[-0.65364362  0.28366219  0.96017029]
+[ 1.15782128 -3.38051501 -0.29100619]
+[1.38629436 1.60943791 1.79175947]
+[0.60205999 0.69897    0.77815125]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -411,7 +541,7 @@ window.onload = wrap_img;
 <h1 id="4.-Data-analysis-using-numpy">
 <a class="anchor" href="#4.-Data-analysis-using-numpy" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Data analysis using numpy<a class="anchor-link" href="#4.-Data-analysis-using-numpy"> </a>
 </h1>
-<p>Numpy provides a convenient and powerful way to perform data analysis tasks on <strong><strong><em>__</em></strong></strong>. One of the most common tasks in data analysis is finding the <strong><em>__</em></strong>, <strong><em>__</em></strong>, and <strong><strong>__</strong></strong> of a dataset. Numpy provides functions to perform these operations quickly and easily. The mean function calculates the average value of the data, while the median function calculates the middle value in the data. The standard deviation function calculates how spread out the data is from the mean. Additionally, numpy provides functions to find the minimum and maximum values in the data. These functions are very useful for gaining insight into the properties of large datasets and can be used for a wide range of data analysis tasks.</p>
+<p>Numpy provides a convenient and powerful way to perform data analysis tasks on large datasets. One of the most common tasks in data analysis is finding the mean, median, and standard deviation of a dataset. Numpy provides functions to perform these operations quickly and easily. The mean function calculates the average value of the data, while the median function calculates the middle value in the data. The standard deviation function calculates how spread out the data is from the mean. Additionally, numpy provides functions to find the minimum and maximum values in the data. These functions are very useful for gaining insight into the properties of large datasets and can be used for a wide range of data analysis tasks.</p>
 
 </div>
 </div>
@@ -423,7 +553,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="c1"># finds the mean of the dataset</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="c1"># finds the median of the dataset</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="c1"># finds the standard deviation of the dataset</span>
@@ -432,6 +562,24 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10.2
+12.0
+6.04648658313239
+2
+19
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -453,10 +601,25 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>51
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -487,7 +650,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">padres</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">'files/padres.csv'</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">','</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span>
 <span class="c1"># delimiter indicates that the data is separated into columns which is distinguished by commas</span>
@@ -498,6 +661,32 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[['Name' ' Position' ' Average' ' HR' ' RBI' ' OPS' ' JerseyNumber']
+ ['Manny Machado' ' 3B' ' .298' ' 32' ' 102' ' .897' ' 13']
+ ['Fernando Tatis Jr' ' RF' ' .281' ' 42' ' 97' ' .975' ' 23']
+ ['Juan Soto' ' LF' ' .242' ' 27' ' 62' ' .853' ' 22']
+ ['Xander Bogaerts' ' SS' ' .307' ' 15' ' 73' ' .833' ' 2']
+ ['Nelson Cruz' ' DH' ' .234' ' 10' ' 64' ' .651' ' 32']
+ ['Matt Carpenter' ' DH' ' .305' ' 15' ' 37' ' 1.138' ' 14']
+ ['Jake Cronenworth' ' 1B' ' .239' ' 17' ' 88' ' .722' ' 9']
+ ['Ha-Seong Kim' ' 2B' ' .251' ' 11' ' 59' ' .708' ' 7']
+ ['Trent Grisham' ' CF' ' .184' ' 17' ' 53' ' .626' ' 1']
+ ['Luis Campusano' ' C' ' .250' ' 1' ' 5' ' .593' ' 12']
+ ['Austin Nola' ' C' ' .251' ' 4' ' 40' ' .649' ' 26']
+ ['Jose Azocar' ' OF' ' .257' ' 0' ' 10' ' .630' ' 28']]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -519,13 +708,39 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">padres</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">'files/padres.csv'</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">','</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">padres</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[['Name' ' Position' ' Average' ' HR' ' RBI' ' OPS' ' JerseyNumber']
+ ['Manny Machado' ' 3B' ' .298' ' 32' ' 102' ' .897' ' 13']
+ ['Fernando Tatis Jr' ' RF' ' .281' ' 42' ' 97' ' .975' ' 23']
+ ['Juan Soto' ' LF' ' .242' ' 27' ' 62' ' .853' ' 22']
+ ['Xander Bogaerts' ' SS' ' .307' ' 15' ' 73' ' .833' ' 2']
+ ['Nelson Cruz' ' DH' ' .234' ' 10' ' 64' ' .651' ' 32']
+ ['Matt Carpenter' ' DH' ' .305' ' 15' ' 37' ' 1.138' ' 14']
+ ['Jake Cronenworth' ' 1B' ' .239' ' 17' ' 88' ' .722' ' 9']
+ ['Ha-Seong Kim' ' 2B' ' .251' ' 11' ' 59' ' .708' ' 7']
+ ['Trent Grisham' ' CF' ' .184' ' 17' ' 53' ' .626' ' 1']
+ ['Luis Campusano' ' C' ' .250' ' 1' ' 5' ' .593' ' 12']
+ ['Austin Nola' ' C' ' .251' ' 4' ' 40' ' .649' ' 26']
+ ['Jose Azocar' ' OF' ' .257' ' 0' ' 10' ' .630' ' 28']]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -539,11 +754,37 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">padres</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">padres</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">","</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Name, Position, Average, HR, RBI, OPS, JerseyNumber
+Manny Machado, 3B, .298, 32, 102, .897, 13
+Fernando Tatis Jr, RF, .281, 42, 97, .975, 23
+Juan Soto, LF, .242, 27, 62, .853, 22
+Xander Bogaerts, SS, .307, 15, 73, .833, 2
+Nelson Cruz, DH, .234, 10, 64, .651, 32
+Matt Carpenter, DH, .305, 15, 37, 1.138, 14
+Jake Cronenworth, 1B, .239, 17, 88, .722, 9
+Ha-Seong Kim, 2B, .251, 11, 59, .708, 7
+Trent Grisham, CF, .184, 17, 53, .626, 1
+Luis Campusano, C, .250, 1, 5, .593, 12
+Austin Nola, C, .251, 4, 40, .649, 26
+Jose Azocar, OF, .257, 0, 10, .630, 28
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -598,7 +839,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="c1"># What this does is it calls the python pandas library and this code segment is needed whenever incorporating pandas.</span>
 </pre></div>
 
@@ -629,7 +870,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">data1</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s1">'teams'</span><span class="p">:</span> <span class="p">[</span><span class="s2">"BARCA"</span><span class="p">,</span> <span class="s2">"REAL"</span><span class="p">,</span> <span class="s2">"ATLETICO"</span><span class="p">],</span>
@@ -642,6 +883,23 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>      teams  standings
+0     BARCA          1
+1      REAL          2
+2  ATLETICO          3
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -668,7 +926,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
 
 <span class="n">score</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">5</span><span class="p">]</span>
 
@@ -678,6 +936,23 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>math       1.0
+science    1.0
+pe         0.2
+dtype: float64
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -723,7 +998,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 
 <span class="n">time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">period_range</span><span class="p">(</span><span class="s1">'2022-01'</span><span class="p">,</span> <span class="s1">'2022-12'</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">'M'</span><span class="p">)</span>
@@ -733,6 +1008,22 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>PeriodIndex(['2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06',
+             '2022-07', '2022-08', '2022-09', '2022-10', '2022-11', '2022-12'],
+            dtype='period[M]')
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -754,10 +1045,37 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+
+<span class="n">time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">period_range</span><span class="p">(</span><span class="s1">'2022-06'</span><span class="p">,</span> <span class="s1">'2023-07'</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">'D'</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>PeriodIndex(['2022-06-01', '2022-06-02', '2022-06-03', '2022-06-04',
+             '2022-06-05', '2022-06-06', '2022-06-07', '2022-06-08',
+             '2022-06-09', '2022-06-10',
+             ...
+             '2023-06-22', '2023-06-23', '2023-06-24', '2023-06-25',
+             '2023-06-26', '2023-06-27', '2023-06-28', '2023-06-29',
+             '2023-06-30', '2023-07-01'],
+            dtype='period[D]', length=396)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -792,7 +1110,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">'Category'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">],</span>
@@ -801,12 +1119,29 @@ window.onload = wrap_img;
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
 
-<span class="n">grouped</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Category'</span><span class="p">)</span><span class="o">.</span><span class="c1">#GUESS WHAT THIS WOULD BE IF WE WERE LOOKING FOR COMBINED TOTALS!()</span>
+<span class="n">grouped</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Category'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1">#GUESS WHAT THIS WOULD BE IF WE WERE LOOKING FOR COMBINED TOTALS!() # would be the sum</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">grouped</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>           Value
+Category        
+E         187.25
+F         955.50
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -833,7 +1168,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">colors</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">([</span><span class="s1">'yellow'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">,</span> <span class="s1">'yellow'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">],</span> <span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="s1">'yellow'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">])</span>
 
@@ -841,6 +1176,21 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['yellow', 'orange', 'blue', 'yellow', 'orange']
+Categories (3, object): ['yellow', 'orange', 'blue']
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -867,15 +1217,29 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 
 <span class="n">timing</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">'2023-02-05 02:00:00'</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="c1">#WHAT WOULD THIS BE)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">timing</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2023-02-05 02:00:00
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -913,7 +1277,8 @@ window.onload = wrap_img;
 <li>Austin Nola, C, .251, 4, 40, .649, 26</li>
 <li>Jose Azocar, OF, .257, 0, 10, .630, 28</li>
 </ul>
-<p>QUESTION: WHAT DO YOU GUYS THINK THE INDEX FOR THIS WOULD BE?</p>
+<p>QUESTION: WHAT DO YOU GUYS THINK THE INDEX FOR THIS WOULD BE?
+Answer: Name, Position, Average, HR, RBI, OPS, JerseyNumber</p>
 
 </div>
 </div>
@@ -922,6 +1287,11 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Can you explain what is going on in this code segment below. (hint: define what ascending= false means, and df. head means)</p>
+<ul>
+<li>listing top 10 players and bottom 10 players, but by name</li>
+<li>df.head seems like it means the beginning of the data</li>
+<li>ascending = false ensures that they are placed alphabetical order</li>
+</ul>
 
 </div>
 </div>
@@ -933,7 +1303,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="c1">#read csv and sort 'Duration' largest to smallest</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/padres.csv'</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'Name'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -950,6 +1320,44 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>--Duration Top 10---------
+                Name  Position   Average   HR   RBI    OPS   JerseyNumber
+3    Xander Bogaerts        SS     0.307   15    73  0.833              2
+8      Trent Grisham        CF     0.184   17    53  0.626              1
+4        Nelson Cruz        DH     0.234   10    64  0.651             32
+5     Matt Carpenter        DH     0.305   15    37  1.138             14
+0      Manny Machado        3B     0.298   32   102  0.897             13
+9     Luis Campusano         C     0.250    1     5  0.593             12
+2          Juan Soto        LF     0.242   27    62  0.853             22
+11       Jose Azocar        OF     0.257    0    10  0.630             28
+6   Jake Cronenworth        1B     0.239   17    88  0.722              9
+7       Ha-Seong Kim        2B     0.251   11    59  0.708              7
+--Duration Bottom 10------
+                 Name  Position   Average   HR   RBI    OPS   JerseyNumber
+4         Nelson Cruz        DH     0.234   10    64  0.651             32
+5      Matt Carpenter        DH     0.305   15    37  1.138             14
+0       Manny Machado        3B     0.298   32   102  0.897             13
+9      Luis Campusano         C     0.250    1     5  0.593             12
+2           Juan Soto        LF     0.242   27    62  0.853             22
+11        Jose Azocar        OF     0.257    0    10  0.630             28
+6    Jake Cronenworth        1B     0.239   17    88  0.722              9
+7        Ha-Seong Kim        2B     0.251   11    59  0.708              7
+1   Fernando Tatis Jr        RF     0.281   42    97  0.975             23
+10        Austin Nola         C     0.251    4    40  0.649             26
+Name,  Position,  Average,  HR,  RBI,  OPS,  JerseyNumber
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -960,7 +1368,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"./files/housing.csv"</span><span class="p">)</span>
@@ -976,6 +1384,21 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The mode of the 'total_rooms' column is: 0    1527.0
+Name: total_rooms, dtype: float64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -986,7 +1409,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"./files/housing.csv"</span><span class="p">)</span>
 
@@ -1003,6 +1426,34 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>             total_rooms  population  longitude
+total_rooms                                    
+2.0                  2.0         6.0          1
+6.0                  6.0         8.0          1
+8.0                  8.0        13.0          1
+11.0                11.0        24.0          1
+12.0                12.0        18.0          1
+...                  ...         ...        ...
+30450.0          30450.0      9419.0          1
+32054.0          32054.0     15507.0          1
+32627.0          32627.0     28566.0          1
+37937.0          37937.0     16122.0          1
+39320.0          39320.0     16305.0          1
+
+[5926 rows x 3 columns]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1056,6 +1507,385 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gains</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"./files/data.csv"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gains</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     Duration  Pulse  Maxpulse  Calories
+0          60    110       130     409.1
+1          60    117       145     479.0
+2          60    103       135     340.0
+3          45    109       175     282.4
+4          45    117       148     406.0
+..        ...    ...       ...       ...
+164        60    105       140     290.8
+165        60    110       145     300.4
+166        60    115       145     310.2
+167        75    120       150     320.4
+168        75    125       150     330.4
+
+[169 rows x 4 columns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">max</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'Category'</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s1">'Num'</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+<span class="nb">min</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'Category'</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s1">'Num'</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+<span class="k">for</span> <span class="n">category</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Duration'</span><span class="p">,</span> <span class="s1">'Pulse'</span><span class="p">,</span> <span class="s1">'Maxpulse'</span><span class="p">,</span> <span class="s1">'Calories'</span><span class="p">]:</span>
+    <span class="nb">max</span><span class="p">[</span><span class="s1">'Category'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">category</span><span class="p">)</span>
+    <span class="nb">min</span><span class="p">[</span><span class="s1">'Category'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">category</span><span class="p">)</span>
+    <span class="nb">max</span><span class="p">[</span><span class="s1">'Num'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gains</span><span class="p">[</span><span class="n">category</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+    <span class="nb">min</span><span class="p">[</span><span class="s1">'Num'</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gains</span><span class="p">[</span><span class="n">category</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="n">maxAll</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">max</span><span class="p">)</span>
+<span class="n">minAll</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">min</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Max:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">maxAll</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Min:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">minAll</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Max:
+   Category     Num
+0  Duration   300.0
+1     Pulse   159.0
+2  Maxpulse   184.0
+3  Calories  1860.4
+Min:
+   Category    Num
+0  Duration   15.0
+1     Pulse   80.0
+2  Maxpulse  100.0
+3  Calories   50.3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">gains</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">"Duration"</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gains</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">"Pulse"</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gains</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">"Maxpulse"</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gains</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">"Calories"</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     Duration  Pulse  Maxpulse  Calories
+112        15    124       139     124.2
+93         15     80       100      50.5
+135        20    136       156     189.0
+68         20    106       136     110.4
+64         20    110       130     131.4
+..        ...    ...       ...       ...
+90        180    101       127     600.1
+109       210    137       184    1860.4
+60        210    108       160    1376.0
+79        270    100       131    1729.0
+69        300    108       143    1500.2
+
+[169 rows x 4 columns]
+     Duration  Pulse  Maxpulse  Calories
+159        30     80       120     240.9
+93         15     80       100      50.5
+89         20     83       107      50.3
+160        30     85       120     250.4
+92         30     90       107     105.3
+..        ...    ...       ...       ...
+85         30    151       170     300.1
+95         20    151       168     229.4
+97         25    152       168     244.2
+58         20    153       172     226.4
+80         30    159       182     319.2
+
+[169 rows x 4 columns]
+     Duration  Pulse  Maxpulse  Calories
+103        90     90       100     500.4
+93         15     80       100      50.5
+102        90     90       100     500.0
+22         60    130       101     300.0
+88         45    129       103     242.0
+..        ...    ...       ...       ...
+58         20    153       172     226.4
+54         30    136       175     238.0
+3          45    109       175     282.4
+80         30    159       182     319.2
+109       210    137       184    1860.4
+
+[169 rows x 4 columns]
+     Duration  Pulse  Maxpulse  Calories
+89         20     83       107      50.3
+93         15     80       100      50.5
+100        20     95       112      77.7
+107        30     90       120      86.2
+104        30     92       108      92.7
+..        ...    ...       ...       ...
+17         45     90       112       NaN
+27         60    103       132       NaN
+91         45    107       137       NaN
+118        60    105       125       NaN
+141        60     97       127       NaN
+
+[169 rows x 4 columns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">merge</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">"Duration"</span><span class="p">:</span> <span class="p">[</span><span class="s1">'50'</span><span class="p">,</span> <span class="s1">'45'</span><span class="p">],</span>
+        <span class="s2">"Pulse"</span><span class="p">:</span> <span class="p">[</span><span class="s1">'130'</span><span class="p">,</span> <span class="s1">'150'</span><span class="p">],</span>
+        <span class="s2">"Maxpulse"</span><span class="p">:</span> <span class="p">[</span><span class="s1">'145'</span><span class="p">,</span> <span class="s1">'160'</span><span class="p">],</span>
+        <span class="s2">"Calories"</span><span class="p">:</span> <span class="p">[</span><span class="s1">'350'</span><span class="p">,</span> <span class="s1">'550'</span><span class="p">],</span>
+    <span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">170</span><span class="p">,</span> <span class="mi">171</span><span class="p">]</span>
+<span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">gains</span><span class="p">,</span> <span class="n">merge</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>    Duration Pulse Maxpulse Calories
+0         60   110      130    409.1
+1         60   117      145    479.0
+2         60   103      135    340.0
+3         45   109      175    282.4
+4         45   117      148    406.0
+..       ...   ...      ...      ...
+166       60   115      145    310.2
+167       75   120      150    320.4
+168       75   125      150    330.4
+170       50   130      145      350
+171       45   150      160      550
+
+[171 rows x 4 columns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">randoms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">randoms</span><span class="o">.</span><span class="n">integers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[25 55 19 81 50 34 14 53 39 20]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">threed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">threed</span><span class="p">)</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"shape is "</span><span class="p">)</span> <span class="c1">#see the dimensions</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">threed</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[[1 2]
+  [3 4]
+  [5 6]]
+
+ [[5 6]
+  [7 8]
+  [9 0]]
+
+ [[2 2]
+  [3 3]
+  [4 4]]]
+shape is 
+(3, 3, 2)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0.         0.01010101 0.02020202 0.03030303 0.04040404 0.05050505
+ 0.06060606 0.07070707 0.08080808 0.09090909 0.1010101  0.11111111
+ 0.12121212 0.13131313 0.14141414 0.15151515 0.16161616 0.17171717
+ 0.18181818 0.19191919 0.2020202  0.21212121 0.22222222 0.23232323
+ 0.24242424 0.25252525 0.26262626 0.27272727 0.28282828 0.29292929
+ 0.3030303  0.31313131 0.32323232 0.33333333 0.34343434 0.35353535
+ 0.36363636 0.37373737 0.38383838 0.39393939 0.4040404  0.41414141
+ 0.42424242 0.43434343 0.44444444 0.45454545 0.46464646 0.47474747
+ 0.48484848 0.49494949 0.50505051 0.51515152 0.52525253 0.53535354
+ 0.54545455 0.55555556 0.56565657 0.57575758 0.58585859 0.5959596
+ 0.60606061 0.61616162 0.62626263 0.63636364 0.64646465 0.65656566
+ 0.66666667 0.67676768 0.68686869 0.6969697  0.70707071 0.71717172
+ 0.72727273 0.73737374 0.74747475 0.75757576 0.76767677 0.77777778
+ 0.78787879 0.7979798  0.80808081 0.81818182 0.82828283 0.83838384
+ 0.84848485 0.85858586 0.86868687 0.87878788 0.88888889 0.8989899
+ 0.90909091 0.91919192 0.92929293 0.93939394 0.94949495 0.95959596
+ 0.96969697 0.97979798 0.98989899 1.        ]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
